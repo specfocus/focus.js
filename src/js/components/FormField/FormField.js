@@ -89,7 +89,7 @@ const Input = ({ component, disabled, invalid, name, onChange, ...rest }) => {
   const formContext = useContext(FormContext);
   const [value, setValue] = formContext.useFormInput(name, rest.value);
   const InputComponent = component || TextInput;
-  // Grommet input components already check for FormContext
+  // Focus input components already check for FormContext
   // and, using their `name`, end up calling the useFormInput.setValue()
   // already. For custom components, we expect they will call
   // this onChange() and we'll call setValue() here, primarily

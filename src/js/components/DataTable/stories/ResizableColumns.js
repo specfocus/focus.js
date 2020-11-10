@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, DataTable, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, DataTable, Heading } from 'focus';
+import { focus } from 'focus/themes';
 
 export const DATA = [
   {
@@ -62,7 +62,7 @@ const columnsResize = [
 ];
 
 export const ResizableDataTable = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       <Heading level="3">Table with resizable & column sizes</Heading>
       <DataTable
@@ -72,7 +72,7 @@ export const ResizableDataTable = () => (
         resizeable
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 ResizableDataTable.story = {

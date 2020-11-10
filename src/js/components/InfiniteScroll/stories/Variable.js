@@ -1,7 +1,7 @@
 import React from 'react';
-import { grommet } from 'grommet/themes';
+import { focus } from 'focus/themes';
 
-import { Grommet, Box, InfiniteScroll, Text } from 'grommet';
+import { Viewport, Box, InfiniteScroll, Text } from 'focus';
 
 const allItems = Array(240)
   .fill()
@@ -9,7 +9,7 @@ const allItems = Array(240)
 
 const Example = props => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box>
         <InfiniteScroll items={allItems} {...props}>
           {item => (
@@ -25,7 +25,7 @@ const Example = props => {
           )}
         </InfiniteScroll>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

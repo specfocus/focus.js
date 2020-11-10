@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet, Heading, Text, Tip } from 'grommet';
+import { focus, Box, Button, Viewport,, Heading, Text, Tip } from 'focus';
 import { Trash } from 'grommet-icons';
 
 const TipContent = ({ message }) => (
@@ -20,7 +20,7 @@ const TipContent = ({ message }) => (
 
 export const Caret = () => {
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box align="center" justify="center" background="dark-1" fill gap="large">
         <Heading textAlign="center" level="1" size="xsmall">
           Tooltip is styled with a Caret
@@ -37,7 +37,7 @@ export const Caret = () => {
           </Box>
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

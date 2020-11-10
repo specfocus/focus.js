@@ -8,7 +8,7 @@ export const doc = RangeSelector => {
     .availableAt(getAvailableAtBadge('RangeSelector'))
     .description('A control to input a range of values.')
     .usage(
-      `import { RangeSelector } from 'grommet';
+      `import { RangeSelector } from 'focus';
 <RangeSelector />`,
     )
     .intrinsicElement('div');

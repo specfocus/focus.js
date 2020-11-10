@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Attraction, Car, TreeOption } from 'grommet-icons';
-import { Box, Grommet, Tab, Tabs } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Tab, Tabs } from 'focus';
+import { focus } from 'focus/themes';
 
 const UncontrolledTabs = ({ plain = false }) => (
-  <Grommet theme={grommet} full>
+  <Viewport theme={focus} full>
     <Box fill>
       <Tabs flex>
         <Tab plain={plain} title="Tab 1">
@@ -26,7 +26,7 @@ const UncontrolledTabs = ({ plain = false }) => (
         </Tab>
       </Tabs>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 UncontrolledTabs.propTypes = {

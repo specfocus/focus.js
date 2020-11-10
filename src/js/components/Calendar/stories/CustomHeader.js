@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Button, Calendar, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Calendar, Viewport, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 import { FormPreviousLink, FormNextLink } from 'grommet-icons';
 
@@ -13,7 +13,7 @@ export const CustomHeaderCalendar = () => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <Calendar
           date={date}
@@ -51,7 +51,7 @@ export const CustomHeaderCalendar = () => {
           )}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

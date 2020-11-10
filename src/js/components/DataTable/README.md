@@ -5,7 +5,7 @@ A data driven table.
 ## Usage
 
 ```javascript
-import { DataTable } from 'grommet';
+import { DataTable } from 'focus';
 <DataTable />
 ```
 

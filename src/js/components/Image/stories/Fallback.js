@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Grommet, Image } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Image } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Fallback = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Image
       fallback="//v2.grommet.io/assets/IMG_4245.jpg"
       src="//v2.grommet.io/assets/IMG_4245_not_exists.jpg"
     />
-  </Grommet>
+  </Viewport>
 );

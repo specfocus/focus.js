@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet, Text, Tip } from 'grommet';
+import { focus, Box, Button, Viewport, Text, Tip } from 'focus';
 import { Help as HelpOption, CircleInformation } from 'grommet-icons';
 
 export const Info = () => {
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box
         fill
         background="background-back"
@@ -51,7 +51,7 @@ export const Info = () => {
           <Button icon={<HelpOption size="large" />} />
         </Tip>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

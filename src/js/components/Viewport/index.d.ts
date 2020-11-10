@@ -17,4 +17,4 @@ export interface GrommetProps {
 declare const Grommet: React.ComponentClass<GrommetProps &
   JSX.IntrinsicElements['div']>;
 
-export { Grommet };
+export { Viewport };

@@ -6,15 +6,15 @@ import {
   CheckBox,
   Form,
   FormField,
-  Grommet,
+  Viewport,
   TextInput,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'focus';
+import { focus } from 'focus/themes';
 
 export const DynamicFields = () => {
   const [haveAlias, setHaveAlias] = useState();
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill align="center" justify="center">
         <Box width="medium">
           <Form
@@ -44,7 +44,7 @@ export const DynamicFields = () => {
           </Form>
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

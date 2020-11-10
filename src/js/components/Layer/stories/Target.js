@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Button, CheckBox, Grid, Grommet, Layer, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, CheckBox, Grid, Viewport, Layer, Select } from 'focus';
+import { focus } from 'focus/themes';
 
 const positions = ['left', 'right', 'top', 'bottom', 'center'];
 
@@ -18,7 +18,7 @@ export const TargetLayer = () => {
   const onClose = () => setOpen(undefined);
 
   return (
-    <Grommet theme={grommet} full>
+    <Viewport theme={focus} full>
       <Grid
         fill
         columns={[gutter, 'flex', gutter]}
@@ -65,7 +65,7 @@ export const TargetLayer = () => {
           </Box>
         </Layer>
       )}
-    </Grommet>
+    </Viewport>
   );
 };
 

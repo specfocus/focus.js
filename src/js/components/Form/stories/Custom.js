@@ -6,16 +6,16 @@ import {
   CheckBox,
   Form,
   FormField,
-  Grommet,
+  Viewport,
   MaskedInput,
   RadioButtonGroup,
   RangeInput,
   Select,
   TextArea,
   TextInput,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+} from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 const customTheme = {
   global: {
@@ -57,7 +57,7 @@ const customTheme = {
 };
 
 export const Custom = () => (
-  <Grommet full theme={deepMerge(grommet, customTheme)}>
+  <Viewport full theme={deepMerge(grommet, customTheme)}>
     <Box fill align="center" justify="center">
       <Box width="medium">
         <Form
@@ -102,5 +102,5 @@ export const Custom = () => (
         </Form>
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );

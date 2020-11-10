@@ -6,14 +6,14 @@ import {
   CheckBoxGroup,
   Form,
   FormField,
-  Grommet,
+  Viewport,
   Heading,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'focus';
+import { focus } from 'focus/themes';
 
 export const FormUncontrolled = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box pad="medium">
         <Heading level="3">Form with string options</Heading>
         <Form
@@ -50,7 +50,7 @@ export const FormUncontrolled = () => {
           <Button type="submit" label="Submit" />
         </Form>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Box, Button, Collapsible, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Collapsible, Viewport, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Default = props => {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="start" gap="small">
         <Button primary onClick={() => setOpen(!open)} label="Toggle" />
         <Collapsible open={open} {...props}>
@@ -23,7 +23,7 @@ export const Default = props => {
         </Collapsible>
         <Text>This is other content outside the Collapsible box</Text>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { Box, Drop, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Box, Drop, Viewport } from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 const lazyTheme = deepMerge(grommet, {
   global: {
@@ -30,7 +30,7 @@ const LazyDrop = () => {
   }, []);
 
   return (
-    <Grommet theme={lazyTheme} full>
+    <Viewport theme={lazyTheme} full>
       <Box fill justify="between" pad="large" gap="small">
         <Box direction="row" justify="between" pad={{ horizontal: 'small' }}>
           <Box
@@ -116,7 +116,7 @@ const LazyDrop = () => {
           )}
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

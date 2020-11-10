@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Grommet, Box, InfiniteScroll, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, InfiniteScroll, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 const allItems = Array(2000)
   .fill()
   .map((_, i) => `item ${i + 1}`);
 
 const Example = props => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box>
       <InfiniteScroll items={allItems} {...props}>
         {item => (
@@ -23,7 +23,7 @@ const Example = props => (
         )}
       </InfiniteScroll>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 export const Simple = () => <Example />;

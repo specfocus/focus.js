@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Button, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Viewport, Select } from 'focus';
+import { focus } from 'focus/themes';
 
 const optionList = [
   'One',
@@ -28,7 +28,7 @@ export const Unselect = () => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box
         pad="medium"
         direction="row"
@@ -50,6 +50,6 @@ export const Unselect = () => {
           label="Clear All"
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

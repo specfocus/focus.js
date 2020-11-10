@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import { Search } from 'grommet-icons';
-import { Box, Grommet, Image, Text, TextInput } from 'grommet';
-import { grommet, ThemeType } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Box, Viewport,, Image, Text, TextInput } from 'focus';
+import { focus, ThemeType } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 // Type annotations can only be used in TypeScript files.
 // Remove ': ThemeType' if you are not using Typescript.
@@ -131,7 +131,7 @@ export const CustomSuggestions = () => {
   };
 
   return (
-    <Grommet full theme={myCustomTheme}>
+    <Viewport full theme={myCustomTheme}>
       <Box background="dark-1" fill align="center" pad={{ top: 'large' }}>
         <Box
           ref={boxRef}
@@ -169,7 +169,7 @@ export const CustomSuggestions = () => {
           />
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

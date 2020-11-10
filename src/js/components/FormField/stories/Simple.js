@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, FormField, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, FormField, Viewport, Select } from 'focus';
+import { focus } from 'focus/themes';
 
 const allOptions = Array(100)
   .fill()
@@ -11,7 +11,7 @@ export const Simple = () => {
   const [value, setValue] = useState('');
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <FormField label="Label" htmlFor="select">
           <Select
@@ -23,6 +23,6 @@ export const Simple = () => {
           />
         </FormField>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

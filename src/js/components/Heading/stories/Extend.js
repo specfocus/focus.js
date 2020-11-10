@@ -1,7 +1,7 @@
 import React from 'react';
-import { Grommet, Heading } from 'grommet';
-import { deepMerge } from 'grommet/utils';
-import { grommet } from 'grommet/themes';
+import { Viewport, Heading } from 'focus';
+import { deepMerge } from 'focus/utils';
+import { focus } from 'focus/themes';
 
 const letterSpace = {
   1: {
@@ -29,7 +29,7 @@ const customTheme = deepMerge(grommet, {
 });
 
 export const Extend = () => (
-  <Grommet theme={customTheme}>
+  <Viewport theme={customTheme}>
     <Heading level="1" size="large">
       This is using the extend property on Heading
     </Heading>
@@ -39,5 +39,5 @@ export const Extend = () => (
     <Heading level="3" size="small">
       This is using the extend property on Heading
     </Heading>
-  </Grommet>
+  </Viewport>
 );

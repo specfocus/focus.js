@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Grommet, Box, Menu, ThemeType } from 'grommet';
+import { Viewport, Box, Menu, ThemeType } from 'focus';
 import { FormUp, FormDown } from 'grommet-icons';
 
 // Type annotations can only be used in TypeScript files.
@@ -69,7 +69,7 @@ const customBreakpoints: ThemeType = {
 
 const ThemedMenu = () => {
   return (
-    <Grommet theme={customBreakpoints}>
+    <Viewport theme={customBreakpoints}>
       <Box align="center" pad="large">
         <Menu
           dropProps={{ align: { top: 'bottom', left: 'left' } }}
@@ -81,7 +81,7 @@ const ThemedMenu = () => {
           ]}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

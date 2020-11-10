@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { StatusGood } from 'grommet-icons';
-import { Box, Button, Grommet, Form, FormField, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Viewport, Form, FormField, TextInput } from 'focus';
+import { focus } from 'focus/themes';
 
 export const ValidateOnBlur = () => (
-  <Grommet full theme={grommet}>
+  <Viewport full theme={focus}>
     <Box fill align="center" justify="center">
       <Box width="medium">
         <Form
@@ -50,7 +50,7 @@ export const ValidateOnBlur = () => (
         </Form>
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 ValidateOnBlur.story = {

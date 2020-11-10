@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { Stack } from '..';
 
 const CONTENTS = [<div key={1}>first</div>, <div key={2}>second</div>];
@@ -10,9 +10,9 @@ const CONTENTS = [<div key={1}>first</div>, <div key={2}>second</div>];
 describe('Stack', () => {
   test('default', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Stack>{CONTENTS}</Stack>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -20,11 +20,11 @@ describe('Stack', () => {
 
   test('guidingChild', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Stack guidingChild="first">{CONTENTS}</Stack>
         <Stack guidingChild="last">{CONTENTS}</Stack>
         <Stack guidingChild={0}>{CONTENTS}</Stack>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -32,7 +32,7 @@ describe('Stack', () => {
 
   test('anchor', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Stack anchor="center">{CONTENTS}</Stack>
         <Stack anchor="top">{CONTENTS}</Stack>
         <Stack anchor="left">{CONTENTS}</Stack>
@@ -42,7 +42,7 @@ describe('Stack', () => {
         <Stack anchor="bottom-left">{CONTENTS}</Stack>
         <Stack anchor="top-right">{CONTENTS}</Stack>
         <Stack anchor="bottom-right">{CONTENTS}</Stack>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -50,12 +50,12 @@ describe('Stack', () => {
 
   test('fill', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Stack fill>{CONTENTS}</Stack>
         <Stack fill={false}>{CONTENTS}</Stack>
         <Stack fill="horizontal">{CONTENTS}</Stack>
         <Stack fill="vertical">{CONTENTS}</Stack>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -63,11 +63,11 @@ describe('Stack', () => {
 
   test('interactiveChild', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Stack interactiveChild="first">{CONTENTS}</Stack>
         <Stack interactiveChild="last">{CONTENTS}</Stack>
         <Stack interactiveChild={0}>{CONTENTS}</Stack>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

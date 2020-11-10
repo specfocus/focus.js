@@ -2,14 +2,14 @@ import React from 'react';
 
 import { Favorite } from 'grommet-icons';
 
-import { Avatar, Box, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Avatar, Box, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Basic = () => {
   const src = '//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80';
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box
         align="center"
         justify="center"
@@ -24,6 +24,6 @@ export const Basic = () => {
         <Avatar background="dark-2">R</Avatar>
         <Avatar background="brand">SY</Avatar>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

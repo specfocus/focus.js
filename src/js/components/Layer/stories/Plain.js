@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Grommet, Layer, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Layer, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const PlainLayer = () => (
-  <Grommet theme={grommet} full>
+  <Viewport theme={focus} full>
     <Box fill background="dark-3">
       <Layer margin="medium" plain>
         <Box pad="large" border={{ color: 'accent-1', size: 'large' }}>
@@ -12,7 +12,7 @@ export const PlainLayer = () => (
         </Box>
       </Layer>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 PlainLayer.story = { name: 'Plain' };

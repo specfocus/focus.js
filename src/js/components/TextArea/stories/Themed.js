@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, TextArea } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Box, Viewport, TextArea } from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 const customTheme = deepMerge(grommet, {
   textArea: {
@@ -19,7 +19,7 @@ export const Themed = () => {
   const onChange = event => setValue(event.target.value);
 
   return (
-    <Grommet theme={customTheme}>
+    <Viewport theme={customTheme}>
       <Box
         width="large"
         height="medium"
@@ -27,6 +27,6 @@ export const Themed = () => {
       >
         <TextArea value={value} onChange={onChange} fill />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

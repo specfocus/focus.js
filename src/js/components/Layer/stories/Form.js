@@ -6,14 +6,14 @@ import {
   Box,
   Button,
   FormField,
-  Grommet,
+  Viewport,
   Heading,
   Layer,
   Select,
   TextArea,
   TextInput,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'focus';
+import { focus } from 'focus/themes';
 
 export const FormLayer = () => {
   const [open, setOpen] = React.useState(false);
@@ -24,7 +24,7 @@ export const FormLayer = () => {
   const onClose = () => setOpen(undefined);
 
   return (
-    <Grommet theme={grommet} full>
+    <Viewport theme={focus} full>
       <Box fill align="center" justify="center">
         <Button icon={<Add />} label="Add" onClick={onOpen} />
         {open && (
@@ -86,7 +86,7 @@ export const FormLayer = () => {
           </Layer>
         )}
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

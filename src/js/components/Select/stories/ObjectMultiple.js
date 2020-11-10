@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Select } from 'focus';
+import { focus } from 'focus/themes';
 
 const objectOptions = [];
 for (let i = 1; i <= 200; i += 1) {
@@ -17,7 +17,7 @@ export const ObjectMultiple = () => {
   const [value, setValue] = useState([1, 2]);
 
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill align="center" justify="start" pad="large">
         <Select
           size="medium"
@@ -44,7 +44,7 @@ export const ObjectMultiple = () => {
           }}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

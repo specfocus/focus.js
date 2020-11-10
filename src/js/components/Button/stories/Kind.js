@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { User } from 'grommet-icons';
-import { Box, Button, grommet, Grommet, Heading, Text } from 'grommet';
+import { Box, Button, grommet, Viewport, Heading, Text } from 'focus';
 
 const darks = [false, true];
 const kinds = [
@@ -34,7 +34,7 @@ const contents = [
 
 export const Kind = () => (
   <Box pad="large" gap="large">
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box gap="medium">
         {kinds.map(kind => (
           <Box key={kind.name} flex={false}>
@@ -69,6 +69,6 @@ export const Kind = () => (
           </Box>
         ))}
       </Box>
-    </Grommet>
+    </Viewport>
   </Box>
 );

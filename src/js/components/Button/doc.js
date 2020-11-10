@@ -18,7 +18,7 @@ export const doc = Button => {
       This allows you to customize the rendering of the Button in those cases.`,
     )
     .usage(
-      `import { Button } from 'grommet';
+      `import { Button } from 'focus';
 <Button primary label='Label' />`,
     )
     .intrinsicElement('button');

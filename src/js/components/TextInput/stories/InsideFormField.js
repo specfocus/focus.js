@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Button, Form, FormField, Grommet, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Form, FormField, Viewport, TextInput } from 'focus';
+import { focus } from 'focus/themes';
 
 const allSuggestions = Array(100)
   .fill()
@@ -32,7 +32,7 @@ export const InsideFormField = props => {
   const onSelect = event => setState({ ...state, value: event.suggestion });
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <Form
           onSubmit={({ value: nextValue }) => {
@@ -53,7 +53,7 @@ export const InsideFormField = props => {
           <Button type="submit" label="submit" />
         </Form>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

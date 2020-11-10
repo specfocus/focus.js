@@ -3,15 +3,15 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import { render, fireEvent } from '@testing-library/react';
 
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { WorldMap } from '..';
 
 describe('WorldMap', () => {
   test('default', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <WorldMap />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -19,9 +19,9 @@ describe('WorldMap', () => {
 
   test('color', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <WorldMap color="brand" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -29,7 +29,7 @@ describe('WorldMap', () => {
 
   test('continents', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <WorldMap
           continents={[
             {
@@ -39,7 +39,7 @@ describe('WorldMap', () => {
             },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -47,7 +47,7 @@ describe('WorldMap', () => {
 
   test('places', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <WorldMap
           places={[
             {
@@ -58,7 +58,7 @@ describe('WorldMap', () => {
             },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -68,7 +68,7 @@ describe('WorldMap', () => {
     const onClick = jest.fn();
     const onHover = jest.fn();
     const { container, getByTestId } = render(
-      <Grommet>
+      <Viewport>
         <WorldMap
           places={[
             {
@@ -82,7 +82,7 @@ describe('WorldMap', () => {
           data-testid="worldmap"
           onSelectPlace={() => {}}
         />
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.mouseOver(getByTestId('Sydney'));
     expect(container.firstChild).toMatchSnapshot();
@@ -103,7 +103,7 @@ describe('WorldMap', () => {
     const onClick = jest.fn();
     const onHover = jest.fn();
     const { container, getByTestId } = render(
-      <Grommet>
+      <Viewport>
         <WorldMap
           continents={[
             {
@@ -114,7 +114,7 @@ describe('WorldMap', () => {
             },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.mouseOver(getByTestId('Africa'));
     expect(container.firstChild).toMatchSnapshot();
@@ -133,12 +133,12 @@ describe('WorldMap', () => {
 
   test('fill', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <WorldMap fill />
         <WorldMap fill={false} />
         <WorldMap fill="horizontal" />
         <WorldMap fill="vertical" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

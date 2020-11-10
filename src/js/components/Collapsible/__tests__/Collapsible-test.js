@@ -6,7 +6,7 @@ import 'jest-axe/extend-expect';
 import 'regenerator-runtime/runtime';
 
 import { Collapsible } from '..';
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { Text } from '../../Text';
 
 describe('Collapsible', () => {
@@ -15,11 +15,11 @@ describe('Collapsible', () => {
   beforeEach(() => {
     App = ({ ...props }) => {
       return (
-        <Grommet>
+        <Viewport>
           <Collapsible {...props}>
             <Text>Example</Text>
           </Collapsible>
-        </Grommet>
+        </Viewport>
       );
     };
   });

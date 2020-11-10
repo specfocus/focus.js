@@ -11,7 +11,7 @@ export const doc = Markdown => {
       you can see all the options in the documentation.`,
     )
     .usage(
-      `import { Markdown } from 'grommet';
+      `import { Markdown } from 'focus';
       <Markdown>{content}</Markdown>`,
     )
     .intrinsicElement('div');

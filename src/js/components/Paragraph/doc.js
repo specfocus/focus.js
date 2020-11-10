@@ -9,7 +9,7 @@ export const doc = Paragraph => {
     .availableAt(getAvailableAtBadge('Paragraph'))
     .description('A paragraph of text.')
     .usage(
-      `import { Paragraph } from 'grommet';
+      `import { Paragraph } from 'focus';
 <Paragraph />`,
     )
     .intrinsicElement('p');

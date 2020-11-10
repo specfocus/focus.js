@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import {
   Box,
-  Grommet,
+  Viewport,
   Table,
   TableBody,
   TableCell,
@@ -11,12 +11,12 @@ import {
   TableHeader,
   TableRow,
   Text,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'focus';
+import { focus } from 'focus/themes';
 import { data, columns } from './data';
 
 const DefaultTable = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       <Table caption="Default Table">
         <TableHeader>
@@ -50,7 +50,7 @@ const DefaultTable = () => (
         </TableFooter>
       </Table>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 storiesOf('Table', module).add('Default', () => <DefaultTable />);

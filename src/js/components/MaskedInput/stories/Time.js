@@ -1,12 +1,12 @@
 import React from 'react';
-import { Box, Grommet, MaskedInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, MaskedInput } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Time = () => {
   const [value, setValue] = React.useState('');
 
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill align="center" justify="start" pad="large">
         <Box width="medium">
           <MaskedInput
@@ -37,6 +37,6 @@ export const Time = () => {
           />
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

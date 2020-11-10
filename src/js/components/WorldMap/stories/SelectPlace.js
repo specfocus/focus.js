@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Grommet, WorldMap } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, WorldMap } from 'focus';
+import { focus } from 'focus/themes';
 
 export const SelectPlace = () => {
   const [places, setPlaces] = React.useState();
@@ -11,11 +11,11 @@ export const SelectPlace = () => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <WorldMap onSelectPlace={onSelectPlace} places={places} />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

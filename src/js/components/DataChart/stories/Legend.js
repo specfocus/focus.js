@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, DataChart, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, DataChart, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 const data = [];
 for (let i = 1; i < 8; i += 1) {
@@ -14,7 +14,7 @@ for (let i = 1; i < 8; i += 1) {
 }
 
 export const Legend = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" justify="start" pad="large">
       <DataChart
         data={data}
@@ -35,5 +35,5 @@ export const Legend = () => (
         axis={{ x: { property: 'date', granularity: 'medium' } }}
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );

@@ -12,12 +12,12 @@ import {
   Accordion,
   AccordionPanel,
   Box,
-  Grommet,
+  Viewport,
   Heading,
   Text,
   ThemeContext,
-} from 'grommet';
-import { grommet, ThemeType } from 'grommet/themes';
+} from 'focus';
+import { focus, ThemeType } from 'focus/themes';
 
 // Type annotations can only be used in TypeScript files.
 // Remove ': ThemeType' if you are not using Typescript.
@@ -104,7 +104,7 @@ const RichAccordion = () => {
   const [highlightLoaded, setHighlightLoaded] = React.useState(false);
 
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill direction="row">
         <Box basis="medium" border="all">
           <Box
@@ -244,7 +244,7 @@ const RichAccordion = () => {
           </ThemeContext.Extend>
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

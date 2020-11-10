@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-import { Grommet, grommet, Box, Button, Drop, Nav, Text } from 'grommet';
+import { Viewport, grommet, Box, Button, Drop, Nav, Text } from 'focus';
 import { Calculator, Bug, Achievement } from 'grommet-icons';
 
 const TooltipButton = ({ icon, name }) => {
@@ -45,13 +45,13 @@ const TooltipButton = ({ icon, name }) => {
 
 export const TrapFocus = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Nav align="center" pad="large">
         <TooltipButton icon={<Calculator />} name="Calculator" />
         <TooltipButton icon={<Bug />} name="Bug" />
         <TooltipButton icon={<Achievement />} name="Achievement" />
       </Nav>
-    </Grommet>
+    </Viewport>
   );
 };
 

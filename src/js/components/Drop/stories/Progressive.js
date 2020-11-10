@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 
-import { Box, Button, Drop, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Drop, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 const ProgressiveDrop = () => {
   const boxRef = useRef();
@@ -24,7 +24,7 @@ const ProgressiveDrop = () => {
   };
 
   return (
-    <Grommet theme={grommet} full>
+    <Viewport theme={focus} full>
       <Box fill align="center" justify="center">
         <Button ref={boxRef} primary label="Click me" onClick={onOpenDrop} />
         {openDrop && (
@@ -63,7 +63,7 @@ const ProgressiveDrop = () => {
           </Drop>
         )}
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

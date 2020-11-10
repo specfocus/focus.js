@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Grommet, Box, Image, Anchor } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Image, Anchor } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Fill = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="start" gap="small">
         <Box height="small" width="small" border>
           <Anchor href="#">
@@ -22,6 +22,6 @@ export const Fill = () => {
           </Anchor>
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

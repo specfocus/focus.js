@@ -2,14 +2,14 @@ import React from 'react';
 
 import { Notification } from 'grommet-icons';
 
-import { Box, Button, Collapsible, Heading, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Collapsible, Heading, Viewport, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Horizontal = () => {
   const [openNotification, setOpenNotification] = React.useState();
 
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill>
         <Box
           as="header"
@@ -46,7 +46,7 @@ export const Horizontal = () => {
           </Collapsible>
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

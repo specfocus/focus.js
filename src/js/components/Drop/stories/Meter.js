@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { Box, Drop, Grommet, Meter } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Drop, Viewport, Meter } from 'focus';
+import { focus } from 'focus/themes';
 
 const TestDrop = () => {
   const targetRef = useRef();
@@ -9,7 +9,7 @@ const TestDrop = () => {
   const [, setShowDrop] = useState(false);
   useEffect(() => setShowDrop(true), []);
   return (
-    <Grommet theme={grommet} full>
+    <Viewport theme={focus} full>
       <Box fill align="center" justify="center" pad="large">
         <Meter
           ref={targetRef}
@@ -28,7 +28,7 @@ const TestDrop = () => {
           </Drop>
         )}
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

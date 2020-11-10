@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Grommet as GrommetIcon } from 'grommet-icons';
-import { Anchor, Box, Footer, grommet, Grommet, Main, Text } from 'grommet';
+import { Focus as GrommetIcon } from 'grommet-icons';
+import { Anchor, Box, Footer, grommet, Viewport, Main, Text } from 'focus';
 import { fiveColumns as data } from './data';
 
 const StyledAnchor = styled(Anchor)`
@@ -30,7 +30,7 @@ const FooterContent = () => {
 
 export const DoubleFooter = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Main background="light-4" elevation="large" pad="large" border>
         <Text margin="small" size="xsmall">
           Main Content
@@ -52,7 +52,7 @@ export const DoubleFooter = () => {
           © 2019 Copyright
         </Text>
       </Footer>
-    </Grommet>
+    </Viewport>
   );
 };
 

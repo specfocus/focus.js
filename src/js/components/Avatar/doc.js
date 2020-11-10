@@ -7,7 +7,7 @@ export const doc = Avatar => {
     .availableAt(getAvailableAtBadge('Avatar'))
     .description('An Avatar.')
     .usage(
-      `import { Avatar } from 'grommet';
+      `import { Avatar } from 'focus';
 <Avatar/>`,
     )
     .intrinsicElement('div');

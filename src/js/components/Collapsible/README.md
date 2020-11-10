@@ -4,7 +4,7 @@ Expand or collapse animation.
 ## Usage
 
 ```javascript
-import { Collapsible } from 'grommet';
+import { Collapsible } from 'focus';
 <Collapsible open>test</Collapsible>
 ```
 

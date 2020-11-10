@@ -5,10 +5,10 @@ import { cleanup, render } from '@testing-library/react';
 
 import { hpe as hpeTheme } from 'grommet-theme-hpe';
 
-import { Grommet } from '..';
+import { Viewport } from '..';
 import { Heading } from '../../Heading';
 import { AnnounceContext, ResponsiveContext } from '../../../contexts';
-import { grommet } from '../../../themes/grommet';
+import { focus } from '../../../themes/grommet';
 
 const TestAnnouncer = ({ announce }) => {
   React.useEffect(() => announce('hello', 'assertive'));
@@ -38,67 +38,67 @@ const customBreakpointsTheme = {
 
 const SSRTester = ({ ua }) => {
   return (
-    <Grommet theme={customBreakpointsTheme} userAgent={ua}>
+    <Viewport theme={customBreakpointsTheme} userAgent={ua}>
       <ResponsiveContext.Consumer>
         {size => <Heading>{`Received size ${size} for ${ua}`}</Heading>}
       </ResponsiveContext.Consumer>
-    </Grommet>
+    </Viewport>
   );
 };
 
-describe('Grommet', () => {
+describe('Focus', () => {
   afterEach(cleanup);
 
   test('basic', () => {
-    const component = renderer.create(<Grommet />);
+    const component = renderer.create(<Viewport />);
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test('grommet theme', () => {
-    const component = renderer.create(<Grommet theme={grommet} />);
+    const component = renderer.create(<Viewport theme={focus} />);
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test('hpe theme', () => {
     const component = renderer.create(
-      <Grommet theme={hpeTheme}>Grommet App</Grommet>,
+      <Viewport theme={hpeTheme}>Focus App</Viewport>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test('themeMode', () => {
     const component = renderer.create(
-      <Grommet theme={grommet} themeMode="dark" />,
+      <Viewport theme={focus} themeMode="dark" />,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test('cssVars', () => {
-    const component = renderer.create(<Grommet cssVars>Grommet App</Grommet>);
+    const component = renderer.create(<Viewport cssVars>Focus App</Viewport>);
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test('full', () => {
-    const component = renderer.create(<Grommet full>Grommet App</Grommet>);
+    const component = renderer.create(<Viewport full>Focus App</Viewport>);
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test('background', () => {
     const component = renderer.create(
-      <Grommet full background="#0000ff">
-        Grommet App
-      </Grommet>,
+      <Viewport full background="#0000ff">
+        Focus App
+      </Viewport>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test('announce', done => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <AnnounceContext.Consumer>
           {announce => <TestAnnouncer announce={announce} />}
         </AnnounceContext.Consumer>
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
 

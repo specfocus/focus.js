@@ -6,19 +6,19 @@ import {
   CheckBox,
   Form,
   FormField,
-  Grommet,
+  Viewport,
   MaskedInput,
   RadioButtonGroup,
   RangeInput,
   Select,
   TextArea,
   TextInput,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'focus';
+import { focus } from 'focus/themes';
 
 export const Uncontrolled = () => {
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill align="center" justify="center">
         <Box width="medium">
           <Form
@@ -65,6 +65,6 @@ export const Uncontrolled = () => {
           </Form>
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

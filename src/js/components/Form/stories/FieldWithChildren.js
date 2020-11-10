@@ -6,15 +6,15 @@ import {
   CheckBoxGroup,
   Form,
   FormField,
-  Grommet,
+  Viewport,
   MaskedInput,
   RadioButtonGroup,
   RangeInput,
   Select,
   TextArea,
   TextInput,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'focus';
+import { focus } from 'focus/themes';
 
 const passwordRulesStrong = [
   {
@@ -40,7 +40,7 @@ const passwordRulesStrong = [
 ];
 
 export const FieldWithChildren = () => (
-  <Grommet full theme={grommet}>
+  <Viewport full theme={focus}>
     <Box fill align="center" justify="center">
       <Box width="medium">
         <Form
@@ -103,7 +103,7 @@ export const FieldWithChildren = () => (
         </Form>
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 FieldWithChildren.story = {

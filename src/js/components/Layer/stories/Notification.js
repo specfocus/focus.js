@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Add, FormClose, StatusGood } from 'grommet-icons';
 
-import { Box, Button, Grommet, Layer, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Viewport, Layer, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const NotificationLayer = () => {
   const [open, setOpen] = React.useState();
@@ -13,7 +13,7 @@ export const NotificationLayer = () => {
   const onClose = () => setOpen(undefined);
 
   return (
-    <Grommet theme={grommet} full>
+    <Viewport theme={focus} full>
       <Box fill align="center" justify="center">
         <Button
           icon={<Add color="brand" />}
@@ -53,7 +53,7 @@ export const NotificationLayer = () => {
           </Box>
         </Layer>
       )}
-    </Grommet>
+    </Viewport>
   );
 };
 

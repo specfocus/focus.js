@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { ThemeType } from 'grommet/themes';
-import { grommet, Box, Button, Grommet } from 'grommet';
+import { ThemeType } from 'focus/themes';
+import { focus, Box, Button, Viewport } from 'focus';
 
 // Type annotations can only be used in TypeScript files.
 // Remove ': ThemeType' if you are not using Typescript.
@@ -51,21 +51,21 @@ const customTheme: ThemeType = {
 
 export const TSCustom = () => (
   <>
-    <Grommet theme={customTheme}>
+    <Viewport theme={customTheme}>
       <Box align="center" pad="large">
         <Button label="custom theme" onClick={() => {}} primary />
       </Box>
-    </Grommet>
-    <Grommet theme={customTheme}>
+    </Viewport>
+    <Viewport theme={customTheme}>
       <Box align="center" pad="large">
         <Button label="custom theme disabled" disabled primary />
       </Box>
-    </Grommet>
-    <Grommet theme={grommet}>
+    </Viewport>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <Button as="span" label="Custom as=span" />
       </Box>
-    </Grommet>
+    </Viewport>
   </>
 );
 TSCustom.story = { name: 'TS-Custom' };

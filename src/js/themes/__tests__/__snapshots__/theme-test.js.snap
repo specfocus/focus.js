@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Grommet ThemeContext theme 1`] = `
+exports[`Focus ThemeContext theme 1`] = `
 .c1 {
   box-sizing: border-box;
   font-size: inherit;
@@ -43,7 +43,7 @@ exports[`Grommet ThemeContext theme 1`] = `
 </div>
 `;
 
-exports[`Grommet custom theme 1`] = `
+exports[`Focus custom theme 1`] = `
 .c4 {
   display: inline-block;
   -webkit-flex: 0 0 auto;
@@ -478,7 +478,7 @@ exports[`Grommet custom theme 1`] = `
 </div>
 `;
 
-exports[`Grommet dark theme 1`] = `
+exports[`Focus dark theme 1`] = `
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1032,7 +1032,7 @@ exports[`Grommet dark theme 1`] = `
 </div>
 `;
 
-exports[`Grommet default theme 1`] = `
+exports[`Focus default theme 1`] = `
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1583,7 +1583,7 @@ exports[`Grommet default theme 1`] = `
 </div>
 `;
 
-exports[`Grommet grommet theme 1`] = `
+exports[`Focus grommet theme 1`] = `
 .c1 {
   display: inline-block;
   box-sizing: border-box;
@@ -1711,7 +1711,7 @@ exports[`Grommet grommet theme 1`] = `
 </div>
 `;
 
-exports[`Grommet hpe theme 1`] = `
+exports[`Focus hpe theme 1`] = `
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;

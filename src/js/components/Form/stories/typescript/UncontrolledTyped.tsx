@@ -6,13 +6,13 @@ import {
   CheckBox,
   Form,
   FormField,
-  Grommet,
+  Viewport,
   RadioButtonGroup,
   RangeInput,
   Select,
   TextArea,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'focus';
+import { focus } from 'focus/themes';
 import { FormExtendedEvent } from '../../Form';
 
 // interface declarations can only be used in TypeScript files
@@ -28,7 +28,7 @@ interface FormState {
 }
 
 export const UncontrolledTyped = () => (
-  <Grommet full theme={grommet}>
+  <Viewport full theme={focus}>
     <Box fill align="center" justify="center">
       <Box width="medium">
         <Form
@@ -90,7 +90,7 @@ export const UncontrolledTyped = () => (
         </Form>
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 UncontrolledTyped.story = {

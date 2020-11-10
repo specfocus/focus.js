@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Grommet, Box, Button, RadioButton } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Viewport, Box, Button, RadioButton } from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 const theme = deepMerge(grommet, {
   radioButton: {
@@ -34,7 +34,7 @@ export const ThemeRadioButton = () => {
   const [selected, setSelected] = React.useState();
 
   return (
-    <Grommet theme={theme}>
+    <Viewport theme={theme}>
       <Box align="center" pad="large" gap="large">
         <RadioButton
           label="option 1"
@@ -46,7 +46,7 @@ export const ThemeRadioButton = () => {
 
         <Button label="clear" onClick={() => setSelected(undefined)} />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

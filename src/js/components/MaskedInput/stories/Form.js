@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Button, Form, FormField, Grommet, MaskedInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Form, FormField, Viewport, MaskedInput } from 'focus';
+import { focus } from 'focus/themes';
 
 export const MaskedInputForm = () => {
   const [value, setValue] = React.useState({ value: '' });
@@ -10,7 +10,7 @@ export const MaskedInputForm = () => {
     setValue(nextValue);
   };
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <Form
           value={value}
@@ -29,7 +29,7 @@ export const MaskedInputForm = () => {
           <Button type="submit" label="submit" />
         </Form>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

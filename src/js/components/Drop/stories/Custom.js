@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { Box, Drop, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Box, Drop, Viewport } from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 const customTheme = deepMerge(grommet, {
   global: {
@@ -20,7 +20,7 @@ const CustomDrop = () => {
 
   useEffect(() => setShowDrop(true), []);
   return (
-    <Grommet theme={customTheme} full>
+    <Viewport theme={customTheme} full>
       <Box fill align="center" justify="center">
         <Box
           background="dark-3"
@@ -40,7 +40,7 @@ const CustomDrop = () => {
           </Drop>
         )}
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

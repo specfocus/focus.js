@@ -4,7 +4,7 @@ export const doc = Tab => {
   const DocumentedTab = describe(Tab)
     .description('One tab within Tabs.')
     .usage(
-      `import { Tab } from 'grommet';
+      `import { Tab } from 'focus';
 <Tab />`,
     )
     .intrinsicElement('button');

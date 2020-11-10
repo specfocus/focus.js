@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { CircleInformation, Currency } from 'grommet-icons';
-import { Box, Grommet, FormField, Tab, Tabs, Text, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, FormField, Tab, Tabs, Text, TextInput } from 'focus';
+import { focus } from 'focus/themes';
 
 const RichTabs = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Tabs>
       <Tab
         title={
@@ -30,7 +30,7 @@ const RichTabs = () => (
         </FormField>
       </Tab>
     </Tabs>
-  </Grommet>
+  </Viewport>
 );
 
 const RichTabTitle = ({ icon, label }) => (

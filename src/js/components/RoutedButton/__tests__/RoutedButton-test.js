@@ -5,7 +5,7 @@ import 'jest-styled-components';
 
 import { findAllByType } from '../../../utils';
 
-import { Grommet, RoutedButton } from '../..';
+import { Viewport, RoutedButton } from '../..';
 
 class FakeRouter extends Component {
   static propTypes = {
@@ -46,11 +46,11 @@ describe('RoutedButton', () => {
     console.warn = jest.fn();
     const warnSpy = jest.spyOn(console, 'warn');
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FakeRouter replace={replace} push={push}>
           <RoutedButton label="Test" path="/" />
         </FakeRouter>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -68,11 +68,11 @@ describe('RoutedButton', () => {
     const preventDefault = jest.fn();
     const onClick = jest.fn();
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FakeRouter replace={replace} push={push}>
           <RoutedButton label="Test" onClick={onClick} path="/" />
         </FakeRouter>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     const anchor = findAllByType(tree, 'a');
@@ -93,11 +93,11 @@ describe('RoutedButton', () => {
     const warnSpy = jest.spyOn(console, 'warn');
     const onClick = jest.fn();
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FakeRouter replace={replace} push={push}>
           <RoutedButton label="Test" onClick={onClick} path="/" />
         </FakeRouter>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
 
@@ -122,11 +122,11 @@ describe('RoutedButton', () => {
     const warnSpy = jest.spyOn(console, 'warn');
     const preventDefault = jest.fn();
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FakeRouter replace={replace} push={push}>
           <RoutedButton label="Test" path="/" />
         </FakeRouter>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
 
@@ -149,11 +149,11 @@ describe('RoutedButton', () => {
     const warnSpy = jest.spyOn(console, 'warn');
     const preventDefault = jest.fn();
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FakeRouter replace={replace} push={push}>
           <RoutedButton label="Test" path="/" method="replace" />
         </FakeRouter>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, List } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, List } from 'focus';
+import { focus } from 'focus/themes';
 
 const locations = [
   'Boise',
@@ -12,9 +12,9 @@ const locations = [
 ];
 
 export const Basic = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       <List data={locations} />
     </Box>
-  </Grommet>
+  </Viewport>
 );

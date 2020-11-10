@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Grid, Grommet } from 'grommet';
-import { grommet } from '../../../themes';
+import { Box, Grid, Viewport } from 'focus';
+import { focus } from '../../../themes';
 
 export const BorderGrid = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box pad="small" gap="small" align="start">
       <Grid pad="small" border>
         true
@@ -67,7 +67,7 @@ export const BorderGrid = () => (
         ))}
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 BorderGrid.story = { name: 'Border' };

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Gremlin, IceCream } from 'grommet-icons';
-import { Stack, grommet, Grommet, Box, Diagram } from 'grommet';
+import { Stack, grommet, Viewport, Box, Diagram } from 'focus';
 
 import { DiagramConnectionAnchor, DiagramConnectionType } from '../../index';
 
@@ -25,7 +25,7 @@ const connections = [connection];
 
 export const Connections = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Stack>
         <Box fill pad="xlarge">
           <Box align="start">
@@ -37,6 +37,6 @@ export const Connections = () => {
         </Box>
         <Diagram connections={connections} />
       </Stack>
-    </Grommet>
+    </Viewport>
   );
 };

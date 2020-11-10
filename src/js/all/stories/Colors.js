@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { Anchor, Box, Grommet, Paragraph, Text } from 'grommet';
+import { Anchor, Box, Viewport, Paragraph, Text } from 'focus';
 
 const customTheme = {
   global: {
@@ -25,7 +25,7 @@ const customTheme = {
       red: '#FC6161',
       orange: '#FFBC44',
       yellow: '#FFEB59',
-      // you can also point to existing grommet colors
+      // you can also point to existing focus colors
       brightGreen: 'accent-1',
       deepGreen: 'neutral-2',
       // Changing default text color,
@@ -39,21 +39,21 @@ const customTheme = {
 };
 
 const Example = () => (
-  <Grommet theme={customTheme}>
+  <Viewport theme={customTheme}>
     <Box background="yellow" gap="medium" pad="small">
       <Text>Custom color purple</Text>
       <Text color="deepGreen">Inline custom color of deepGreen</Text>
       <Paragraph color="red">
-        Wrapping your application with the Grommet component that is pointing to
+        Wrapping your application with the Viewport component that is pointing to
         your customTheme object as shown on the example, will allow you full
         access to your custom colors across your application. You can override
-        any Grommet color that is mentioned in the docs in a similar fashion.
+        any Viewport color that is mentioned in the docs in a similar fashion.
       </Paragraph>
-      <Anchor href="https://github.com/grommet/grommet/wiki/Color-Properties">
-        Click here to read more about Grommet Colors
+      <Anchor href="https://github.com/specfocus/focus.js/wiki/Color-Properties">
+        Click here to read more about Viewport Colors
       </Anchor>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 storiesOf('Theme', module).add('Colors', () => <Example />);

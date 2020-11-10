@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import 'jest-styled-components';
 
-import { Grommet, Image, Box } from '../..';
+import { Viewport, Image, Box } from '../..';
 import { InfiniteScroll } from '..';
 
 const simpleItems = value =>
@@ -22,7 +22,7 @@ describe('InfiniteScroll', () => {
 
   test('basic', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll />
         <InfiniteScroll items={items}>
           {(item, index, ref) => (
@@ -34,36 +34,36 @@ describe('InfiniteScroll', () => {
         <InfiniteScroll items={items}>
           {(item, index) => <div key={index}>{item}</div>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('step', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll items={items} step={2}>
           {(item, index) => <div key={index}>{item}</div>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('show', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll items={items} step={2} show={3}>
           {(item, index) => <div key={index}>{item}</div>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('renderMarker', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll
           items={items}
           step={2}
@@ -71,18 +71,18 @@ describe('InfiniteScroll', () => {
         >
           {(item, index) => <div key={index}>{item}</div>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('replace', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll items={items} step={2} replace>
           {(item, index) => <div key={index}>{item}</div>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -141,11 +141,11 @@ describe('InfiniteScroll', () => {
       }
     }
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll items={mixedItems}>
           {(item, index) => <div key={index}>{item}</div>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -156,7 +156,7 @@ describe('Number of Items Rendered', () => {
   step when step < items.length`, () => {
     const step = 50;
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll
           items={simpleItems(1000)}
           // show={117}
@@ -164,7 +164,7 @@ describe('Number of Items Rendered', () => {
         >
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
 
     const pageItems = createPageItems(container.firstChild.children);
@@ -176,11 +176,11 @@ describe('Number of Items Rendered', () => {
   step when step = array.length`, () => {
     const step = 200;
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll items={simpleItems(200)} step={step}>
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
 
     const pageItems = createPageItems(container.firstChild.children);
@@ -192,11 +192,11 @@ describe('Number of Items Rendered', () => {
   item array when step > array`, () => {
     const numItems = 1000;
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll items={simpleItems(numItems)} step={1050}>
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
 
     const pageItems = createPageItems(container.firstChild.children);
@@ -208,11 +208,11 @@ describe('Number of Items Rendered', () => {
     const step = 25;
     const numItems = 200;
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll items={simpleItems(numItems)} step={step}>
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
 
     const pageItems = createPageItems(container.firstChild.children);
@@ -230,11 +230,11 @@ describe('Number of Items Rendered', () => {
 describe('show scenarios', () => {
   test(`When show, show item should be visible in window`, () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll items={simpleItems(300)} show={105}>
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
     // item(104) = 'item 105' because indexing starts at 0.
     // Need to modify this next selection to only be concerned with the
@@ -249,7 +249,7 @@ describe('show scenarios', () => {
     const numItems = 200;
     const showIndex = 67;
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll
           items={simpleItems(numItems)}
           show={showIndex}
@@ -257,7 +257,7 @@ describe('show scenarios', () => {
         >
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
 
     const pageItems = createPageItems(container.firstChild.children);
@@ -276,7 +276,7 @@ describe('show scenarios', () => {
     const numItems = 200;
     const showIndex = 41;
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll
           items={simpleItems(numItems)}
           show={showIndex}
@@ -284,7 +284,7 @@ describe('show scenarios', () => {
         >
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
 
     // Check to see that expected item exists
@@ -304,7 +304,7 @@ describe('show scenarios', () => {
     const numItems = 200;
     const showIndex = 26;
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll
           items={simpleItems(numItems)}
           show={showIndex}
@@ -312,7 +312,7 @@ describe('show scenarios', () => {
         >
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
 
     // Check to see that expected item exists
@@ -334,7 +334,7 @@ describe('show scenarios', () => {
     const numItems = 200;
     const showIndex = 88;
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll
           items={simpleItems(numItems)}
           replace
@@ -343,7 +343,7 @@ describe('show scenarios', () => {
         >
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
 
     // Check to see that expected item exists
@@ -372,7 +372,7 @@ describe('show scenarios', () => {
     const numItems = 200;
     const showIndex = 26;
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <InfiniteScroll
           items={simpleItems(numItems)}
           replace
@@ -381,7 +381,7 @@ describe('show scenarios', () => {
         >
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </Viewport>,
     );
 
     // Check to see that expected item exists

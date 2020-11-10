@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Grommet, Box, Button, RadioButton } from 'grommet';
+import { Viewport, Box, Button, RadioButton } from 'focus';
 import { Ascend } from 'grommet-icons';
-import { grommet } from 'grommet/themes';
+import { focus } from 'focus/themes';
 
 export const Children = () => {
   const [selected, setSelected] = React.useState();
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large" gap="large">
         <RadioButton
           name="name"
@@ -23,6 +23,6 @@ export const Children = () => {
 
         <Button label="clear" onClick={() => setSelected(undefined)} />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

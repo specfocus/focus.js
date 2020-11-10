@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, DateInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, DateInput } from 'focus';
+import { focus } from 'focus/themes';
 
 export const FormatInline = () => {
   const [value, setValue] = React.useState('');
@@ -11,7 +11,7 @@ export const FormatInline = () => {
     setValue(nextValue);
   };
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <DateInput
           format="mm/dd/yyyy"
@@ -20,7 +20,7 @@ export const FormatInline = () => {
           onChange={onChange}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

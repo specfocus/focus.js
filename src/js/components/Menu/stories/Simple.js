@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Menu } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Menu } from 'focus';
+import { focus } from 'focus/themes';
 
 const SimpleMenu = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       <Menu
         dropProps={{
@@ -19,7 +19,7 @@ const SimpleMenu = () => (
         ]}
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 export const Simple = () => <SimpleMenu />;

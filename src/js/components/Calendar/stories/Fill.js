@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { Box, Calendar, Grommet } from 'grommet';
+import { Box, Calendar, Viewport } from 'focus';
 
-import { grommet } from 'grommet/themes';
+import { focus } from 'focus/themes';
 
 export const Fill = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center">
         <Box height="large" width="large" border>
           <Calendar fill daysOfWeek />
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

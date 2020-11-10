@@ -9,7 +9,7 @@ export const doc = Video => {
     .availableAt(getAvailableAtBadge('Video'))
     .description('A video player.')
     .usage(
-      `import { Video } from 'grommet';
+      `import { Video } from 'focus';
 <Video />`,
     )
     .intrinsicElement('video');

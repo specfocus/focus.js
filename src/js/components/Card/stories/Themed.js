@@ -8,7 +8,7 @@ import {
   User,
   Wifi,
 } from 'grommet-icons';
-import { Box, Card, CardBody, CardFooter, Grid, Grommet, Text } from 'grommet';
+import { Box, Card, CardBody, CardFooter, Grid, Viewport, Text } from 'focus';
 
 const data = [
   {
@@ -93,7 +93,7 @@ const Identifier = ({ children, title, subTitle, size, ...rest }) => (
 );
 
 export const Themed = () => (
-  <Grommet theme={theme} full>
+  <Viewport theme={theme} full>
     <Box pad="large">
       {/* Responsive Grid */}
       <Grid gap="medium" rows="small" columns={{ count: 'fit', size: 'small' }}>
@@ -117,5 +117,5 @@ export const Themed = () => (
         ))}
       </Grid>
     </Box>
-  </Grommet>
+  </Viewport>
 );

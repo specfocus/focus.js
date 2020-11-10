@@ -15,9 +15,9 @@
     "strict": false,
     "baseUrl": "./",
     "paths": {
-      "grommet": ["src/js"],
-      "grommet/themes": ["src/js/themes"],
-      "grommet/utils": ["src/js/utils"]
+      "focus": ["src/js"],
+      "focus/themes": ["src/js/themes"],
+      "focus/utils": ["src/js/utils"]
     },
     "lib": ["dom", "es2017"],
     "types": [],

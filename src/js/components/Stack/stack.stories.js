@@ -1,26 +1,26 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { Grommet, Box, Stack } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Stack } from 'focus';
+import { focus } from 'focus/themes';
 
 const SimpleStack = () => (
-  <Grommet>
+  <Viewport>
     <Stack anchor="center">
       <Box pad="large" background="neutral-1" />
       <Box pad="small" background="accent-1" />
     </Stack>
-  </Grommet>
+  </Viewport>
 );
 
 const FillStack = () => (
-  <Grommet theme={grommet} full>
+  <Viewport theme={focus} full>
     <Stack fill>
       <Box background="brand" fill>
         Test
       </Box>
     </Stack>
-  </Grommet>
+  </Viewport>
 );
 
 storiesOf('Stack', module)

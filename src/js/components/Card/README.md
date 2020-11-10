@@ -7,7 +7,7 @@ A Card is a container of information that provides access to more
 ## Usage
 
 ```javascript
-import { Card } from 'grommet';
+import { Card } from 'focus';
 <Card/>
 ```
 

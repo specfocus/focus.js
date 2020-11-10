@@ -5,7 +5,7 @@ A group of CheckBoxes.
 ## Usage
 
 ```javascript
-import { CheckBoxGroup } from 'grommet';
+import { CheckBoxGroup } from 'focus';
         <CheckBoxGroup />
 ```
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grommet, Grid, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Grid, Heading } from 'focus';
+import { focus } from 'focus/themes';
 
 const headingFiller = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -32,7 +32,7 @@ Set.propTypes = {
 };
 
 export const All = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Grid columns="large" gap="medium">
       <Set size="medium" />
       <Set size="small" />
@@ -40,5 +40,5 @@ export const All = () => (
       <Set size="xlarge" />
     </Grid>
     <Heading fill>{headingFiller}</Heading>
-  </Grommet>
+  </Viewport>
 );

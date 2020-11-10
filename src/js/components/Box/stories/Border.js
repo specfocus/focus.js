@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Text } from 'grommet';
-import { grommet } from '../../../themes';
+import { Viewport, Box, Text } from 'focus';
+import { focus } from '../../../themes';
 
 export const BorderBox = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box pad="small" gap="small" align="start">
       <Box pad="small" border>
         true
@@ -79,7 +79,7 @@ export const BorderBox = () => (
         ))}
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 BorderBox.story = { name: 'Border' };

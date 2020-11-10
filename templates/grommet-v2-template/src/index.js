@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-import { grommet, Box, Heading, Grommet, Paragraph } from 'grommet';
+import { focus, Box, Heading, Viewport, Paragraph } from 'focus';
 
 class App extends Component {
   render() {
     return (
-      <Grommet theme={grommet}>
+      <Viewport theme={focus}>
         <Box pad="small">
           <Heading level={3}>
             <strong>Hello World</strong>
           </Heading>
-          <Paragraph>Hello from a Grommet page!</Paragraph>
+          <Paragraph>Hello from a Focus page!</Paragraph>
         </Box>
-      </Grommet>
+      </Viewport>
     );
   }
 }

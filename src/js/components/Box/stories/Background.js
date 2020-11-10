@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Text } from 'grommet';
-import { grommet } from '../../../themes';
+import { Viewport, Box, Text } from 'focus';
+import { focus } from '../../../themes';
 
 export const BackgroundBox = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box pad="small" gap="small" align="start">
       <Box
         pad="small"
@@ -78,7 +78,7 @@ export const BackgroundBox = () => (
         </Box>
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 BackgroundBox.story = { name: 'Background' };

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-import { Box, Button, CheckBoxGroup, Form, FormField, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, CheckBoxGroup, Form, FormField, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 export const FormControlled = () => {
   const [value, setValue] = useState();
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box pad="medium" width="medium">
         <Form
           onSubmit={({ value: values, touched }) =>
@@ -28,7 +28,7 @@ export const FormControlled = () => {
           <Button type="submit" label="Submit" />
         </Form>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

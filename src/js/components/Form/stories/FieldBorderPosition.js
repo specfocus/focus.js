@@ -6,7 +6,7 @@ import {
   Form,
   FormField,
   Grid,
-  Grommet,
+  Viewport,
   RadioButtonGroup,
   RangeInput,
   Select,
@@ -14,9 +14,9 @@ import {
   TextArea,
   TextInput,
   ThemeContext,
-} from 'grommet';
-import { deepMerge } from 'grommet/utils';
-import { grommet } from 'grommet/themes';
+} from 'focus';
+import { deepMerge } from 'focus/utils';
+import { focus } from 'focus/themes';
 
 const allOptions = Array(3)
   .fill()
@@ -126,7 +126,7 @@ const FormExample = ({ index, borderPosition, theme }) => {
 };
 
 export const FieldBorderPosition = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box pad="large">
       <Grid columns={{ count: 'fit', size: ['auto', 'medium'] }} gap="medium">
         {borderPositions &&
@@ -141,7 +141,7 @@ export const FieldBorderPosition = () => (
           })}
       </Grid>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 FieldBorderPosition.story = {

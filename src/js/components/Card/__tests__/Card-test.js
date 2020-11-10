@@ -8,7 +8,7 @@ import { Card } from '../Card';
 import { CardBody } from '../../CardBody';
 import { CardFooter } from '../../CardFooter';
 import { CardHeader } from '../../CardHeader';
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { Text } from '../../Text';
 
 const customTheme = {
@@ -44,9 +44,9 @@ describe('Card', () => {
 
   test('renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Card />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -54,11 +54,11 @@ describe('Card', () => {
 
   test('header', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Card>
           <CardHeader>header</CardHeader>
         </Card>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -66,11 +66,11 @@ describe('Card', () => {
 
   test('footer', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Card>
           <CardFooter>footer</CardFooter>
         </Card>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -78,13 +78,13 @@ describe('Card', () => {
 
   test('children', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Card>
           <Box>
             <Text>test</Text>
           </Box>
         </Card>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -92,13 +92,13 @@ describe('Card', () => {
 
   test('all', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Card>
           <CardHeader>header</CardHeader>
           <CardBody>body</CardBody>
           <CardFooter>footer</CardFooter>
         </Card>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -106,13 +106,13 @@ describe('Card', () => {
 
   test('Themed', () => {
     const component = renderer.create(
-      <Grommet theme={customTheme}>
+      <Viewport theme={customTheme}>
         <Card width="small">
           <CardHeader>header</CardHeader>
           <CardBody>body</CardBody>
           <CardFooter>footer</CardFooter>
         </Card>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

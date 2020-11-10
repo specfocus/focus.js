@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Box, Grommet, Text, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Text, Heading } from 'focus';
+import { focus } from 'focus/themes';
 
 const wordBreakValues = ['normal', 'break-all', 'keep-all', 'break-word'];
 
 /* eslint-disable max-len */
 export const WordBreak = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     {wordBreakValues.map(value => (
       <Box key={value} margin="small" width="medium">
         <Heading level={4}>{`word-break: ${value};`}</Heading>
@@ -18,7 +18,7 @@ export const WordBreak = () => (
         </Text>
       </Box>
     ))}
-  </Grommet>
+  </Viewport>
 );
 /* eslint-enable max-len */
 WordBreak.story = {

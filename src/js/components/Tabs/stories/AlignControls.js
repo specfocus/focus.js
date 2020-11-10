@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Attraction, Car, TreeOption } from 'grommet-icons';
-import { Box, Grommet, grommet, Tab, Tabs } from 'grommet';
-import { deepMerge } from 'grommet/utils';
+import { Box, Viewport, grommet, Tab, Tabs } from 'focus';
+import { deepMerge } from 'focus/utils';
 
 const myTheme = deepMerge(grommet, {
   tabs: {
@@ -29,7 +29,7 @@ const myTheme = deepMerge(grommet, {
 });
 
 const AlignControlsTabs = () => (
-  <Grommet theme={myTheme} full>
+  <Viewport theme={myTheme} full>
     <Tabs justify="start" alignControls="start">
       <Tab title="Tab 1">
         <Box fill pad="large" align="center">
@@ -47,7 +47,7 @@ const AlignControlsTabs = () => (
         </Box>
       </Tab>
     </Tabs>
-  </Grommet>
+  </Viewport>
 );
 
 export const AlignControls = () => <AlignControlsTabs />;

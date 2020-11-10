@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Anchor, Box, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Anchor, Box, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 const SizeAnchor = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         {['xxlarge', 'xlarge', 'large', 'medium', 'small', 'xsmall'].map(
           size => (
@@ -15,7 +15,7 @@ const SizeAnchor = () => {
           ),
         )}
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

@@ -49,7 +49,7 @@ The availability of Grid can be tested via \`Grid.available\`. Use this
 to create fallback rendering for older browsers, like ie11.`,
     )
     .usage(
-      `import { Grid } from 'grommet';
+      `import { Grid } from 'focus';
 <Grid />`,
     )
     .intrinsicElement('div');

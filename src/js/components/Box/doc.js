@@ -53,7 +53,7 @@ export const doc = Box => {
       provides CSS flexbox capabilities for layout, as well as general
       styling of things like background color, border, and animation.`,
     )
-    .usage("import { Box } from 'grommet';\n<Box />")
+    .usage("import { Box } from 'focus';\n<Box />")
     .intrinsicElement('div');
   DocumentedBox.propTypes = {
     ...genericProps,

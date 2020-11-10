@@ -2,13 +2,13 @@ import React from 'react';
 
 import { Add } from 'grommet-icons';
 
-import { Box, Button, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Viewport, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 const PlainButtons = props => (
   <Box pad="large" gap="large">
     {/* Out of the Box Button */}
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center">
         <Button hoverIndicator="light-1" onClick={() => {}} {...props}>
           {/*  When Button include children, it is treated as plain */}
@@ -18,9 +18,9 @@ const PlainButtons = props => (
           </Box>
         </Button>
       </Box>
-    </Grommet>
+    </Viewport>
     {/* Kind Button */}
-    <Grommet
+    <Viewport
       theme={{
         global: {
           font: {
@@ -39,7 +39,7 @@ const PlainButtons = props => (
           </Box>
         </Button>
       </Box>
-    </Grommet>
+    </Viewport>
   </Box>
 );
 

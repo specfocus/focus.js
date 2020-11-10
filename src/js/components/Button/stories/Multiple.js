@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Grommet, Box, Button } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Button } from 'focus';
+import { focus } from 'focus/themes';
 
 import { Add } from 'grommet-icons';
 
 export const Multiple = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       <Box direction="row" align="center" gap="small" pad="xsmall">
         <Button label="Cancel" onClick={() => {}} />
@@ -43,5 +43,5 @@ export const Multiple = () => (
         />
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );

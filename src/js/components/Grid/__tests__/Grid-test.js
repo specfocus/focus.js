@@ -3,15 +3,15 @@ import renderer from 'react-test-renderer';
 import { render } from '@testing-library/react';
 import 'jest-styled-components';
 
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { Grid } from '..';
 
 describe('Grid', () => {
   test('renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -19,9 +19,9 @@ describe('Grid', () => {
 
   test('a11yTitle renders', () => {
     const { container, getByLabelText } = render(
-      <Grommet>
+      <Viewport>
         <Grid a11yTitle="My Grid" />
-      </Grommet>,
+      </Viewport>,
     );
     const gridWithLabel = getByLabelText('My Grid');
     expect(gridWithLabel).toBeTruthy();
@@ -30,11 +30,11 @@ describe('Grid', () => {
 
   test('rows renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid rows={[['small', 'medium'], 'large', 'medium']} />
         <Grid rows={['small', 'large', 'medium']} />
         <Grid rows="small" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -44,9 +44,9 @@ describe('Grid', () => {
     console.warn = jest.fn();
     const warnSpy = jest.spyOn(console, 'warn');
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid rows={['flex']} fill={false} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -57,7 +57,7 @@ describe('Grid', () => {
 
   test('columns renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid columns={['1/2', '2/4']} />
         <Grid columns={['1/3', '2/3']} />
         <Grid columns={['1/4', '3/4']} />
@@ -66,7 +66,7 @@ describe('Grid', () => {
         <Grid columns="flex" />
         <Grid columns={{ count: 'fit', size: 'small' }} />
         <Grid columns={{ count: 'fill', size: ['small', 'medium'] }} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -74,7 +74,7 @@ describe('Grid', () => {
 
   test('areas renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid
           rows={['xxsmall', 'medium', 'xsmall']}
           columns={['3/4', '1/4']}
@@ -85,7 +85,7 @@ describe('Grid', () => {
             { name: 'footer', start: [2, 0], end: [2, 1] },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -97,7 +97,7 @@ describe('Grid', () => {
     const warnSpy = jest.spyOn(console, 'warn');
     expect(() => {
       renderer.create(
-        <Grommet>
+        <Viewport>
           <Grid
             rows={['xxsmall', 'medium', 'xsmall']}
             columns="small"
@@ -108,7 +108,7 @@ describe('Grid', () => {
               { name: 'footer', start: [2, 0], end: [2, 1] },
             ]}
           />
-        </Grommet>,
+        </Viewport>,
       );
     }).toThrow('props.columns.map is not a function');
     expect(warnSpy).toHaveBeenCalledWith(
@@ -118,7 +118,7 @@ describe('Grid', () => {
 
   test('areas renders when given an array of string arrays', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid
           rows={['xxsmall', 'medium', 'xsmall']}
           columns={['3/4', '1/4']}
@@ -128,7 +128,7 @@ describe('Grid', () => {
             ['footer', 'footer'],
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -136,12 +136,12 @@ describe('Grid', () => {
 
   test('justify renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid justify="start" />
         <Grid justify="center" />
         <Grid justify="end" />
         <Grid justify="stretch" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -149,12 +149,12 @@ describe('Grid', () => {
 
   test('align renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid align="start" />
         <Grid align="center" />
         <Grid align="end" />
         <Grid align="stretch" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -162,14 +162,14 @@ describe('Grid', () => {
 
   test('justifyContent renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid justifyContent="start" />
         <Grid justifyContent="center" />
         <Grid justifyContent="between" />
         <Grid justifyContent="around" />
         <Grid justifyContent="end" />
         <Grid justifyContent="stretch" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -177,14 +177,14 @@ describe('Grid', () => {
 
   test('alignContent renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid alignContent="start" />
         <Grid alignContent="center" />
         <Grid alignContent="between" />
         <Grid alignContent="around" />
         <Grid alignContent="end" />
         <Grid alignContent="stretch" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -192,7 +192,7 @@ describe('Grid', () => {
 
   test('gap renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid gap="small" />
         <Grid gap="medium" />
         <Grid gap="large" />
@@ -204,7 +204,7 @@ describe('Grid', () => {
         <Grid gap={{ column: 'large' }} />
         <Grid gap={{ row: 'small', column: 'medium' }} />
         <Grid gap={{ test: 'test' }} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -212,12 +212,12 @@ describe('Grid', () => {
 
   test('fill renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid fill />
         <Grid fill={false} />
         <Grid fill="horizontal" />
         <Grid fill="vertical" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -225,10 +225,10 @@ describe('Grid', () => {
 
   test('responsive', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid responsive />
         <Grid responsive={false} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -236,9 +236,9 @@ describe('Grid', () => {
 
   test('as renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid as="article" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -246,21 +246,21 @@ describe('Grid', () => {
 
   test('proxies tag', () => {
     const tagComponent = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid tag="article" />
-      </Grommet>,
+      </Viewport>,
     );
     const asComponent = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid as="article" />
-      </Grommet>,
+      </Viewport>,
     );
     expect(tagComponent.toJSON()).toEqual(asComponent.toJSON());
   });
 
   test('pad', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid pad="small" />
         <Grid pad="medium" />
         <Grid pad="large" />
@@ -272,7 +272,7 @@ describe('Grid', () => {
         <Grid pad={{ start: 'small' }} />
         <Grid pad={{ end: 'small' }} />
         <Grid pad={{ top: 'small' }} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -280,7 +280,7 @@ describe('Grid', () => {
 
   test('border', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Grid border="all" />
         <Grid border="horizontal" />
         <Grid border="vertical" />
@@ -304,7 +304,7 @@ describe('Grid', () => {
             { side: 'left', color: 'accent-2', size: 'large', style: 'dashed' },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

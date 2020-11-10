@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Avatar, Box, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Avatar, Box, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Round = () => {
   const src = '//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80';
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box direction="row" alignContent="center" gap="small" pad="large">
         <Avatar size="large" src={src} round={false} />
         <Avatar size="large" src={src} round="xsmall" />
@@ -16,6 +16,6 @@ export const Round = () => {
         <Avatar size="large" src={src} round="large" />
         <Avatar size="large" src={src} />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

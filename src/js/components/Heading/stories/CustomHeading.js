@@ -1,7 +1,7 @@
 import React from 'react';
-import { Grommet, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Viewport, Heading } from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 const customlevel = deepMerge(grommet, {
   heading: {
@@ -25,7 +25,7 @@ const customlevel = deepMerge(grommet, {
   },
 });
 export const Custom = () => (
-  <Grommet theme={customlevel}>
+  <Viewport theme={customlevel}>
     <Heading level={5} size="small">
       Heading level 5 small
     </Heading>
@@ -35,5 +35,5 @@ export const Custom = () => (
     <Heading level={5} size="large">
       Heading level 5 small
     </Heading>
-  </Grommet>
+  </Viewport>
 );

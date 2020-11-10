@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { grommet, Box, Button, Grommet, Nav, Text } from 'grommet';
+import { focus, Box, Button, Viewport, Nav, Text } from 'focus';
 
 const SidebarButton = ({ label, ...rest }) => (
   <Button plain {...rest}>
@@ -18,7 +18,7 @@ const SidebarButton = ({ label, ...rest }) => (
 const SidebarNav = () => {
   const [active, setActive] = useState();
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill direction="row">
         <Nav background="neutral-1">
           {['Dashboard', 'Devices', 'Settings'].map(label => (
@@ -31,7 +31,7 @@ const SidebarNav = () => {
           ))}
         </Nav>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

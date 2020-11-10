@@ -5,7 +5,7 @@ A sidebar, typically used with Nav children.
 ## Usage
 
 ```javascript
-import { Sidebar } from 'grommet';
+import { Sidebar } from 'focus';
 <Sidebar/>
 ```
 

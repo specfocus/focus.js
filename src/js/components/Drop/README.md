@@ -5,7 +5,7 @@ A container that is overlaid next to a target.
 ## Usage
 
 ```javascript
-import { Drop } from 'grommet';
+import { Drop } from 'focus';
 <Drop target={reference}>...</Drop>
 ```
 

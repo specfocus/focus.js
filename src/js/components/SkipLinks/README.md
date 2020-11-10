@@ -5,7 +5,7 @@ Describe a list of elements to skip to.
 ## Usage
 
 ```javascript
-import { SkipLinks } from 'grommet';
+import { SkipLinks } from 'focus';
 <SkipLinks elements={['main', 'footer']} />
 ```
 

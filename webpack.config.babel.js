@@ -16,9 +16,9 @@ export default {
   entry: './src/js/index.js',
   output: {
     path: path.resolve('./dist'),
-    filename: 'grommet.min.js',
+    filename: 'focus.min.js',
     libraryTarget: 'var',
-    library: 'Grommet',
+    library: 'focus',
   },
   externals: {
     react: 'React',

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { Box, Calendar, Drop, Heading, Grommet, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Calendar, Drop, Heading, Viewport, TextInput } from 'focus';
+import { focus } from 'focus/themes';
 
 const OverflowDrop = () => {
   const targetRef = useRef();
@@ -19,7 +19,7 @@ const OverflowDrop = () => {
   useEffect(() => setShowDrop(true), []);
 
   return (
-    <Grommet theme={grommet} full>
+    <Viewport theme={focus} full>
       <Box fill align="center" justify="center">
         <Box
           background="dark-3"
@@ -56,7 +56,7 @@ const OverflowDrop = () => {
           </Drop>
         )}
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

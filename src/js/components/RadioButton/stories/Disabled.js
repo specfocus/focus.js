@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Grommet, Box, RadioButton } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, RadioButton } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Disabled = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large" gap="large">
         <RadioButton
           label="option 1"
@@ -15,6 +15,6 @@ export const Disabled = () => {
           disabled
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

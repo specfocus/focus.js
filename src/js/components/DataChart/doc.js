@@ -100,7 +100,7 @@ export const doc = DataChart => {
     Charts and adds guides and axes for decoration.`,
     )
     .usage(
-      `import { DataChart } from 'grommet';
+      `import { DataChart } from 'focus';
 <DataChart data={data} property={} />`,
     )
     .intrinsicElement('div');

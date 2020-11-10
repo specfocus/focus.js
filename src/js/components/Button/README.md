@@ -9,7 +9,7 @@ You can provide a single function child that will be called with
 ## Usage
 
 ```javascript
-import { Button } from 'grommet';
+import { Button } from 'focus';
 <Button primary label='Label' />
 ```
 

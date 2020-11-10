@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Grommet, Box, Chart, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Chart, Heading } from 'focus';
+import { focus } from 'focus/themes';
 
 const values = [{ value: [10, 20] }, { value: [20, 30] }, { value: [30, 15] }];
 
 export const Types = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box direction="row-responsive" wrap pad="large">
       {['bar', 'line', 'area', 'point'].map(type => (
         <Box key={type} margin="medium">
@@ -17,5 +17,5 @@ export const Types = () => (
         </Box>
       ))}
     </Box>
-  </Grommet>
+  </Viewport>
 );

@@ -6,7 +6,7 @@ import 'regenerator-runtime/runtime';
 
 import { axe } from 'jest-axe';
 import { cleanup, render } from '@testing-library/react';
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { Box } from '../../Box';
 import { RadioButton } from '..';
 
@@ -15,9 +15,9 @@ describe('RadioButton', () => {
 
   test('should have no accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <RadioButton name="test" a11yTitle="test" />
-      </Grommet>,
+      </Viewport>,
     );
 
     const results = await axe(container);
@@ -27,10 +27,10 @@ describe('RadioButton', () => {
 
   test('basic', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <RadioButton name="test" value="1" />
         <RadioButton id="test id" name="test" value="2" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -38,10 +38,10 @@ describe('RadioButton', () => {
 
   test('label', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <RadioButton label="test label" name="test" value="1" />
         <RadioButton label={<div>test label</div>} name="test" value="2" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -49,9 +49,9 @@ describe('RadioButton', () => {
 
   test('checked', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <RadioButton checked name="test" value="1" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -59,10 +59,10 @@ describe('RadioButton', () => {
 
   test('disabled', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <RadioButton disabled name="test" value="1" />
         <RadioButton disabled checked name="test" value="2" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -73,14 +73,14 @@ describe('RadioButton', () => {
       <Box pad="small" background={checked ? 'accent-1' : 'control'} />
     );
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <RadioButton name="test" value="1">
           {child}
         </RadioButton>
         <RadioButton checked name="test" value="2">
           {child}
         </RadioButton>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -95,9 +95,9 @@ describe('RadioButton', () => {
       },
     };
     const component = renderer.create(
-      <Grommet theme={customTheme}>
+      <Viewport theme={customTheme}>
         <RadioButton label="test" name="test" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -115,9 +115,9 @@ describe('RadioButton', () => {
     };
 
     const component = renderer.create(
-      <Grommet theme={customTheme}>
+      <Viewport theme={customTheme}>
         <RadioButton name="test" />
-      </Grommet>,
+      </Viewport>,
     );
 
     const tree = component.toJSON();

@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 
-import { Grommet, Box, Chart, Keyboard, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Chart, Keyboard, Stack, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 import { calcs } from '../calcs';
 import { generateData } from './data';
@@ -18,7 +18,7 @@ export const ScanChart = props => {
   );
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Keyboard
         onLeft={() => setActive(Math.max(0, active - 1))}
         onRight={() => setActive(Math.min(data.length - 1, active + 1))}
@@ -117,7 +117,7 @@ export const ScanChart = props => {
           </Box>
         </Box>
       </Keyboard>
-    </Grommet>
+    </Viewport>
   );
 };
 

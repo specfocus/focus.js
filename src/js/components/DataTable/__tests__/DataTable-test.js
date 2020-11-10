@@ -2,7 +2,7 @@ import React from 'react';
 import 'jest-styled-components';
 import { cleanup, render, fireEvent } from '@testing-library/react';
 
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { DataTable } from '..';
 
 describe('DataTable', () => {
@@ -10,16 +10,16 @@ describe('DataTable', () => {
 
   test('empty', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('basic', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -30,14 +30,14 @@ describe('DataTable', () => {
             { a: 'two', b: 2 },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('!primaryKey', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -49,14 +49,14 @@ describe('DataTable', () => {
           ]}
           primaryKey={false}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('paths', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -67,14 +67,14 @@ describe('DataTable', () => {
             { a: 'two', b: { c: 2 } },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('primaryKey', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -86,14 +86,14 @@ describe('DataTable', () => {
           ]}
           primaryKey="b"
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('footer', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A', footer: 'Total' },
@@ -104,14 +104,14 @@ describe('DataTable', () => {
             { a: 'two', b: 2 },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('sortable', () => {
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -124,7 +124,7 @@ describe('DataTable', () => {
           ]}
           sortable
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -136,7 +136,7 @@ describe('DataTable', () => {
   test('onSort', () => {
     const onSort = jest.fn();
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -150,7 +150,7 @@ describe('DataTable', () => {
           onSort={onSort}
           sortable
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -164,7 +164,7 @@ describe('DataTable', () => {
 
   test('sort', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -177,14 +177,14 @@ describe('DataTable', () => {
           ]}
           sort={{ property: 'a', direction: 'asc' }}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('sort nested object', () => {
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -201,7 +201,7 @@ describe('DataTable', () => {
           ]}
           sort={{ property: 'b.value', direction: 'asc' }}
         />
-      </Grommet>,
+      </Viewport>,
     );
 
     expect(container.querySelectorAll('td').item(0).textContent).toBe('1');
@@ -220,7 +220,7 @@ describe('DataTable', () => {
   test('sort nested object with onSort', () => {
     const onSort = jest.fn();
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -238,7 +238,7 @@ describe('DataTable', () => {
           onSort={onSort}
           sort={{ property: 'b.value', direction: 'asc' }}
         />
-      </Grommet>,
+      </Viewport>,
     );
 
     expect(container.querySelectorAll('td').item(0).textContent).toBe('1');
@@ -260,7 +260,7 @@ describe('DataTable', () => {
 
   test('sort external', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -273,19 +273,19 @@ describe('DataTable', () => {
           ]}
           sort={{ property: 'a', direction: 'asc', external: true }}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('search', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[{ property: 'a', header: 'A', search: true }]}
           data={[{ a: 'Alpha' }, { a: 'beta' }, { a: '[]' }]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(container.querySelector('[aria-label="Open search by a"]'));
@@ -299,7 +299,7 @@ describe('DataTable', () => {
 
   test('resizeable', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -311,14 +311,14 @@ describe('DataTable', () => {
           ]}
           resizeable
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('aggregate', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -334,14 +334,14 @@ describe('DataTable', () => {
             { a: 'two', b: 2 },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('aggregate with nested object', () => {
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -362,7 +362,7 @@ describe('DataTable', () => {
             { a: 'two', obj: { value: 2 }, obj2: { value: 20 } },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(getByText('3')).toBeTruthy();
     expect(container.firstChild).toMatchSnapshot();
@@ -370,7 +370,7 @@ describe('DataTable', () => {
 
   test('groupBy', () => {
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -384,7 +384,7 @@ describe('DataTable', () => {
           ]}
           groupBy="a"
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -396,13 +396,13 @@ describe('DataTable', () => {
   test('click', () => {
     const onClickRow = jest.fn();
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[{ property: 'a', header: 'A' }]}
           data={[{ a: 'alpha' }, { a: 'beta' }]}
           onClickRow={onClickRow}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByText('beta'));
@@ -414,7 +414,7 @@ describe('DataTable', () => {
 
   test('background', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         {[
           'accent-1',
           ['accent-1', 'accent-2'],
@@ -433,14 +433,14 @@ describe('DataTable', () => {
             background={background}
           />
         ))}
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('border', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         {[
           true,
           'top',
@@ -463,14 +463,14 @@ describe('DataTable', () => {
             border={border}
           />
         ))}
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('pad', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         {[
           'small',
           { vertical: 'small', horizontal: 'medium' },
@@ -492,14 +492,14 @@ describe('DataTable', () => {
             pad={pad}
           />
         ))}
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('rowProps', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A', footer: 'Total' },
@@ -513,14 +513,14 @@ describe('DataTable', () => {
             one: { background: 'accent-1', border: 'bottom', pad: 'large' },
           }}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('groupBy property', () => {
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -534,7 +534,7 @@ describe('DataTable', () => {
           ]}
           groupBy={{ property: 'a' }}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -545,7 +545,7 @@ describe('DataTable', () => {
 
   test('groupBy expand', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -560,7 +560,7 @@ describe('DataTable', () => {
           primaryKey="b"
           groupBy={{ property: 'a', expand: ['one'] }}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -568,7 +568,7 @@ describe('DataTable', () => {
   test('groupBy onExpand', () => {
     const onExpand = jest.fn(groupState => groupState);
     const { getAllByLabelText } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -583,7 +583,7 @@ describe('DataTable', () => {
           primaryKey="b"
           groupBy={{ property: 'a', onExpand }}
         />
-      </Grommet>,
+      </Viewport>,
     );
 
     const expandButtons = getAllByLabelText('expand');
@@ -596,7 +596,7 @@ describe('DataTable', () => {
 
   test('replace', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -612,14 +612,14 @@ describe('DataTable', () => {
           step={2}
           replace
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('themeColumnSizes', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A', size: 'medium' },
@@ -630,14 +630,14 @@ describe('DataTable', () => {
             { a: 'two', b: 2 },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('absoluteColumnSizes', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A', size: '400px' },
@@ -648,14 +648,14 @@ describe('DataTable', () => {
             { a: 'two', b: 2 },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('relativeColumnSizes', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[
             { property: 'a', header: 'A', size: '2/3' },
@@ -666,14 +666,14 @@ describe('DataTable', () => {
             { a: 'two', b: 2 },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('fill', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         {[true, 'horizontal', 'vertical'].map(fill => (
           <DataTable
             key={JSON.stringify(fill)}
@@ -688,14 +688,14 @@ describe('DataTable', () => {
             fill={fill}
           />
         ))}
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('pin', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         {[true, 'header', 'footer'].map(pin => (
           <DataTable
             key={JSON.stringify(pin)}
@@ -710,7 +710,7 @@ describe('DataTable', () => {
             pin={pin}
           />
         ))}
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -734,7 +734,7 @@ describe('DataTable', () => {
     };
 
     const { container } = render(
-      <Grommet theme={theme}>
+      <Viewport theme={theme}>
         {[true, 'header', 'footer'].map(pin => (
           <DataTable
             background={{ pinned: 'red' }}
@@ -750,7 +750,7 @@ describe('DataTable', () => {
             pin={pin}
           />
         ))}
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -758,7 +758,7 @@ describe('DataTable', () => {
   test('select', () => {
     const onSelect = jest.fn();
     const { container, getByLabelText } = render(
-      <Grommet>
+      <Viewport>
         <DataTable
           columns={[{ property: 'a', header: 'A' }]}
           data={[{ a: 'alpha' }, { a: 'beta' }]}
@@ -766,7 +766,7 @@ describe('DataTable', () => {
           select={['alpha']}
           onSelect={onSelect}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByLabelText('select beta'));
@@ -807,7 +807,7 @@ describe('DataTable', () => {
     };
 
     const { container, getByLabelText } = render(
-      <Grommet theme={customTheme}>
+      <Viewport theme={customTheme}>
         <DataTable
           columns={[{ property: 'a', header: 'A' }]}
           data={[{ a: 'alpha' }, { a: 'beta' }]}
@@ -816,7 +816,7 @@ describe('DataTable', () => {
           sortable
           resizeable
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
 

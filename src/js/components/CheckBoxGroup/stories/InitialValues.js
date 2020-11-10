@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-import { Box, CheckBoxGroup, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, CheckBoxGroup, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 export const InitialValues = () => {
   const [value, setValue] = useState(['First', 'Second']);
   const [value2, setValue2] = useState(['M']);
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box pad="medium" gap="large">
         Initial value via options object:
         <CheckBoxGroup
@@ -37,7 +37,7 @@ export const InitialValues = () => {
           ]}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

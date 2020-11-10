@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, CheckBox, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, CheckBox, Viewport, Select } from 'focus';
+import { focus } from 'focus/themes';
 
 const Option = React.memo(({ value, selected }) => (
   <Box direction="row" gap="small" align="center" pad="xsmall">
@@ -22,7 +22,7 @@ export const ManyOptions = () => {
   const [options, setOptions] = React.useState(dummyOptions);
 
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill align="center" justify="start" pad="large">
         <Select
           multiple
@@ -59,7 +59,7 @@ export const ManyOptions = () => {
           )}
         </Select>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

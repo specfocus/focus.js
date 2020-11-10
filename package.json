@@ -1,6 +1,6 @@
 {
-  "name": "grommet",
-  "version": "2.15.2",
+  "name": "focus",
+  "version": "1.0.0",
   "main": "index.js",
   "module": "es6/index.js",
   "jsnext:main": "es6/index.js",
@@ -10,18 +10,14 @@
   ],
   "description": "focus on the essential experience",
   "authors": [
-    "Alan Souza",
-    "Bryan Jacquot",
-    "Chris Carlozzi",
-    "Eric Soderberg",
-    "Shimrit Yacobi"
+    "Lucas Martinez"
   ],
-  "homepage": "http://grommet.io",
-  "bugs": "https://github.com/grommet/grommet/issues",
+  "homepage": "http://specfocus.com",
+  "bugs": "https://github.com/specfocus/focus.js/issues",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/grommet/grommet.git"
+    "url": "https://github.com/specfocus/focus.js.git"
   },
   "engine-strict": true,
   "engines": {
@@ -107,11 +103,6 @@
     "eslint-plugin-react": "^7.9.1",
     "eslint-plugin-react-hooks": "^2.2.0",
     "fs-extra": "^8.1.0",
-    "grommet-theme-aruba": "^0.1.1",
-    "grommet-theme-dxc": "^0.1.1",
-    "grommet-theme-hp": "^0.1.1",
-    "grommet-theme-hpe": "^2.0.0",
-    "grommet-theme-v1": "^0.1.1",
     "jest": "^25.1.0",
     "jest-axe": "^3.4.0",
     "jest-cli": "^25.1.0",
@@ -179,14 +170,14 @@
   ],
   "bundlesize": [
     {
-      "path": "./dist/grommet.min.js",
+      "path": "./dist/focus.min.js",
       "maxSize": "120 kB"
     }
   ],
   "keywords": [
-    "grommet",
-    "grommet.io",
-    "grommetux",
+    "focus",
+    "focus.js",
+    "focusux",
     "component",
     "library",
     "design system",

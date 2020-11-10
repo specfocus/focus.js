@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, Select, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Select, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Simple = () => {
   const options = ['one', 'two'];
   const [value, setValue] = useState('');
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill align="center" justify="start" pad="large" gap="medium">
         <Text weight="bold">Enabled</Text>
         <Select
@@ -29,6 +29,6 @@ export const Simple = () => {
           disabled
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

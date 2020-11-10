@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, Chart, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Chart, Heading } from 'focus';
+import { focus } from 'focus/themes';
 
 const type = 'bar';
 let value = 10;
@@ -14,7 +14,7 @@ const values = Array(14)
   });
 
 export const Layout = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box margin="medium">
       <Heading level={2}>full</Heading>
       <Box pad="medium" border>
@@ -37,5 +37,5 @@ export const Layout = () => (
         <Chart type={type} values={values} round />
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );

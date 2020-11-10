@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
-import { Box, Text, ThemeContext, Grommet, Select } from 'grommet';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
+import { Box, Text, ThemeContext, Viewport, Select } from 'focus';
 
 const customTheme = deepMerge(grommet, {
   global: {
@@ -23,7 +23,7 @@ export const GlobalThemeWithThemeContext = () => {
   const [valueBlue, setValueBlue] = useState('');
 
   return (
-    <Grommet theme={customTheme}>
+    <Viewport theme={customTheme}>
       <Box align="center" pad="large" direction="column" gap="large">
         <Box>
           <Text margin="medium">
@@ -64,7 +64,7 @@ export const GlobalThemeWithThemeContext = () => {
           </ThemeContext.Extend>
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 
-import { Box, Button, Calendar, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Calendar, Viewport, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const ActiveDate = () => {
   const [datesD, setDatesD] = useState();
@@ -11,7 +11,7 @@ export const ActiveDate = () => {
   const endDateButton = useRef();
 
   return (
-    <Grommet theme={grommet} full>
+    <Viewport theme={focus} full>
       <Box gap="small" pad="large">
         <Box direction="row" gap="small">
           <Button
@@ -55,6 +55,6 @@ export const ActiveDate = () => {
           range="array"
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

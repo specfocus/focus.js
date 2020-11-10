@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 
 import { FormClose } from 'grommet-icons';
-import { Box, Button, CheckBox, Grommet, Select, Text } from 'grommet';
+import { Box, Button, CheckBox, Viewport, Select, Text } from 'focus';
 import { theme as customSearchTheme } from './theme';
 
 const allContentPartners = [
@@ -148,7 +148,7 @@ export const CustomSearch = () => {
   };
 
   return (
-    <Grommet full theme={customSearchTheme}>
+    <Viewport full theme={customSearchTheme}>
       <Box fill align="center" justify="center" width="medium">
         <Select
           ref={selectRef}
@@ -192,7 +192,7 @@ export const CustomSearch = () => {
           {renderOption}
         </Select>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

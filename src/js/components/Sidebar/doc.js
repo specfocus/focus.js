@@ -7,7 +7,7 @@ export const doc = Sidebar => {
     .availableAt(getAvailableAtBadge('Sidebar'))
     .description('A sidebar, typically used with Nav children.')
     .usage(
-      `import { Sidebar } from 'grommet';
+      `import { Sidebar } from 'focus';
 <Sidebar/>`,
     )
     .intrinsicElement('div');

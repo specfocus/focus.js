@@ -8,7 +8,7 @@ export const doc = Meter => {
     .availableAt(getAvailableAtBadge('Meter'))
     .description('A graphical meter.')
     .usage(
-      `import { Meter } from 'grommet';
+      `import { Meter } from 'focus';
 <Meter />`,
     );
   // We don't include svg due to a collision on the values property

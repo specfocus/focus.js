@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, RadioButtonGroup } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, RadioButtonGroup } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Simple = ({ value: initialValue, ...props }) => {
   const [value, setValue] = useState(initialValue);
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <RadioButtonGroup
           name="radio"
@@ -21,6 +21,6 @@ export const Simple = ({ value: initialValue, ...props }) => {
           {...props}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

@@ -22,8 +22,8 @@ yarn-error.log*
 report*
 
 #licenses 
-grommet-*-licenses.json
-grommet-*-src-with-dependecies.tgz
+focus-*-licenses.json
+focus-*-src-with-dependecies.tgz
 
 # misc
 .cache

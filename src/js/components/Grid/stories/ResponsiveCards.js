@@ -5,10 +5,10 @@ import {
   Box,
   Card,
   Grid,
-  Grommet,
+  Viewport,
   ResponsiveContext,
   Text,
-} from 'grommet';
+} from 'focus';
 
 const cards = Array(20)
   .fill()
@@ -18,7 +18,7 @@ const cards = Array(20)
 export const Example = () => {
   const size = useContext(ResponsiveContext);
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box pad="large">
         <Grid columns={size !== 'small' ? 'small' : '100%'} gap="small">
           {cards.map((card, index) => (
@@ -29,7 +29,7 @@ export const Example = () => {
           ))}
         </Grid>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

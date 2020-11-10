@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Box, CheckBoxGroup, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, CheckBoxGroup, Viewport, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Disabled = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box pad="medium" gap="large">
         <Box>
           <Text margin={{ vertical: 'small' }}>Disabled Group</Text>
@@ -22,6 +22,6 @@ export const Disabled = () => {
           />
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

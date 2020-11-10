@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, CheckBox, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, CheckBox, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 const boxStyle = {
   position: 'relative',
@@ -28,7 +28,7 @@ export const WithStickyDiv = () => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box pad="large" align="center">
         <Box height="120px" width="120px" overflow="auto" style={boxStyle}>
           <Box background={titleBoxBackground} style={titleBoxStyle}>
@@ -44,7 +44,7 @@ export const WithStickyDiv = () => {
           ))}
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

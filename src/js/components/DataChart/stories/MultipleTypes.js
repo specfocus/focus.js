@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, DataChart, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, DataChart, Viewport, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 const data = [];
 for (let i = 0; i < 13; i += 1) {
@@ -13,7 +13,7 @@ for (let i = 0; i < 13; i += 1) {
 }
 
 export const MultipleTypes = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" justify="start" pad="large">
       <DataChart
         data={data}
@@ -61,5 +61,5 @@ export const MultipleTypes = () => (
         pad="small"
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );

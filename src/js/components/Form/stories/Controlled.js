@@ -6,15 +6,15 @@ import {
   CheckBox,
   Form,
   FormField,
-  Grommet,
+  Viewport,
   MaskedInput,
   RadioButtonGroup,
   RangeInput,
   Select,
   TextArea,
   TextInput,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'focus';
+import { focus } from 'focus/themes';
 
 const defaultValue = {
   name: '',
@@ -29,7 +29,7 @@ const defaultValue = {
 export const Controlled = () => {
   const [value, setValue] = useState(defaultValue);
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill align="center" justify="center">
         <Box width="medium">
           <Form
@@ -81,6 +81,6 @@ export const Controlled = () => {
           </Form>
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

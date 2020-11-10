@@ -1,8 +1,8 @@
 import React, { useReducer, useEffect } from 'react';
 
-import { Box, Diagram, Grommet, grommet, Stack, Text } from 'grommet';
+import { Box, Diagram, Viewport, grommet, Stack, Text } from 'focus';
 import { Diamond } from 'grommet-icons';
-import { deepMerge } from 'grommet/utils';
+import { deepMerge } from 'focus/utils';
 
 import { data } from './data';
 
@@ -86,7 +86,7 @@ export const Animated = () => {
   }
 
   return (
-    <Grommet theme={customTheme}>
+    <Viewport theme={customTheme}>
       <Box align="center">
         <Box pad="large">
           <Stack>
@@ -110,6 +110,6 @@ export const Animated = () => {
           </Stack>
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

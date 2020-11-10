@@ -9,7 +9,7 @@ import 'regenerator-runtime/runtime';
 import { CaretDown, CaretUp, FormDown } from 'grommet-icons';
 import { createPortal, expectPortal } from '../../../utils/portal';
 
-import { Grommet } from '../..';
+import { Viewport } from '../..';
 import { Select } from '..';
 
 describe('Select', () => {
@@ -19,9 +19,9 @@ describe('Select', () => {
 
   test('should not have accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <Select options={['one', 'two', 'three']} a11yTitle="test" />
-      </Grommet>,
+      </Viewport>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -210,9 +210,9 @@ describe('Select', () => {
       );
     };
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet>
+      <Viewport>
         <Test />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByPlaceholderText('test select'));
@@ -256,9 +256,9 @@ describe('Select', () => {
       );
     };
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet>
+      <Viewport>
         <Test />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByPlaceholderText('test select'));
@@ -304,9 +304,9 @@ describe('Select', () => {
       );
     };
     const { getByPlaceholderText, container } = render(
-      <Grommet>
+      <Viewport>
         <Test />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByPlaceholderText('test select'));
@@ -482,14 +482,14 @@ describe('Select', () => {
     };
 
     const { container } = render(
-      <Grommet theme={customTheme}>
+      <Viewport theme={customTheme}>
         <Select
           data-testid="test-select-style-open"
           id="test-open-id"
           options={['morning', 'afternoon', 'evening']}
           placeholder="Select..."
         />
-      </Grommet>,
+      </Viewport>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -522,14 +522,14 @@ describe('Select', () => {
     };
 
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet theme={customTheme}>
+      <Viewport theme={customTheme}>
         <Select
           data-testid="test-select-style-options-1"
           id="test-options-style-id"
           options={['morning', 'afternoon', 'evening']}
           placeholder="Select..."
         />
-      </Grommet>,
+      </Viewport>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -554,14 +554,14 @@ describe('Select', () => {
     };
 
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet theme={customTheme}>
+      <Viewport theme={customTheme}>
         <Select
           data-testid="test-select-style-options-2"
           id="test-options-style-id"
           options={['morning', 'afternoon', 'evening']}
           placeholder="Select..."
         />
-      </Grommet>,
+      </Viewport>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -596,14 +596,14 @@ describe('Select', () => {
     };
 
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet theme={customTheme}>
+      <Viewport theme={customTheme}>
         <Select
           data-testid="test-select-style-options-3"
           id="test-options-style-id"
           options={['morning', 'afternoon', 'evening']}
           placeholder="Select..."
         />
-      </Grommet>,
+      </Viewport>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -637,14 +637,14 @@ describe('Select', () => {
       },
     };
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet theme={customTheme}>
+      <Viewport theme={customTheme}>
         <Select
           data-testid="applies-custom-hover-style"
           id="applies-custom-hover-style-id"
           options={['morning', 'afternoon', 'evening']}
           placeholder="Select..."
         />
-      </Grommet>,
+      </Viewport>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -668,12 +668,12 @@ describe('Select', () => {
     };
 
     const { getByPlaceholderText, container } = render(
-      <Grommet theme={customTheme}>
+      <Viewport theme={customTheme}>
         <Select
           options={['morning', 'afternoon', 'evening']}
           placeholder="Select..."
         />
-      </Grommet>,
+      </Viewport>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -762,13 +762,13 @@ describe('Select', () => {
 
   test('undefined option', () => {
     const { getByPlaceholderText } = render(
-      <Grommet>
+      <Viewport>
         <Select
           id="test-select"
           placeholder="test select"
           options={[undefined, 1, 2]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     const select = getByPlaceholderText('test select');
     fireEvent.click(getByPlaceholderText('test select'));
@@ -781,28 +781,28 @@ describe('Select', () => {
 
   test('valueLabel', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <Select
           id="test-select"
           placeholder="test select"
           options={[undefined, 1, 2]}
           valueLabel="test"
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firsChild).toMatchSnapshot();
   });
 
   test('selected', () => {
     const { container, getByPlaceholderText } = render(
-      <Grommet>
+      <Viewport>
         <Select
           options={['one', 'two']}
           placeholder="test select"
           id="test-select"
           selected={0}
         />
-      </Grommet>,
+      </Viewport>,
     );
     const select = getByPlaceholderText('test select');
     expect(container.firstChild).toMatchSnapshot();
@@ -816,14 +816,14 @@ describe('Select', () => {
     // has scrollIntoView as part of its implementation.
     window.HTMLElement.prototype.scrollIntoView = jest.fn();
     const { container, getByPlaceholderText } = render(
-      <Grommet>
+      <Viewport>
         <Select
           id="test-select"
           placeholder="test select"
           options={['one', 'two', 'three']}
           disabled={[0]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.click(getByPlaceholderText('test select'));
     // key event to start keyboard navigation
@@ -843,14 +843,14 @@ describe('Select', () => {
     jest.useFakeTimers();
     const onSearch = jest.fn();
     const { container, getByPlaceholderText } = render(
-      <Grommet>
+      <Viewport>
         <Select
           id="test-select"
           placeholder="test select"
           options={['one', 'two']}
           onSearch={onSearch}
         />
-      </Grommet>,
+      </Viewport>,
     );
 
     fireEvent.click(getByPlaceholderText('test select'));
@@ -872,14 +872,14 @@ describe('Select', () => {
   test('disabled option value', () => {
     jest.useFakeTimers();
     const { getByPlaceholderText } = render(
-      <Grommet>
+      <Viewport>
         <Select
           id="test-select"
           placeholder="test select"
           options={['one', 'two']}
           disabled={['one']}
         />
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.click(getByPlaceholderText('test select'));
     expectPortal('test-select__drop').toMatchSnapshot();

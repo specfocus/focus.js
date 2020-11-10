@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Grommet, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, TextInput } from 'focus';
+import { focus } from 'focus/themes';
 
 const suggestions = Array(100)
   .fill()
@@ -26,7 +26,7 @@ export const OnSelect = () => {
   };
 
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill align="center" justify="start" pad="large">
         <Box width="medium">
           <TextInput
@@ -38,7 +38,7 @@ export const OnSelect = () => {
           />
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

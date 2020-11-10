@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Meter, Text, Tip } from 'grommet';
+import { Box, Meter, Text, Tip } from 'focus';
 
 const amountFormatter = new Intl.NumberFormat('en-US', {
   style: 'currency',

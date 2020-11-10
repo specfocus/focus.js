@@ -5,7 +5,7 @@ A container that lazily renders items.
 ## Usage
 
 ```javascript
-import { InfiniteScroll } from 'grommet';
+import { InfiniteScroll } from 'focus';
 <InfiniteScroll />
 ```
 

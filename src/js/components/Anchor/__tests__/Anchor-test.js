@@ -8,7 +8,7 @@ import 'regenerator-runtime/runtime';
 import { axe } from 'jest-axe';
 import { findAllByType } from '../../../utils';
 
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { Anchor } from '..';
 
 describe('Anchor', () => {
@@ -16,9 +16,9 @@ describe('Anchor', () => {
 
   test('should have no accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <Anchor>Link</Anchor>
-      </Grommet>,
+      </Viewport>,
     );
 
     const results = await axe(container);
@@ -28,9 +28,9 @@ describe('Anchor', () => {
 
   test('renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Anchor />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -38,9 +38,9 @@ describe('Anchor', () => {
 
   test('renders with children', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Anchor href="#">children</Anchor>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -50,11 +50,11 @@ describe('Anchor', () => {
     console.warn = jest.fn();
     const warnSpy = jest.spyOn(console, 'warn');
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <Anchor href="#" label="Test">
           invalid
         </Anchor>
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
     expect(warnSpy).toHaveBeenCalledWith(
@@ -70,11 +70,11 @@ describe('Anchor', () => {
     console.warn = jest.fn();
     const warnSpy = jest.spyOn(console, 'warn');
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <Anchor href="#" icon={<svg />}>
           invalid
         </Anchor>
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
     expect(warnSpy).toHaveBeenCalledWith(
@@ -88,9 +88,9 @@ describe('Anchor', () => {
 
   test('primary renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Anchor href="#" primary label="Test" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -99,9 +99,9 @@ describe('Anchor', () => {
   test('focus renders', () => {
     const onFocus = jest.fn();
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <Anchor href="#" label="Test" onFocus={onFocus} />
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.focus(getByText('Test'));
     expect(container.firstChild).toMatchSnapshot();
@@ -111,9 +111,9 @@ describe('Anchor', () => {
   test('blur renders', () => {
     const onBlur = jest.fn();
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <Anchor href="#" label="Test" onBlur={onBlur} />
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.blur(getByText('Test'));
     expect(container.firstChild).toMatchSnapshot();
@@ -122,9 +122,9 @@ describe('Anchor', () => {
 
   test('disabled renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Anchor disabled />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -132,9 +132,9 @@ describe('Anchor', () => {
 
   test('icon label renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Anchor icon={<svg />} label="Test" onClick={() => {}} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -142,9 +142,9 @@ describe('Anchor', () => {
 
   test('reverse icon label renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Anchor reverse icon={<svg />} label="Test" onClick={() => {}} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -152,14 +152,14 @@ describe('Anchor', () => {
 
   test('size renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Anchor size="xsmall" />
         <Anchor size="small" />
         <Anchor size="medium" />
         <Anchor size="large" />
         <Anchor size="xlarge" />
         <Anchor size="xxlarge" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -168,9 +168,9 @@ describe('Anchor', () => {
   test('is clickable', () => {
     const onClick = jest.fn();
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Anchor href="#" label="Test" onClick={onClick} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
 
@@ -181,9 +181,9 @@ describe('Anchor', () => {
 
   test('renders tag', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Anchor href="#" label="Test" as="span" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -191,11 +191,11 @@ describe('Anchor', () => {
 
   test('weight renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Anchor href="#" label="Normal" weight="normal" />
         <Anchor href="#" label="Bold" weight="bold" />
         <Anchor href="#" label="Bold" weight={500} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

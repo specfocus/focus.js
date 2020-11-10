@@ -5,7 +5,7 @@ Footer for a document or section
 ## Usage
 
 ```javascript
-import { Footer } from 'grommet';
+import { Footer } from 'focus';
 <Footer />
 ```
 

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Chart } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Chart } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Dash = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large" gap="large">
       <Chart type="line" dash values={[20, 30, 15]} />
       <Chart type="line" dash round values={[20, 30, 15]} />
@@ -21,5 +21,5 @@ export const Dash = () => (
         ]}
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );

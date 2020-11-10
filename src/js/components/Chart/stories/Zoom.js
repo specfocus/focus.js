@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Grommet, Box, Button, Chart, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Button, Chart, Stack, Text } from 'focus';
+import { focus } from 'focus/themes';
 import { Next, Previous } from 'grommet-icons';
 
 import { calcs } from '../calcs';
@@ -53,7 +53,7 @@ const ZoomChart = ({ data, max }) => {
   }
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box pad="large" direction="row" gap="medium">
         <Button
           hoverIndicator
@@ -118,7 +118,7 @@ const ZoomChart = ({ data, max }) => {
           onClick={() => setReference(nextReference)}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

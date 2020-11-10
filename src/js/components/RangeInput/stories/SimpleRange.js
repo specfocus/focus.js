@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Grommet, RangeInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, RangeInput } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Simple = () => {
   const [value, setValue] = React.useState(5);
@@ -9,10 +9,10 @@ export const Simple = () => {
   const onChange = event => setValue(event.target.value);
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <RangeInput value={value} onChange={onChange} />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { storiesOf } from '@storybook/react';
 
 import {
-  Grommet,
+  Viewport,
   Accordion,
   AccordionPanel,
   Anchor,
@@ -33,16 +33,16 @@ import {
   TextArea,
   TextInput,
   Video,
-} from 'grommet';
+} from 'focus';
 import { FormNext } from 'grommet-icons';
-import { grommet } from 'grommet/themes';
-import { generate } from 'grommet/themes/base';
-import { deepMerge } from 'grommet/utils';
-import { hpe } from 'grommet-theme-hpe';
-import { aruba } from 'grommet-theme-aruba';
-import { hp } from 'grommet-theme-hp';
-import { dxc } from 'grommet-theme-dxc';
-import { v1 } from 'grommet-theme-v1';
+import { focus } from 'focus/themes';
+import { generate } from 'focus/themes/base';
+import { deepMerge } from 'focus/utils';
+import { hpe } from 'focus/themes/hpe';
+import { aruba } from 'focus/themes/aruba';
+import { hp } from 'focus/themes/hp';
+import { dxc } from 'focus/themes/dxc';
+import { v1 } from 'focus/themes/v1';
 
 const Node = ({ id, ...rest }) => (
   <Box
@@ -67,7 +67,7 @@ const connection = (fromTarget, toTarget, { color, ...rest } = {}) => ({
 });
 
 const themes = {
-  grommet,
+  focus,
   hpe,
   aruba,
   hp,
@@ -83,7 +83,7 @@ const Components = () => {
   const [radioButton, setRadioButton] = useState('RadioButton 1');
   const [rangeSelector, setRangeSelector] = useState([1, 2]);
   const [themeMode, setThemeMode] = useState();
-  const [themeName, setThemeName] = useState('grommet');
+  const [themeName, setThemeName] = useState('focus');
   const [background, setBackground] = useState(undefined);
   const [tabIndex, setTabIndex] = useState(0);
 
@@ -316,7 +316,7 @@ const Components = () => {
 
   return (
     <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <Grommet theme={grommet} style={{ flex: '0 0 auto' }}>
+      <Viewport theme={focus} style={{ flex: '0 0 auto' }}>
         <Box
           direction="row-responsive"
           gap="medium"
@@ -365,8 +365,8 @@ const Components = () => {
           </Box>
           <Text size="small">{`${baseSize}px base spacing`}</Text>
         </Box>
-      </Grommet>
-      <Grommet theme={theme} themeMode={themeMode} style={{ flex: '1 1' }}>
+      </Viewport>
+      <Viewport theme={theme} themeMode={themeMode} style={{ flex: '1 1' }}>
         <Box
           fill
           pad="medium"
@@ -383,7 +383,7 @@ const Components = () => {
             </Box>
           )}
         </Box>
-      </Grommet>
+      </Viewport>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet } from 'grommet';
+import { focus, Box, Button, Viewport } from 'focus';
 import { UserFemale, Info } from 'grommet-icons';
 import { Tip } from '../../Tip';
 
@@ -15,7 +15,7 @@ const Circle = ({ ...rest }) => (
 
 export const Animated = () => {
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box
         align="center"
         justify="center"
@@ -40,7 +40,7 @@ export const Animated = () => {
         </Tip>
         Double animation of 'fadeIn' and 'pulse'
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

@@ -4,7 +4,7 @@ export const doc = Collapsible => {
   const DocumentedCollapsible = describe(Collapsible)
     .description('Expand or collapse animation.')
     .usage(
-      `import { Collapsible } from 'grommet';
+      `import { Collapsible } from 'focus';
 <Collapsible open>test</Collapsible>`,
     )
     .intrinsicElement('div');

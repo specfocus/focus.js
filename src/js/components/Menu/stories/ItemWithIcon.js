@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Grommet, Box, Menu, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Menu, Text } from 'focus';
+import { focus } from 'focus/themes';
 import { FormDown, Github, Slack } from 'grommet-icons';
 
 // This story offers a suggested workaround for issue #3209.
 
 const IconItemsMenu = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       <Menu
         plain
@@ -39,7 +39,7 @@ const IconItemsMenu = () => (
         </Box>
       </Menu>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 export const ItemWithIcon = () => <IconItemsMenu />;

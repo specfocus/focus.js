@@ -6,12 +6,12 @@ import {
   Box,
   Form,
   FormField,
-  Grommet,
+  Viewport,
   Heading,
   Text,
   TextInput,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'focus';
+import { focus } from 'focus/themes';
 import { deepMerge } from '../../../utils';
 
 const customTheme = deepMerge(grommet, {
@@ -60,7 +60,7 @@ const customTheme = deepMerge(grommet, {
 
 export const Themed = () => {
   return (
-    <Grommet theme={customTheme}>
+    <Viewport theme={customTheme}>
       <Box gap="medium">
         <Box border pad={{ horizontal: 'medium' }} width="medium">
           <Form>
@@ -121,6 +121,6 @@ export const Themed = () => {
           </Form>
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

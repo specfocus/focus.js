@@ -2,9 +2,9 @@ import React from 'react';
 import { css } from 'styled-components';
 
 import { Attraction, Car, TreeOption } from 'grommet-icons';
-import { Box, Grommet, Tab, Tabs } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Box, Viewport, Tab, Tabs } from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 const customTheme = deepMerge(grommet, {
   tab: {
@@ -38,7 +38,7 @@ const customTheme = deepMerge(grommet, {
   },
 });
 const IconTabs = () => (
-  <Grommet theme={customTheme} full>
+  <Viewport theme={customTheme} full>
     <Box pad="medium" fill>
       <Tabs flex>
         <Tab title="Tab 1" icon={<Attraction />}>
@@ -58,7 +58,7 @@ const IconTabs = () => (
         </Tab>
       </Tabs>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 export const Icon = () => <IconTabs />;

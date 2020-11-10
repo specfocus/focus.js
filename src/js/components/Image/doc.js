@@ -8,7 +8,7 @@ export const doc = Image => {
     .availableAt(getAvailableAtBadge('Image'))
     .description('An image.')
     .usage(
-      `import { Image } from 'grommet';
+      `import { Image } from 'focus';
 <Image/>`,
     )
     .intrinsicElement('img');

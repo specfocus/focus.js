@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Box, Grommet, Clock } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Clock } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Analog = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" justify="start" pad="large">
       <Clock type="analog" />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 Analog.story = {

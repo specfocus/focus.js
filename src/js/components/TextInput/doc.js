@@ -10,7 +10,7 @@ export const doc = TextInput => {
       'A control to input a single line of text, with optional suggestions.',
     )
     .usage(
-      `import { TextInput } from 'grommet';
+      `import { TextInput } from 'focus';
 <TextInput id='item' name='item' />`,
     )
     .intrinsicElement('input');

@@ -6,7 +6,7 @@ import 'regenerator-runtime/runtime';
 
 import { cleanup, render, fireEvent } from '@testing-library/react';
 import { axe } from 'jest-axe';
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { CheckBoxGroup } from '..';
 
 describe('CheckBoxGroup', () => {
@@ -14,9 +14,9 @@ describe('CheckBoxGroup', () => {
 
   test('should have no accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <CheckBoxGroup options={['First', 'Second']} />
-      </Grommet>,
+      </Viewport>,
     );
 
     const results = await axe(container);
@@ -25,9 +25,9 @@ describe('CheckBoxGroup', () => {
 
   test('options renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <CheckBoxGroup options={['First', 'Second']} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -35,9 +35,9 @@ describe('CheckBoxGroup', () => {
 
   test('value renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <CheckBoxGroup value={['First']} options={['First', 'Second']} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -45,7 +45,7 @@ describe('CheckBoxGroup', () => {
 
   test('initial value renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <CheckBoxGroup
           value={['Wuhan', 'Jerusalem']}
           options={[
@@ -54,7 +54,7 @@ describe('CheckBoxGroup', () => {
             { label: 'Wuhan', value: 'Wuhan' },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -62,11 +62,11 @@ describe('CheckBoxGroup', () => {
 
   test('disabled renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <CheckBoxGroup disabled options={['First', 'Second']} />
         <CheckBoxGroup options={[{ label: 'First', disabled: true }]} />
         <CheckBoxGroup options={[{ label: 'First', disabled: true }]} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -75,7 +75,7 @@ describe('CheckBoxGroup', () => {
   test('onChange', () => {
     const onChange = jest.fn();
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <CheckBoxGroup
           options={[
             { label: 'first-label', value: 'First' },
@@ -83,7 +83,7 @@ describe('CheckBoxGroup', () => {
           ]}
           onChange={onChange}
         />
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.click(getByText('first-label'));
     expect(onChange).toBeCalledTimes(1);
@@ -93,7 +93,7 @@ describe('CheckBoxGroup', () => {
   test('onClick for check and uncheck a CheckBox', () => {
     const onClick = jest.fn();
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <CheckBoxGroup
           options={[
             { label: 'first-label', value: 'First' },
@@ -101,7 +101,7 @@ describe('CheckBoxGroup', () => {
           ]}
           onClick={onClick}
         />
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.click(getByText('first-label'));
     expect(onClick).toBeCalledTimes(1);
@@ -113,7 +113,7 @@ describe('CheckBoxGroup', () => {
 
   test('labelKey', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <CheckBoxGroup
           labelKey="labelKeyTest"
           options={[
@@ -121,14 +121,14 @@ describe('CheckBoxGroup', () => {
             { labelKeyTest: 'second-label', value: 'Second' },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('valueKey', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <CheckBoxGroup
           valueKey="valueKeyTest"
           options={[
@@ -136,7 +136,7 @@ describe('CheckBoxGroup', () => {
             { label: 'second-label', valueKeyTest: 'Second' },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -146,7 +146,7 @@ describe('CheckBoxGroup', () => {
     const errorSpy = jest.spyOn(console, 'error');
 
     render(
-      <Grommet>
+      <Viewport>
         <CheckBoxGroup
           value={['yes', 'yes-again']}
           options={[
@@ -154,7 +154,7 @@ describe('CheckBoxGroup', () => {
             { label: 'Yes!', value: 'yes-again' },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
 
     expect(errorSpy).not.toBeCalledWith(
@@ -173,14 +173,14 @@ describe('CheckBoxGroup', () => {
     const warnSpy = jest.spyOn(console, 'warn');
 
     render(
-      <Grommet>
+      <Viewport>
         <CheckBoxGroup
           options={[
             { label: 'first-label', value: 'First', checked: true },
             { label: 'second-label', value: 'Second' },
           ]}
         />
-      </Grommet>,
+      </Viewport>,
     );
 
     expect(warnSpy).toBeCalled();

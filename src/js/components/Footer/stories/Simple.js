@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Box, Footer, grommet, Grommet, Main, Text } from 'grommet';
+import { Box, Footer, grommet, Viewport, Main, Text } from 'focus';
 
 export const Simple = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Main background="light-2" elevation="large" pad="large" gap="large">
       <Text margin="small" size="xsmall">
         Main Content
@@ -12,8 +12,8 @@ export const Simple = () => (
     </Main>
     <Footer background="light-4" justify="center" pad="small">
       <Text textAlign="center" size="small">
-        © 2019 Copyright Grommet
+        © 2019 Copyright Focus
       </Text>
     </Footer>
-  </Grommet>
+  </Viewport>
 );

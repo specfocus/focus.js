@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Grommet, Box, Meter, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Meter, Stack, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const MultipleValues = () => {
   const total = 100;
@@ -10,7 +10,7 @@ export const MultipleValues = () => {
   const [highlight, setHighlight] = useState(false);
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <Stack anchor="center">
           <Meter
@@ -51,7 +51,7 @@ export const MultipleValues = () => {
           </Box>
         </Stack>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

@@ -9,7 +9,7 @@ An accordion containing collapsible panels.
 ## Usage
 
 \`\`\`javascript
-import { Accordion, AccordionPanel } from 'grommet';
+import { Accordion, AccordionPanel } from 'focus';
 <Accordion>
   <AccordionPanel label='Panel 1'>...</AccordionPanel>
   <AccordionPanel label='Panel 2'>...</AccordionPanel>
@@ -355,7 +355,7 @@ or just use children.
 ## Usage
 
 \`\`\`javascript
-import { Anchor } from 'grommet';
+import { Anchor } from 'focus';
 <Anchor href={location} label='Label' />
 \`\`\`
 
@@ -750,7 +750,7 @@ An Avatar.
 ## Usage
 
 \`\`\`javascript
-import { Avatar } from 'grommet';
+import { Avatar } from 'focus';
 <Avatar/>
 \`\`\`
 
@@ -923,7 +923,7 @@ A container that lays out its contents in one direction. Box
 ## Usage
 
 \`\`\`javascript
-import { Box } from 'grommet';
+import { Box } from 'focus';
 <Box />
 \`\`\`
 
@@ -1927,7 +1927,7 @@ You can provide a single function child that will be called with
 ## Usage
 
 \`\`\`javascript
-import { Button } from 'grommet';
+import { Button } from 'focus';
 <Button primary label='Label' />
 \`\`\`
 
@@ -3115,7 +3115,7 @@ A calendar of days displayed by month.
 ## Usage
 
 \`\`\`javascript
-import { Calendar } from 'grommet';
+import { Calendar } from 'focus';
 <Calendar />
 \`\`\`
 
@@ -3699,7 +3699,7 @@ A Card is a container of information that provides access to more
 ## Usage
 
 \`\`\`javascript
-import { Card } from 'grommet';
+import { Card } from 'focus';
 <Card/>
 \`\`\`
 
@@ -3799,7 +3799,7 @@ A carousel that cycles through children. Child components
 ## Usage
 
 \`\`\`javascript
-import { Carousel } from 'grommet';
+import { Carousel } from 'focus';
 <Carousel />
 \`\`\`
 
@@ -4063,7 +4063,7 @@ A graphical chart.
 ## Usage
 
 \`\`\`javascript
-import { Chart } from 'grommet';
+import { Chart } from 'focus';
 <Chart />
 \`\`\`
 
@@ -4635,7 +4635,7 @@ A checkbox toggle control.
 ## Usage
 
 \`\`\`javascript
-import { CheckBox } from 'grommet';
+import { CheckBox } from 'focus';
 <CheckBox />
 \`\`\`
 
@@ -4942,7 +4942,7 @@ A group of CheckBoxes.
 ## Usage
 
 \`\`\`javascript
-import { CheckBoxGroup } from 'grommet';
+import { CheckBoxGroup } from 'focus';
         <CheckBoxGroup />
 \`\`\`
 
@@ -5032,7 +5032,7 @@ A clock with timezone awareness.
 ## Usage
 
 \`\`\`javascript
-import { Clock } from 'grommet';
+import { Clock } from 'focus';
 <Clock />
 \`\`\`
 
@@ -5377,7 +5377,7 @@ Expand or collapse animation.
 ## Usage
 
 \`\`\`javascript
-import { Collapsible } from 'grommet';
+import { Collapsible } from 'focus';
 <Collapsible open>test</Collapsible>
 \`\`\`
 
@@ -5446,7 +5446,7 @@ Takes a data set and visualizes it. While Chart renders a
 ## Usage
 
 \`\`\`javascript
-import { DataChart } from 'grommet';
+import { DataChart } from 'focus';
 <DataChart data={data} property={} />
 \`\`\`
 
@@ -5998,7 +5998,7 @@ A data driven table.
 ## Usage
 
 \`\`\`javascript
-import { DataTable } from 'grommet';
+import { DataTable } from 'focus';
 <DataTable />
 \`\`\`
 
@@ -7083,7 +7083,7 @@ A control to input a single date or a date range.
 ## Usage
 
 \`\`\`javascript
-import { DateInput } from 'grommet';
+import { DateInput } from 'focus';
 <DateInput id='item' name='item' />
 \`\`\`
 
@@ -7226,7 +7226,7 @@ Graphical connection lines. Diagram is meant to be used with Stack.
 ## Usage
 
 \`\`\`javascript
-import { Diagram } from 'grommet';
+import { Diagram } from 'focus';
 <Diagram />
 \`\`\`
 
@@ -7353,7 +7353,7 @@ Proportionally sized grid of boxes. The proportions are approximate. The
 ## Usage
 
 \`\`\`javascript
-import { Distribution } from 'grommet';
+import { Distribution } from 'focus';
 <Distribution />
 \`\`\`
 
@@ -7557,7 +7557,7 @@ A container that is overlaid next to a target.
 ## Usage
 
 \`\`\`javascript
-import { Drop } from 'grommet';
+import { Drop } from 'focus';
 <Drop target={reference}>...</Drop>
 \`\`\`
 
@@ -7776,7 +7776,7 @@ A Button that controls a Drop. When opened, the Drop will contain
 ## Usage
 
 \`\`\`javascript
-import { DropButton } from 'grommet';
+import { DropButton } from 'focus';
 <DropButton dropContent={...} />
 \`\`\`
 
@@ -7990,7 +7990,7 @@ Footer for a document or section
 ## Usage
 
 \`\`\`javascript
-import { Footer } from 'grommet';
+import { Footer } from 'focus';
 <Footer />
 \`\`\`
 
@@ -8004,7 +8004,7 @@ A form that manages state for its fields.
 ## Usage
 
 \`\`\`javascript
-import { Form } from 'grommet';
+import { Form } from 'focus';
 <Form />
 \`\`\`
 
@@ -8119,7 +8119,7 @@ A single field in a form. FormField wraps an input component with
 ## Usage
 
 \`\`\`javascript
-import { FormField } from 'grommet';
+import { FormField } from 'focus';
 <FormField />
 \`\`\`
 
@@ -8682,7 +8682,7 @@ to create fallback rendering for older browsers, like ie11.
 ## Usage
 
 \`\`\`javascript
-import { Grid } from 'grommet';
+import { Grid } from 'focus';
 <Grid />
 \`\`\`
 
@@ -9297,15 +9297,15 @@ Defaults to
   }
 \`\`\`
 ",
-  "Grommet": "## Grommet
-The top level Grommet container.
+  "focus.js": "## focus.js
+The top level Viewport container.
 
 [![](https://cdn-images-1.medium.com/fit/c/120/120/1*TD1P0HtIH9zF0UEH28zYtw.png)](https://storybook.grommet.io/?selectedKind=Grommet&full=0&addons=0&stories=1&panelRight=0) [![](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/grommet/grommet-sandbox?initialpath=/grommet&module=%2Fsrc%2FGrommet.js)
 ## Usage
 
 \`\`\`javascript
-import { Grommet } from 'grommet';
-<Grommet>...</Grommet>
+import { Viewport } from 'focus';
+<Viewport>...</Viewport>
 \`\`\`
 
 ## Properties
@@ -9384,7 +9384,7 @@ boolean
 
 **theme**
 
-Custom styles for Grommet app component.
+Custom styles for Focus app component.
 
 \`\`\`
 object
@@ -9429,7 +9429,7 @@ div
   
 **grommet.extend**
 
-Any additional style for Grommet. Expects \`string | (props) => {}\`.
+Any additional style for Focus. Expects \`string | (props) => {}\`.
 
 Defaults to
 
@@ -9454,7 +9454,7 @@ Is a Box container for introductory content
 ## Usage
 
 \`\`\`javascript
-import { Header } from 'grommet';
+import { Header } from 'focus';
 <Header />
 \`\`\`
 
@@ -9468,7 +9468,7 @@ Heading text structured in levels.
 ## Usage
 
 \`\`\`javascript
-import { Heading } from 'grommet';
+import { Heading } from 'focus';
 <Heading />
 \`\`\`
 
@@ -9824,7 +9824,7 @@ An image.
 ## Usage
 
 \`\`\`javascript
-import { Image } from 'grommet';
+import { Image } from 'focus';
 <Image/>
 \`\`\`
 
@@ -10017,7 +10017,7 @@ A container that lazily renders items.
 ## Usage
 
 \`\`\`javascript
-import { InfiniteScroll } from 'grommet';
+import { InfiniteScroll } from 'focus';
 <InfiniteScroll />
 \`\`\`
 
@@ -10116,7 +10116,7 @@ A handler of keyboard key presses.
 ## Usage
 
 \`\`\`javascript
-import { Keyboard } from 'grommet';
+import { Keyboard } from 'focus';
 <Keyboard onUp={() => {}} />
 \`\`\`
 
@@ -10236,7 +10236,7 @@ An overlay. Layer is typically modal and anchored to an edge, corner, or
 ## Usage
 
 \`\`\`javascript
-import { Layer } from 'grommet';
+import { Layer } from 'focus';
 <Layer />
 \`\`\`
 
@@ -10549,7 +10549,7 @@ An ordered list of items.
 ## Usage
 
 \`\`\`javascript
-import { List } from 'grommet';
+import { List } from 'focus';
 <List data={[...]} />
 \`\`\`
 
@@ -10993,7 +10993,7 @@ main content of a document.
 ## Usage
 
 \`\`\`javascript
-import { Main } from 'grommet';
+import { Main } from 'focus';
 <Main />
 \`\`\`
 
@@ -11001,16 +11001,16 @@ import { Main } from 'grommet';
 
   ",
   "Markdown": "## GrommetMarkdown
-Markdown formatting using Grommet components.
+Markdown formatting using Focus components.
 
-Grommet uses 'markdown-to-jsx' in Markdown component,
+Focus uses 'markdown-to-jsx' in Markdown component,
       you can see all the options in the documentation.
 
 [![](https://cdn-images-1.medium.com/fit/c/120/120/1*TD1P0HtIH9zF0UEH28zYtw.png)](https://storybook.grommet.io/?selectedKind=Markdown&full=0&addons=0&stories=1&panelRight=0) [![](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/grommet/grommet-sandbox?initialpath=/markdown&module=%2Fsrc%2FMarkdown.js)
 ## Usage
 
 \`\`\`javascript
-import { Markdown } from 'grommet';
+import { Markdown } from 'focus';
       <Markdown>{content}</Markdown>
 \`\`\`
 
@@ -11059,7 +11059,7 @@ An input field with formalized syntax.
 ## Usage
 
 \`\`\`javascript
-import { MaskedInput } from 'grommet';
+import { MaskedInput } from 'focus';
 <MaskedInput id='item' name='item' />
 \`\`\`
 
@@ -11406,7 +11406,7 @@ The labels and behavior of the contained Buttons are described
 ## Usage
 
 \`\`\`javascript
-import { Menu } from 'grommet';
+import { Menu } from 'focus';
 <Menu />
 \`\`\`
 
@@ -11762,7 +11762,7 @@ A graphical meter.
 ## Usage
 
 \`\`\`javascript
-import { Meter } from 'grommet';
+import { Meter } from 'focus';
 <Meter />
 \`\`\`
 
@@ -12070,7 +12070,7 @@ Is a Box container for navigation links
 ## Usage
 
 \`\`\`javascript
-import { Nav } from 'grommet';
+import { Nav } from 'focus';
 <Nav />
 \`\`\`
 
@@ -12084,7 +12084,7 @@ A paragraph of text.
 ## Usage
 
 \`\`\`javascript
-import { Paragraph } from 'grommet';
+import { Paragraph } from 'focus';
 <Paragraph />
 \`\`\`
 
@@ -12360,7 +12360,7 @@ RadioButton should typically not be used directly.
 ## Usage
 
 \`\`\`javascript
-import { RadioButton } from 'grommet';
+import { RadioButton } from 'focus';
 <RadioButton />
 \`\`\`
 
@@ -12638,7 +12638,7 @@ A group of radio buttons.
 ## Usage
 
 \`\`\`javascript
-import { RadioButtonGroup } from 'grommet';
+import { RadioButtonGroup } from 'focus';
 <RadioButtonGroup />
 \`\`\`
 
@@ -12740,7 +12740,7 @@ A slider control to input a value within a fixed range.
 ## Usage
 
 \`\`\`javascript
-import { RangeInput } from 'grommet';
+import { RangeInput } from 'focus';
 <RangeInput />
 \`\`\`
 
@@ -13014,7 +13014,7 @@ A control to input a range of values.
 ## Usage
 
 \`\`\`javascript
-import { RangeSelector } from 'grommet';
+import { RangeSelector } from 'focus';
 <RangeSelector />
 \`\`\`
 
@@ -13242,7 +13242,7 @@ An Anchor with support for React Router.
 ## Usage
 
 \`\`\`javascript
-import { RoutedAnchor } from 'grommet';
+import { RoutedAnchor } from 'focus';
 <RoutedAnchor primary path='/documentation' />
 \`\`\`
 
@@ -13278,7 +13278,7 @@ A button with support for React Router.
 ## Usage
 
 \`\`\`javascript
-import { RoutedButton } from 'grommet';
+import { RoutedButton } from 'focus';
 <RoutedButton primary path='/documentation' />
 \`\`\`
 
@@ -13314,7 +13314,7 @@ A control to select a value, with optional search.
 ## Usage
 
 \`\`\`javascript
-import { Select } from 'grommet';
+import { Select } from 'focus';
 <Select />
 \`\`\`
 
@@ -13931,7 +13931,7 @@ A sidebar, typically used with Nav children.
 ## Usage
 
 \`\`\`javascript
-import { Sidebar } from 'grommet';
+import { Sidebar } from 'focus';
 <Sidebar/>
 \`\`\`
 
@@ -13965,7 +13965,7 @@ Describe a list of elements to skip to.
 ## Usage
 
 \`\`\`javascript
-import { SkipLinks } from 'grommet';
+import { SkipLinks } from 'focus';
 <SkipLinks elements={['main', 'footer']} />
 \`\`\`
 
@@ -14095,7 +14095,7 @@ A container that stacks contents on top of each other. One child is
 ## Usage
 
 \`\`\`javascript
-import { Stack } from 'grommet';
+import { Stack } from 'focus';
 <Stack />
 \`\`\`
 
@@ -14287,7 +14287,7 @@ One tab within Tabs.
 ## Usage
 
 \`\`\`javascript
-import { Tab } from 'grommet';
+import { Tab } from 'focus';
 <Tab />
 \`\`\`
 
@@ -14488,7 +14488,7 @@ A table of data organized in cells.
 ## Usage
 
 \`\`\`javascript
-import { Table, TableHeader, TableFooter, TableBody, TableRow } from 'grommet';
+import { Table, TableHeader, TableFooter, TableBody, TableRow } from 'focus';
 <Table />
 \`\`\`
 
@@ -14667,7 +14667,7 @@ The body of a table.
 ## Usage
 
 \`\`\`javascript
-import { TableBody } from 'grommet';
+import { TableBody } from 'focus';
 <TableBody />
 \`\`\`
 
@@ -14685,7 +14685,7 @@ A cell of data in a table.
 ## Usage
 
 \`\`\`javascript
-import { TableCell } from 'grommet';
+import { TableCell } from 'focus';
 <TableCell />
 \`\`\`
 
@@ -14924,7 +14924,7 @@ The footer of a table.
 ## Usage
 
 \`\`\`javascript
-import { TableFooter } from 'grommet';
+import { TableFooter } from 'focus';
 <TableFooter />
 \`\`\`
 
@@ -14942,7 +14942,7 @@ The header of a table.
 ## Usage
 
 \`\`\`javascript
-import { TableHeader } from 'grommet';
+import { TableHeader } from 'focus';
 <TableHeader />
 \`\`\`
 
@@ -14960,7 +14960,7 @@ A row of cells in a table.
 ## Usage
 
 \`\`\`javascript
-import { TableRow } from 'grommet';
+import { TableRow } from 'focus';
 <TableRow />
 \`\`\`
 
@@ -14979,7 +14979,7 @@ A container with controls to show one Tab at a time.
 ## Usage
 
 \`\`\`javascript
-import { Tabs, Tab } from 'grommet';
+import { Tabs, Tab } from 'focus';
 <Tabs>
   <Tab title='Tab 1'>...</Tab>
   <Tab title='Tab 2'>...</Tab>
@@ -15321,7 +15321,7 @@ Arbitrary text.
 ## Usage
 
 \`\`\`javascript
-import { Text } from 'grommet';
+import { Text } from 'focus';
 <Text />
 \`\`\`
 
@@ -15632,7 +15632,7 @@ A control to input multiple lines of text.
 ## Usage
 
 \`\`\`javascript
-import { TextArea } from 'grommet';
+import { TextArea } from 'focus';
 <TextArea id='item' name='item' />
 \`\`\`
 
@@ -15941,7 +15941,7 @@ A control to input a single line of text, with optional suggestions.
 ## Usage
 
 \`\`\`javascript
-import { TextInput } from 'grommet';
+import { TextInput } from 'focus';
 <TextInput id='item' name='item' />
 \`\`\`
 
@@ -16458,7 +16458,7 @@ Tooltip or a hint when hovering over a UI item.
 ## Usage
 
 \`\`\`javascript
-import { Tip } from 'grommet';
+import { Tip } from 'focus';
 <Tip />
 \`\`\`
 
@@ -16522,7 +16522,7 @@ A video player.
 ## Usage
 
 \`\`\`javascript
-import { Video } from 'grommet';
+import { Video } from 'focus';
 <Video />
 \`\`\`
 
@@ -16846,7 +16846,7 @@ A map of the world, or a continent.
 ## Usage
 
 \`\`\`javascript
-import { WorldMap } from 'grommet';
+import { WorldMap } from 'focus';
 <WorldMap />
 \`\`\`
 

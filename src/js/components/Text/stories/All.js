@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 const sizes = [
   'xxlarge',
@@ -14,7 +14,7 @@ const sizes = [
 ];
 
 export const All = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <>
       {sizes.map(size => (
         <Box key={size} margin="small">
@@ -27,5 +27,5 @@ export const All = () => (
         </Text>
       </Box>
     </>
-  </Grommet>
+  </Viewport>
 );

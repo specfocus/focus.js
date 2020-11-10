@@ -7,7 +7,7 @@ export const doc = Form => {
     .availableAt(getAvailableAtBadge('Form'))
     .description('A form that manages state for its fields.')
     .usage(
-      `import { Form } from 'grommet';
+      `import { Form } from 'focus';
 <Form />`,
     )
     .intrinsicElement('form');

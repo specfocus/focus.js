@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Text } from 'grommet';
-import { grommet } from '../../../themes';
+import { Viewport, Box, Text } from 'focus';
+import { focus } from '../../../themes';
 
 export const GradientColorBox = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box
       justify="center"
       align="center"
@@ -14,7 +14,7 @@ export const GradientColorBox = () => (
     >
       <Text color="white">I have a linear gradient background</Text>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 GradientColorBox.story = { name: 'Gradient' };

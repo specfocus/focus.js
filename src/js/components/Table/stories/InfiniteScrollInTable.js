@@ -5,7 +5,7 @@ import {
   Box,
   Heading,
   grommet,
-  Grommet,
+  Viewport,
   InfiniteScroll,
   Table,
   TableRow,
@@ -13,7 +13,7 @@ import {
   TableCell,
   TableHeader,
   Text,
-} from 'grommet';
+} from 'focus';
 
 const InfiniteScrollInTable = () => {
   const step = 25;
@@ -29,7 +29,7 @@ const InfiniteScrollInTable = () => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box pad="small" basis="small">
         <Heading level={3}>
           <Box gap="small">
@@ -80,7 +80,7 @@ const InfiniteScrollInTable = () => {
           </TableBody>
         </Table>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

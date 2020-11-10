@@ -1,11 +1,11 @@
 import React from 'react';
 import { Attraction, Car } from 'grommet-icons';
 
-import { Grommet, Anchor, Box, Button, Text } from 'grommet';
-import { grommet } from '../../../themes';
+import { Viewport, Anchor, Box, Button, Text } from 'focus';
+import { focus } from '../../../themes';
 
 export const SimpleBox = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box
       direction="row-responsive"
       justify="center"
@@ -33,7 +33,7 @@ export const SimpleBox = () => (
         <Button label="Button" onClick={() => {}} />
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 SimpleBox.story = { name: 'Simple' };

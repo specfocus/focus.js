@@ -8,7 +8,7 @@ export const doc = RoutedButton => {
     .availableAt(getAvailableAtBadge('RoutedButton'))
     .description('A button with support for React Router.')
     .usage(
-      `import { RoutedButton } from 'grommet';
+      `import { RoutedButton } from 'focus';
 <RoutedButton primary path='/documentation' />`,
     )
     .intrinsicElement('button');

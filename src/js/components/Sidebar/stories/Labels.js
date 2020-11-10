@@ -6,11 +6,11 @@ import {
   Button,
   Box,
   grommet,
-  Grommet,
+  Viewport,
   Nav,
   Stack,
   Text,
-} from 'grommet';
+} from 'focus';
 
 import {
   Analytics,
@@ -69,7 +69,7 @@ const MainNavigation = () => (
 );
 
 export const Labels = () => (
-  <Grommet theme={grommet} full>
+  <Viewport theme={focus} full>
     <Box direction="row" height={{ min: '100%' }}>
       <Sidebar
         responsive={false}
@@ -81,7 +81,7 @@ export const Labels = () => (
         <MainNavigation />
       </Sidebar>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 storiesOf('Sidebar', module).add('Labels', () => <Labels />);

@@ -45,7 +45,7 @@ export { isObject, deepFreeze, deepMerge, removeUndefined };
  * Example:
  *
  * ```typescript
- * import { SomeComponent } from 'grommet';
+ * import { SomeComponent } from 'focus';
  *
  * type SomeComponentProps = PropsOf<typeof SomeComponent>;
  * ```

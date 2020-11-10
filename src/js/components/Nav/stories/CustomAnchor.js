@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Anchor, Box, Grommet, Main, Nav } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Anchor, Box, Viewport, Main, Nav } from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 const navItems = [
   { label: 'HTML', href: '#' },
@@ -27,7 +27,7 @@ const customTheme = deepMerge(grommet, {
 });
 
 const CustomAnchorNav = () => (
-  <Grommet full theme={customTheme}>
+  <Viewport full theme={customTheme}>
     <Box background="dark-1" pad="large" fill>
       <Box direction="row" pad={{ vertical: 'medium' }}>
         <Nav width="small" margin={{ right: 'large' }}>
@@ -38,7 +38,7 @@ const CustomAnchorNav = () => (
         <Main>Place main content here</Main>
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 export const CustomAnchor = () => <CustomAnchorNav />;

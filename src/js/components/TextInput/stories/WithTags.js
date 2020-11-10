@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { FormClose } from 'grommet-icons';
-import { Box, Button, Grommet, Keyboard, Text, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Viewport, Keyboard, Text, TextInput } from 'focus';
+import { focus } from 'focus/themes';
 
 const allSuggestions = ['sony', 'sonar', 'foo', 'bar'];
 
@@ -120,7 +120,7 @@ export const WithTags = () => {
     );
 
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box pad="small">
         <TagInput
           placeholder="Search for aliases..."
@@ -131,7 +131,7 @@ export const WithTags = () => {
           onChange={({ target: { value } }) => onFilterSuggestion(value)}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

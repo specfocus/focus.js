@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Grommet, Video } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Video } from 'focus';
+import { focus } from 'focus/themes';
 
 const SimpleVideo = props => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       <Video {...props}>
         <source src="small.mp4" type="video/mp4" />
@@ -22,7 +22,7 @@ const SimpleVideo = props => (
         />
       </Video>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 export const Simple = () => <SimpleVideo />;

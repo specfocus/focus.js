@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Text } from 'grommet';
-import { grommet } from '../../../themes';
+import { Viewport, Box, Text } from 'focus';
+import { focus } from '../../../themes';
 
 export const ElevationBox = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box pad="small" align="start">
       <Box pad="medium" background="dark-1" elevation="medium" gap="medium">
         <Text>dark on white</Text>
@@ -24,7 +24,7 @@ export const ElevationBox = () => (
         </Box>
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 ElevationBox.story = { name: 'Elevation' };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet, Text } from 'grommet';
+import { focus, Box, Button, Viewport, Text } from 'focus';
 import { Add } from 'grommet-icons';
 
 const ButtonWithChildren = props => (
@@ -20,11 +20,11 @@ const ButtonWithChildren = props => (
 
 export const Children = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="medium" gap="medium">
         <ButtonWithChildren />
         <ButtonWithChildren disabled />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

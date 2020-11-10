@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Box, CheckBoxGroup, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, CheckBoxGroup, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Simple = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box pad="medium">
         <CheckBoxGroup options={['First', 'Second', 'Third']} />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

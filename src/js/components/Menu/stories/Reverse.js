@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Grommet, Box, Menu } from 'grommet';
+import { Viewport, Box, Menu } from 'focus';
 import { Power, User } from 'grommet-icons';
-import { grommet } from 'grommet/themes';
+import { focus } from 'focus/themes';
 
 const ReverseMenu = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       <Menu
         dropProps={{ align: { top: 'bottom', left: 'left' } }}
@@ -17,7 +17,7 @@ const ReverseMenu = () => (
         ]}
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 export const Reverse = () => <ReverseMenu />;

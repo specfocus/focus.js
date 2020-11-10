@@ -1,11 +1,11 @@
 import React from 'react';
 import { Attraction, Car, TreeOption } from 'grommet-icons';
 
-import { Grommet, Box, Carousel } from 'grommet';
+import { Viewport, Box, Carousel } from 'focus';
 
 export const SimpleCarousel = ({ initialChild, ...props }) => {
   return (
-    <Grommet>
+    <Viewport>
       <Box align="center" pad="large">
         <Carousel initialChild={initialChild} {...props}>
           <Box pad="xlarge" background="accent-1">
@@ -19,7 +19,7 @@ export const SimpleCarousel = ({ initialChild, ...props }) => {
           </Box>
         </Carousel>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

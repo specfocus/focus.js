@@ -4,14 +4,14 @@ import {
   grommet,
   Box,
   Meter,
-  Grommet,
+  Viewport,
   Heading,
   List,
   ResponsiveContext,
   Text,
   Tip,
-} from 'grommet';
-import { deepMerge } from 'grommet/utils';
+} from 'focus';
+import { deepMerge } from 'focus/utils';
 
 const tooltipColor = 'white';
 
@@ -99,7 +99,7 @@ const TipContent = ({ size }) => (
 );
 
 export const ResponsiveTip = () => (
-  <Grommet theme={theme} full>
+  <Viewport theme={theme} full>
     <ResponsiveContext.Consumer>
       {size => (
         <Box
@@ -129,7 +129,7 @@ export const ResponsiveTip = () => (
         </Box>
       )}
     </ResponsiveContext.Consumer>
-  </Grommet>
+  </Viewport>
 );
 
 ResponsiveTip.story = {

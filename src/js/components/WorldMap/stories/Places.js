@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Box, Grommet, WorldMap } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, WorldMap } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Places = () => {
   const [active, setActive] = React.useState();
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <WorldMap
           places={[
@@ -20,6 +20,6 @@ export const Places = () => {
         />
         {active && <Box margin="large">Sydney</Box>}
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

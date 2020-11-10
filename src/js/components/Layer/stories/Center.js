@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Trash } from 'grommet-icons';
 
-import { Box, Button, Grommet, Heading, Layer, Select, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Viewport, Heading, Layer, Select, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const CenterLayer = () => {
   const [open, setOpen] = React.useState();
@@ -18,7 +18,7 @@ export const CenterLayer = () => {
   const onClose2 = () => setOpen2(undefined);
 
   return (
-    <Grommet theme={grommet} full>
+    <Viewport theme={focus} full>
       <Box fill align="center" justify="center">
         <Button
           icon={<Trash />}
@@ -81,7 +81,7 @@ export const CenterLayer = () => {
           </Box>
         </Layer>
       )}
-    </Grommet>
+    </Viewport>
   );
 };
 

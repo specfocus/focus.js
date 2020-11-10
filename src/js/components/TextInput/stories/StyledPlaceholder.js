@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { Box, Form, Grommet, TextInput, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Form, Viewport, TextInput, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const StyledPlaceholder = () => {
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box>
         <Form>
           <TextInput name="name" placeholder={<Text>placeholder</Text>} />
         </Form>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

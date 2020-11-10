@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { Anchor, Box, Grommet, Paragraph } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Anchor, Box, Viewport, Paragraph } from 'focus';
+import { focus } from 'focus/themes';
 
 const InlineAnchor = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <Paragraph>
           This is <Anchor label="an inline link" href="#" /> with surrounding
           text.
         </Paragraph>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

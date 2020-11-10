@@ -1,3 +1,3 @@
 export { base, generate } from './base';
-export { grommet } from './grommet';
+export { focus } from './focus';
 export { dark } from './dark';

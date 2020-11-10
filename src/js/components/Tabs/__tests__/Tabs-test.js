@@ -8,16 +8,16 @@ import 'regenerator-runtime/runtime';
 import { axe } from 'jest-axe';
 import { render, fireEvent } from '@testing-library/react';
 
-import { Grommet, Tab, Tabs } from '../..';
+import { Viewport, Tab, Tabs } from '../..';
 
 describe('Tabs', () => {
   test('should have no accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <Tabs>
           <Tab a11yTitle="test" />
         </Tabs>
-      </Grommet>,
+      </Viewport>,
     );
 
     const results = await axe(container);
@@ -27,44 +27,44 @@ describe('Tabs', () => {
 
   test('no Tab', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Tabs>
           <Tab />
         </Tabs>
-      </Grommet>,
+      </Viewport>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test('Tab', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Tabs>
           <Tab title="Tab 1">Tab body 1</Tab>
           {undefined}
           <Tab title="Tab 2">Tab body 2</Tab>
         </Tabs>
-      </Grommet>,
+      </Viewport>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test('complex title', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Tabs>
           <Tab title={<div>Tab 1</div>}>Tab body 1</Tab>
           {undefined}
           <Tab title={<div>Tab 2</div>}>Tab body 2</Tab>
         </Tabs>
-      </Grommet>,
+      </Viewport>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test('with icon + reverse', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Tabs>
           <Tab title="Tab 1" icon={<svg />}>
             Tab body 1
@@ -73,19 +73,19 @@ describe('Tabs', () => {
             Tab body 2
           </Tab>
         </Tabs>
-      </Grommet>,
+      </Viewport>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test('alignControls', () => {
     const component = renderer.create(
-      <Grommet full>
+      <Viewport full>
         <Tabs alignControls="center">
           <Tab title="Tab 1">Tab body 1</Tab>
           <Tab title="Tab 2">Tab body 2</Tab>
         </Tabs>
-      </Grommet>,
+      </Viewport>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
@@ -93,12 +93,12 @@ describe('Tabs', () => {
   test('Custom Tab component', () => {
     const CustomTab = () => <Tab title="Tab 1">Tab body 1</Tab>;
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <Tabs>
           <CustomTab />
           <Tab title="Tab 2">Tab body 2</Tab>
         </Tabs>
-      </Grommet>,
+      </Viewport>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -107,12 +107,12 @@ describe('Tabs', () => {
   test('change to second tab', () => {
     const onActive = jest.fn();
     const { getByText, container } = render(
-      <Grommet>
+      <Viewport>
         <Tabs onActive={onActive}>
           <Tab title="Tab 1">Tab body 1</Tab>
           <Tab title="Tab 2">Tab body 2</Tab>
         </Tabs>
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -124,7 +124,7 @@ describe('Tabs', () => {
 
   test('set on hover', () => {
     const { getByText, container } = render(
-      <Grommet>
+      <Viewport>
         <Tabs>
           {/* eslint-disable-next-line jsx-a11y/mouse-events-have-key-events */}
           <Tab title="Tab 1" onMouseOver={() => {}} onMouseOut={() => {}}>
@@ -132,7 +132,7 @@ describe('Tabs', () => {
           </Tab>
           <Tab title="Tab 2">Tab body 2</Tab>
         </Tabs>
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -151,14 +151,14 @@ describe('Tabs', () => {
 
   test('should style as disabled', () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <Tabs>
           <Tab title="Enabled Tab">This tab is enabled</Tab>
           <Tab title="Disabled Tab" disabled>
             This tab is disabled
           </Tab>
         </Tabs>
-      </Grommet>,
+      </Viewport>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -181,14 +181,14 @@ describe('Tabs', () => {
     };
 
     const { container, getByText } = render(
-      <Grommet theme={customTheme}>
+      <Viewport theme={customTheme}>
         <Tabs>
           <Tab title="Enabled Tab">This tab is enabled</Tab>
           <Tab title="Disabled Tab" disabled>
             This tab is disabled
           </Tab>
         </Tabs>
-      </Grommet>,
+      </Viewport>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -220,14 +220,14 @@ describe('Tabs', () => {
     };
 
     const { container, getByText } = render(
-      <Grommet theme={customTheme}>
+      <Viewport theme={customTheme}>
         <Tabs>
           <Tab title="Enabled Tab">This tab is enabled</Tab>
           <Tab title="Disabled Tab" disabled>
             This tab is disabled
           </Tab>
         </Tabs>
-      </Grommet>,
+      </Viewport>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -248,13 +248,13 @@ describe('Tabs', () => {
 
   test('styled component should change tab color when active', () => {
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <Tabs>
           <ButtonTab title="About" />
           <ButtonTab title="Activity" />
           <ButtonTab title="Stickers" />
         </Tabs>
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.click(getByText('Activity'));
     expect(container.firstChild).toMatchSnapshot();

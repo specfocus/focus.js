@@ -1,20 +1,20 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { deepMerge } from 'grommet/utils';
+import { deepMerge } from 'focus/utils';
 
 import {
-  grommet,
+  focus,
   Anchor,
   Box,
   Button,
-  Grommet,
+  Viewport,
   Menu,
   Text,
   TextInput,
-} from 'grommet';
+} from 'focus';
 
-const customFocus = deepMerge(grommet, {
+const customFocus = deepMerge(focus, {
   global: {
     colors: {
       focus: 'neutral-3',
@@ -23,7 +23,7 @@ const customFocus = deepMerge(grommet, {
 });
 
 const CustomFocusFC = () => (
-  <Grommet theme={customFocus}>
+  <Viewport theme={customFocus}>
     <Box pad="small" gap="medium" width="medium">
       <Text>
         Focus on the input components and notice the custom focus color
@@ -36,7 +36,7 @@ const CustomFocusFC = () => (
       />
       <Button label="Button" onClick={() => {}} />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 storiesOf('Theme', module).add('Focus', () => <CustomFocusFC />);

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, CheckBox } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { normalizeColor, deepMerge } from 'grommet/utils';
+import { Box, Viewport, CheckBox } from 'focus';
+import { focus } from 'focus/themes';
+import { normalizeColor, deepMerge } from 'focus/utils';
 
 import { FormCheckmark } from 'grommet-icons';
 
@@ -48,7 +48,7 @@ export const Custom = props => {
   const [checked, setChecked] = useState(false);
 
   return (
-    <Grommet theme={deepMerge(grommet, customCheckBoxTheme)}>
+    <Viewport theme={deepMerge(grommet, customCheckBoxTheme)}>
       <Box align="center" pad="large">
         <CheckBox
           {...props}
@@ -57,6 +57,6 @@ export const Custom = props => {
           onChange={event => setChecked(event.target.checked)}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

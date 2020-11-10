@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Grommet, RangeInput } from 'grommet';
-import { ThemeType } from 'grommet/themes';
+import { Box, Viewport, RangeInput } from 'focus';
+import { ThemeType } from 'focus/themes';
 
 import { Volume } from 'grommet-icons';
 
@@ -37,7 +37,7 @@ export const Custom = () => {
   const onChange = event => setValue(event.target.value);
 
   return (
-    <Grommet theme={customThemeRangeInput}>
+    <Viewport theme={customThemeRangeInput}>
       <Box direction="row" align="center" pad="large" gap="small">
         <Volume color="neutral-2" />
         <Box align="center" width="small">
@@ -50,6 +50,6 @@ export const Custom = () => {
           />
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

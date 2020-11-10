@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, DataChart, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, DataChart, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 const data = [];
 for (let i = 1; i < 32; i += 1) {
@@ -15,7 +15,7 @@ for (let i = 1; i < 32; i += 1) {
 }
 
 export const FourDimensionDataChart = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" justify="start" pad="large">
       <DataChart
         data={data}
@@ -47,7 +47,7 @@ export const FourDimensionDataChart = () => (
         legend
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 FourDimensionDataChart.story = {

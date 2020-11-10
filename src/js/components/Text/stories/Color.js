@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Color = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Text color="accent-1">Colored Text</Text>
-  </Grommet>
+  </Viewport>
 );

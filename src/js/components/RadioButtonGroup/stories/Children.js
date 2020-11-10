@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, RadioButtonGroup } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, RadioButtonGroup } from 'focus';
+import { focus } from 'focus/themes';
 import { Ascend, Descend } from 'grommet-icons';
 
 export const Children = () => {
   const [value, setValue] = useState();
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <RadioButtonGroup
           name="radio"
@@ -32,6 +32,6 @@ export const Children = () => {
           }}
         </RadioButtonGroup>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

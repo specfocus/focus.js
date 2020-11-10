@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Grommet, Layer } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Layer } from 'focus';
+import { focus } from 'focus/themes';
 
 const MarginLayer = ({ margin, ...rest }) => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Layer
       margin={
         margin || { left: '40px', top: '50px', right: '30px', bottom: '10px' }
@@ -20,7 +20,7 @@ const MarginLayer = ({ margin, ...rest }) => (
         <Box pad="xlarge">text</Box>
       </Box>
     </Layer>
-  </Grommet>
+  </Viewport>
 );
 
 export const Margin = () => <MarginLayer full />;

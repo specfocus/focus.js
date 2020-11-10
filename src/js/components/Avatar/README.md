@@ -5,7 +5,7 @@ An Avatar.
 ## Usage
 
 ```javascript
-import { Avatar } from 'grommet';
+import { Avatar } from 'focus';
 <Avatar/>
 ```
 

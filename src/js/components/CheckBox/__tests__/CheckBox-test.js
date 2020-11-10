@@ -6,7 +6,7 @@ import { axe } from 'jest-axe';
 import 'jest-axe/extend-expect';
 import 'regenerator-runtime/runtime';
 
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { CheckBox } from '..';
 
 describe('CheckBox', () => {
@@ -14,9 +14,9 @@ describe('CheckBox', () => {
 
   test('should not have accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <CheckBox a11yTitle="test" />
-      </Grommet>,
+      </Viewport>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -25,9 +25,9 @@ describe('CheckBox', () => {
 
   test('label should not have accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <CheckBox label="test" />
-      </Grommet>,
+      </Viewport>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -36,10 +36,10 @@ describe('CheckBox', () => {
 
   test('renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <CheckBox />
         <CheckBox id="test id" name="test name" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -47,10 +47,10 @@ describe('CheckBox', () => {
 
   test('label renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <CheckBox label="test label" />
         <CheckBox label={<div>test label</div>} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -58,9 +58,9 @@ describe('CheckBox', () => {
 
   test('checked renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <CheckBox checked />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -68,10 +68,10 @@ describe('CheckBox', () => {
 
   test('disabled renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <CheckBox disabled />
         <CheckBox disabled checked />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -79,9 +79,9 @@ describe('CheckBox', () => {
 
   test('reverse renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <CheckBox reverse label="test label" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -89,11 +89,11 @@ describe('CheckBox', () => {
 
   test('toggle renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <CheckBox toggle />
         <CheckBox toggle checked />
         <CheckBox toggle label="test label" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -101,10 +101,10 @@ describe('CheckBox', () => {
 
   test('indeterminate renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <CheckBox indeterminate />
         <CheckBox indeterminate label="test label" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -114,9 +114,9 @@ describe('CheckBox', () => {
     console.warn = jest.fn();
     const warnSpy = jest.spyOn(console, 'warn');
     render(
-      <Grommet>
+      <Viewport>
         <CheckBox indeterminate checked />
-      </Grommet>,
+      </Viewport>,
     );
     expect(warnSpy).toBeCalledWith(
       'Checkbox cannot be "checked" and "indeterminate" at the same time.',
@@ -131,9 +131,9 @@ describe('CheckBox', () => {
     console.warn = jest.fn();
     const warnSpy = jest.spyOn(console, 'warn');
     render(
-      <Grommet>
+      <Viewport>
         <CheckBox indeterminate toggle />
-      </Grommet>,
+      </Viewport>,
     );
     expect(warnSpy).toBeCalledWith(
       'Checkbox of type toggle does not have "indeterminate" state.',
@@ -146,9 +146,9 @@ describe('CheckBox', () => {
 
   test('controlled', () => {
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <CheckBox label="test-label" checked />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByText('test-label'));

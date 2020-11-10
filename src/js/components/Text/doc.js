@@ -13,7 +13,7 @@ export const doc = Text => {
     .availableAt(getAvailableAtBadge('Text'))
     .description('Arbitrary text.')
     .usage(
-      `import { Text } from 'grommet';
+      `import { Text } from 'focus';
 <Text />`,
     )
     .intrinsicElement('span');

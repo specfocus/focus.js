@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Grid } from 'grommet';
-import { grommet } from '../../../themes';
+import { Viewport, Box, Grid } from 'focus';
+import { focus } from '../../../themes';
 
 export const Animation = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box pad="medium">
       <Grid columns="small" gap="medium">
         {[
@@ -33,5 +33,5 @@ export const Animation = () => (
         ))}
       </Grid>
     </Box>
-  </Grommet>
+  </Viewport>
 );

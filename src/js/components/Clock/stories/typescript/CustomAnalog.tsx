@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Grommet, Clock } from 'grommet';
+import { Box, Viewport, Clock } from 'focus';
 
 const analogClockTheme = {
   clock: {
@@ -29,11 +29,11 @@ const analogClockTheme = {
 };
 
 export const CustomAnalog = () => (
-  <Grommet theme={analogClockTheme}>
+  <Viewport theme={analogClockTheme}>
     <Box align="center" justify="start" pad="large">
       <Clock type="analog" />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 CustomAnalog.story = {

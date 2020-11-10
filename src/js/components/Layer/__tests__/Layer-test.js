@@ -5,7 +5,7 @@ import { getByTestId, queryByTestId } from '@testing-library/dom';
 
 import { createPortal, expectPortal } from '../../../utils/portal';
 
-import { Grommet, Box, Layer } from '../..';
+import { Viewport, Box, Layer } from '../..';
 import { LayerContainer } from '../LayerContainer';
 
 const SimpleLayer = () => {
@@ -55,10 +55,10 @@ const TargetLayer = props => {
     );
   }
   return (
-    <Grommet>
+    <Viewport>
       <div ref={setTarget} />
       {layer}
-    </Grommet>
+    </Viewport>
   );
 };
 
@@ -85,11 +85,11 @@ describe('Layer', () => {
     fullOptions.forEach(full => {
       test(`position: ${position} - full: ${full}`, () => {
         render(
-          <Grommet>
+          <Viewport>
             <Layer id="position-full-test" position={position} full={full}>
               This is a layer
             </Layer>
-          </Grommet>,
+          </Viewport>,
         );
         expectPortal('position-full-test').toMatchSnapshot();
       });
@@ -99,11 +99,11 @@ describe('Layer', () => {
   ['none', 'xsmall', 'small', 'medium', 'large'].forEach(margin =>
     test(`margin ${margin}`, () => {
       render(
-        <Grommet>
+        <Viewport>
           <Layer id="margin-test" margin={margin}>
             This is a layer
           </Layer>
-        </Grommet>,
+        </Viewport>,
       );
       expectPortal('margin-test').toMatchSnapshot();
     }),
@@ -111,69 +111,69 @@ describe('Layer', () => {
 
   test(`custom margin`, () => {
     render(
-      <Grommet>
+      <Viewport>
         <Layer
           id="margin-test"
           margin={{ top: '50px', bottom: '40px', left: '30px', right: '20px' }}
         >
           This is a layer
         </Layer>
-      </Grommet>,
+      </Viewport>,
     );
     expectPortal('margin-test').toMatchSnapshot();
   });
 
   test('hidden', () => {
     const { rerender } = render(
-      <Grommet>
+      <Viewport>
         <Layer id="hidden-test" position="hidden">
           This is a layer
         </Layer>
-      </Grommet>,
+      </Viewport>,
     );
     expectPortal('hidden-test').toMatchSnapshot();
 
     rerender(
-      <Grommet>
+      <Viewport>
         <Layer id="hidden-test" position="center">
           This is a layer
         </Layer>
-      </Grommet>,
+      </Viewport>,
     );
     expectPortal('hidden-test').toMatchSnapshot();
   });
 
   test('plain', () => {
     render(
-      <Grommet>
+      <Viewport>
         <Layer id="plain-test" plain>
           This is a plain layer
         </Layer>
-      </Grommet>,
+      </Viewport>,
     );
     expectPortal('plain-test').toMatchSnapshot();
   });
 
   test('non-modal', () => {
     render(
-      <Grommet>
+      <Viewport>
         <Layer id="non-modal-test" modal={false}>
           This is a non-modal layer
         </Layer>
-      </Grommet>,
+      </Viewport>,
     );
     expectPortal('non-modal-test').toMatchSnapshot();
   });
 
   test('dark context', () => {
     render(
-      <Grommet>
+      <Viewport>
         <Box background="dark-1">
           <Layer id="non-modal-test" modal={false}>
             This is a non-modal layer
           </Layer>
         </Box>
-      </Grommet>,
+      </Viewport>,
     );
     expectPortal('non-modal-test').toMatchSnapshot();
   });
@@ -181,11 +181,11 @@ describe('Layer', () => {
   ['slide', 'fadeIn', false, true].forEach(animation =>
     test(`animation ${animation}`, () => {
       render(
-        <Grommet>
+        <Viewport>
           <Layer id="animation-test" animation={animation}>
             This is a layer
           </Layer>
-        </Grommet>,
+        </Viewport>,
       );
       expectPortal('animation-test').toMatchSnapshot();
     }),
@@ -194,11 +194,11 @@ describe('Layer', () => {
   test('invokes onEsc', () => {
     const onEsc = jest.fn();
     render(
-      <Grommet>
+      <Viewport>
         <LayerContainer onEsc={onEsc}>
           <input data-testid="test-input" />
         </LayerContainer>
-      </Grommet>,
+      </Viewport>,
     );
 
     const inputNode = getByTestId(document, 'test-input');
@@ -209,14 +209,14 @@ describe('Layer', () => {
   test('is accessible', done => {
     /* eslint-disable jsx-a11y/tabindex-no-positive */
     render(
-      <Grommet>
+      <Viewport>
         <FakeLayer dataTestid="test-layer-node">
           <div data-testid="test-body-node">
             <input />
             <input tabIndex="10" />
           </div>
         </FakeLayer>
-      </Grommet>,
+      </Viewport>,
     );
     /* eslint-enable jsx-a11y/tabindex-no-positive */
 
@@ -239,12 +239,12 @@ describe('Layer', () => {
   test('focus on layer', () => {
     /* eslint-disable jsx-a11y/no-autofocus */
     render(
-      <Grommet>
+      <Viewport>
         <Layer data-testid="focus-layer-test">
           <input />
         </Layer>
         <input autoFocus />
-      </Grommet>,
+      </Viewport>,
     );
     /* eslint-disable jsx-a11y/no-autofocus */
 
@@ -256,12 +256,12 @@ describe('Layer', () => {
   test('not steal focus from an autofocus focusable element', () => {
     /* eslint-disable jsx-a11y/no-autofocus */
     render(
-      <Grommet>
+      <Viewport>
         <Layer data-testid="focus-layer-input-test">
           <input autoFocus data-testid="focus-input" />
           <button type="button">Button</button>
         </Layer>
-      </Grommet>,
+      </Viewport>,
     );
     /* eslint-disable jsx-a11y/no-autofocus */
     const layerNode = getByTestId(document, 'focus-layer-input-test');
@@ -272,29 +272,29 @@ describe('Layer', () => {
 
   test('target', () => {
     render(
-      <Grommet>
+      <Viewport>
         <TargetLayer id="target-test">This layer has a target</TargetLayer>
-      </Grommet>,
+      </Viewport>,
     );
     expectPortal('target-test').toMatchSnapshot();
   });
 
   test('target not modal', () => {
     render(
-      <Grommet>
+      <Viewport>
         <TargetLayer id="target-test" modal={false}>
           This layer has a target
         </TargetLayer>
-      </Grommet>,
+      </Viewport>,
     );
     expectPortal('target-test').toMatchSnapshot();
   });
 
   test('unmounts from dom', () => {
     render(
-      <Grommet>
+      <Viewport>
         <SimpleLayer />
-      </Grommet>,
+      </Viewport>,
     );
     setTimeout(() => {
       expect(queryByTestId(document, 'test-dom-removal')).toBeNull();
@@ -303,9 +303,9 @@ describe('Layer', () => {
 
   test('default containerTarget', () => {
     render(
-      <Grommet>
+      <Viewport>
         <Layer data-testid="layer">Test</Layer>
-      </Grommet>,
+      </Viewport>,
     );
     const layer = getByTestId(document, 'layer');
     const actualRoot = layer.parentNode.parentNode.parentNode.parentNode;
@@ -317,9 +317,9 @@ describe('Layer', () => {
     document.body.appendChild(target);
     try {
       render(
-        <Grommet containerTarget={target}>
+        <Viewport containerTarget={target}>
           <Layer data-testid="layer">Test</Layer>
-        </Grommet>,
+        </Viewport>,
       );
       const layer = getByTestId(document, 'layer');
       const actualRoot = layer.parentNode.parentNode.parentNode.parentNode;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet, Heading } from 'grommet';
+import { focus, Box, Button, Viewport, Heading } from 'focus';
 
 const kindButtonTheme = {
   global: {
@@ -125,7 +125,7 @@ const coloredButton = {
 
 export const Custom = () => (
   <>
-    <Grommet theme={kindButtonTheme}>
+    <Viewport theme={kindButtonTheme}>
       <Box gap="small" pad="large">
         <Heading level={2} size="small">
           new custom theme
@@ -161,8 +161,8 @@ export const Custom = () => (
           />
         </Box>
       </Box>
-    </Grommet>
-    <Grommet theme={customTheme}>
+    </Viewport>
+    <Viewport theme={customTheme}>
       <Box
         align="center"
         justify="center"
@@ -181,16 +181,16 @@ export const Custom = () => (
         <Button label="Disabled" onClick={() => {}} disabled />
         <Button label="Plain Disabled" onClick={() => {}} plain disabled />
       </Box>
-    </Grommet>
-    <Grommet theme={coloredButton}>
+    </Viewport>
+    <Viewport theme={coloredButton}>
       <Box align="center" pad="large">
         <Button as="span" label="theme on dark background" primary />
       </Box>
-    </Grommet>
-    <Grommet theme={grommet}>
+    </Viewport>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <Button as="span" label="Custom as=span" />
       </Box>
-    </Grommet>
+    </Viewport>
   </>
 );

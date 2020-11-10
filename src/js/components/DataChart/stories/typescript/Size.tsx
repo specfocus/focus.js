@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, DataChart, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, DataChart, Viewport, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 const data = [];
 for (let i = 1; i < 8; i += 1) {
@@ -13,7 +13,7 @@ for (let i = 1; i < 8; i += 1) {
 }
 
 export const Size = () => (
-  <Grommet full theme={grommet}>
+  <Viewport full theme={focus}>
     <Box fill="horizontal" align="center" justify="center" pad="large">
       <DataChart
         axis
@@ -36,5 +36,5 @@ export const Size = () => (
         pad={{ horizontal: 'medium', vertical: 'small' }}
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );

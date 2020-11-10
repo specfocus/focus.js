@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Grid } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Grid } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Percentages = () => (
-  <Grommet theme={grommet} full>
+  <Viewport theme={focus} full>
     <Grid
       fill
       areas={[
@@ -18,5 +18,5 @@ export const Percentages = () => (
       <Box gridArea="nav" background="brand" />
       <Box gridArea="main" background="brand" />
     </Grid>
-  </Grommet>
+  </Viewport>
 );

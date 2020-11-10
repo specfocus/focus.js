@@ -4,12 +4,12 @@ import {
   Avatar,
   Button,
   Box,
-  Grommet,
+  Viewport,
   Nav,
   Sidebar,
   Stack,
   Tip,
-} from 'grommet';
+} from 'focus';
 
 import {
   Analytics,
@@ -102,7 +102,7 @@ const SidebarButton = ({ iconName, index }) => {
 };
 
 export const SidebarTip = () => (
-  <Grommet theme={customTheme} full>
+  <Viewport theme={customTheme} full>
     <Box direction="row" height={{ min: '100%' }}>
       <Sidebar
         background="brand"
@@ -122,7 +122,7 @@ export const SidebarTip = () => (
         </Nav>
       </Sidebar>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 SidebarTip.story = { name: 'Sidebar' };

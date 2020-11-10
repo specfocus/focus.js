@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Grommet, Paragraph } from 'grommet';
-import { deepMerge } from 'grommet/utils';
-import { grommet } from 'grommet/themes';
+import { Viewport, Paragraph } from 'focus';
+import { deepMerge } from 'focus/utils';
+import { focus } from 'focus/themes';
 
 const customTheme = deepMerge(grommet, {
   paragraph: {
@@ -13,11 +13,11 @@ const customTheme = deepMerge(grommet, {
 });
 
 export const Themed = () => (
-  <Grommet theme={customTheme}>
+  <Viewport theme={customTheme}>
     <Paragraph>
       The font family for this paragraph is being defined by a custom theme.
     </Paragraph>
-  </Grommet>
+  </Viewport>
 );
 
 // disabling chromatic because snapshot doesn't capture font

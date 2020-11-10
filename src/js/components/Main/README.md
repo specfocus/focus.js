@@ -5,7 +5,7 @@ main content of a document.
 ## Usage
 
 ```javascript
-import { Main } from 'grommet';
+import { Main } from 'focus';
 <Main />
 ```
 

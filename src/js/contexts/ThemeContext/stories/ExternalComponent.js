@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { grommet } from 'grommet/themes';
-import { Box, Text, ThemeContext, Grommet } from 'grommet';
+import { focus } from 'focus/themes';
+import { Box, Text, ThemeContext, Viewport } from 'focus';
 
 export const ExternalComponentWithTheme = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box background="neutral-3">
       <Text color="light-1">This is a grommet component</Text>
     </Box>
@@ -18,7 +18,7 @@ export const ExternalComponentWithTheme = () => (
         </div>
       )}
     </ThemeContext.Consumer>
-  </Grommet>
+  </Viewport>
 );
 
 ExternalComponentWithTheme.story = {

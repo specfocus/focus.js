@@ -8,7 +8,7 @@ import { cleanup, fireEvent, render } from '@testing-library/react';
 
 import { expectPortal } from '../../../utils/portal';
 
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { Drop } from '..';
 
 const customTheme = {
@@ -50,10 +50,10 @@ const TestInput = ({
     );
   }
   return (
-    <Grommet theme={theme} containerTarget={containerTarget}>
+    <Viewport theme={theme} containerTarget={containerTarget}>
       <input ref={inputRef} {...inputProps} aria-label="test" />
       {drop}
-    </Grommet>
+    </Viewport>
   );
 };
 

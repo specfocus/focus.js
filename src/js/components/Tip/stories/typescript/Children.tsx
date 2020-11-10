@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet, Text } from 'grommet';
+import { focus, Box, Button, Viewport, Text } from 'focus';
 import { Tip } from '../../Tip';
 
 export const Children = () => {
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box align="center" pad="xlarge" gap="xlarge" fill>
         <Text>Tooltip will be displayed once hovering on the Tip's Child</Text>
         <Tip
@@ -56,7 +56,7 @@ export const Children = () => {
           <Button label="Button Child" />
         </Tip>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

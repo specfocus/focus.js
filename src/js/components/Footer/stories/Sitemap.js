@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Grommet as GrommetIcon } from 'grommet-icons';
-import { Anchor, Box, Footer, grommet, Grommet, Main, Text } from 'grommet';
+import { Anchor, Box, Footer, grommet, Viewport, Main, Text } from 'focus';
 import { threeColumns as data } from './data';
 
 const FooterAnchor = ({ ...rest }) => (
@@ -25,7 +25,7 @@ const FooterContent = () => {
 
 export const Sitemap = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Main
         background="light-4"
         elevation="large"
@@ -49,6 +49,6 @@ export const Sitemap = () => {
         </Box>
         <FooterContent />
       </Footer>
-    </Grommet>
+    </Viewport>
   );
 };

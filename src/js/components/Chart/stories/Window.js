@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 
-import { Grommet, Box, Chart, RangeSelector, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Chart, RangeSelector, Stack, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 import { calcs } from '../calcs';
 import { generateData } from './data';
@@ -62,7 +62,7 @@ export const WindowChart = ({ data, max }) => {
   );
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box pad="large">
         {/* className="chromatic-ignore" is used for the story testing.
             grommet doesn't reccomend the usage of className */}
@@ -144,7 +144,7 @@ export const WindowChart = ({ data, max }) => {
           />
         </Stack>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

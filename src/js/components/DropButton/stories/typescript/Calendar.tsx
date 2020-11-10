@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FormDown } from 'grommet-icons';
 
-import { Grommet, Box, Calendar, DropButton, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Calendar, DropButton, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 const CalendarDropButton = () => {
   const [date, setDate] = useState('');
@@ -14,7 +14,7 @@ const CalendarDropButton = () => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <DropButton
           open={open}
@@ -30,7 +30,7 @@ const CalendarDropButton = () => {
           </Box>
         </DropButton>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

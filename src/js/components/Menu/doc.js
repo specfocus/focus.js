@@ -19,7 +19,7 @@ export const doc = Menu => {
       in those cases.`,
     )
     .usage(
-      `import { Menu } from 'grommet';
+      `import { Menu } from 'focus';
 <Menu />`,
     )
     .intrinsicElement('button');

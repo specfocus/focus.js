@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Grommet, Box, RangeSelector, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, RangeSelector, Stack, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 const SimpleRangeSelector = ({ direction = 'horizontal', ...rest }) => {
   const [range, setRange] = useState([12, 16]);
@@ -10,7 +10,7 @@ const SimpleRangeSelector = ({ direction = 'horizontal', ...rest }) => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <Stack>
           <Box
@@ -41,7 +41,7 @@ const SimpleRangeSelector = ({ direction = 'horizontal', ...rest }) => {
           />
         </Stack>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

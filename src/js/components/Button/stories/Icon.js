@@ -1,11 +1,11 @@
 import React from 'react';
 import { Close, Send, User } from 'grommet-icons';
 
-import { Box, Button, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Viewport, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Icon = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       <Text margin="small"> plain=true (no padding, no border) </Text>
       <Box direction="row">
@@ -30,7 +30,7 @@ export const Icon = () => (
         <Button icon={<User />} onClick={() => {}} />
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 Icon.story = { name: 'Icon plain' };

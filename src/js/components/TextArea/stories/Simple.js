@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, TextArea } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, TextArea } from 'focus';
+import { focus } from 'focus/themes';
 
 const Resize = props => {
   const [value, setValue] = useState('');
@@ -9,11 +9,11 @@ const Resize = props => {
   const onChange = event => setValue(event.target.value);
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <TextArea value={value} onChange={onChange} {...props} />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

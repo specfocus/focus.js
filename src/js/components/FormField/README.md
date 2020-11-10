@@ -7,7 +7,7 @@ A single field in a form. FormField wraps an input component with
 ## Usage
 
 ```javascript
-import { FormField } from 'grommet';
+import { FormField } from 'focus';
 <FormField />
 ```
 
@@ -26,7 +26,7 @@ string
 
 **component**
 
-The component to insert in the FormField. Grommet will add update the
+The component to insert in the FormField. Focus will add update the
       form values when this field changes. Any additional properties
       (such as initial value) you pass to FormField will be forwarded to this
       component. The component may be custom as long it supports the properties

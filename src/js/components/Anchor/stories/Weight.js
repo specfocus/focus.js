@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Anchor, Box, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Anchor, Box, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 const WeightAnchor = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large" gap="xsmall">
         <Anchor href="#" label="Anchor default weight" />
         <Anchor href="#" label="Anchor weight Normal" weight="normal" />
@@ -14,7 +14,7 @@ const WeightAnchor = () => {
         <Anchor href="#" label="Anchor weight 400" weight="400" />
         <Anchor href="#" label="Anchor weight 600" weight="600" />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

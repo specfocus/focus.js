@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Box, Grommet, Markdown } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Markdown } from 'focus';
+import { focus } from 'focus/themes';
 
 const CONTENT = `
   # Out of Breath
@@ -14,7 +14,7 @@ const CONTENT = `
   [reference](#)
 
 \`\`\`
-import { Grommet } from 'grommet';
+import { Viewport } from 'focus';
 \`\`\`
 
   > i carry your heart with me
@@ -28,11 +28,11 @@ import { Grommet } from 'grommet';
 `;
 
 export const Simple = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       <Markdown>{CONTENT}</Markdown>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 const StyledPre = styled.pre`
@@ -40,11 +40,11 @@ const StyledPre = styled.pre`
 `;
 
 export const ComponentOverrideMarkdown = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       <Markdown components={{ pre: StyledPre }}>{CONTENT}</Markdown>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 ComponentOverrideMarkdown.story = {

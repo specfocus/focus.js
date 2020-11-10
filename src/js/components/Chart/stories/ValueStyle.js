@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, Chart } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Chart } from 'focus';
+import { focus } from 'focus/themes';
 
 const values = [
   {
@@ -35,12 +35,12 @@ const values = [
 ];
 
 export const ValueStyleChart = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large" gap="large">
       <Chart type="point" point="circle" values={values} />
       <Chart type="bar" values={values} />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 ValueStyleChart.story = {

@@ -9,10 +9,10 @@ import {
   CardFooter,
   Collapsible,
   Heading,
-  Grommet,
+  Viewport,
   Image,
   Paragraph,
-} from 'grommet';
+} from 'focus';
 
 import { FormDown, FormUp, Favorite, ShareOption } from 'grommet-icons';
 
@@ -49,7 +49,7 @@ export const RichFooter = () => {
     );
   };
   return (
-    <Grommet theme={theme}>
+    <Viewport theme={theme}>
       <Box pad="medium" align="start">
         <Card elevation="large" width="medium">
           <CardBody height="small">
@@ -95,7 +95,7 @@ export const RichFooter = () => {
           </Collapsible>
         </Card>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import { Attraction, Car, TreeOption } from 'grommet-icons';
-import { Box, Grommet, Tab, Tabs } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Tab, Tabs } from 'focus';
+import { focus } from 'focus/themes';
 
 const ResponsiveTabs = () => {
   const [index, setIndex] = useState();
@@ -10,7 +10,7 @@ const ResponsiveTabs = () => {
   const onActive = nextIndex => setIndex(nextIndex);
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Tabs activeIndex={index} onActive={onActive}>
         <Tab title="Tab 1">
           <Box margin="small" pad="large" align="center" background="accent-1">
@@ -113,7 +113,7 @@ const ResponsiveTabs = () => {
           </Box>
         </Tab>
       </Tabs>
-    </Grommet>
+    </Viewport>
   );
 };
 

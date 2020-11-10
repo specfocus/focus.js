@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Text } from 'grommet';
+import { Text } from 'focus';
 
 // Always should store amount in cents to avoid precision errors
 export const data = [

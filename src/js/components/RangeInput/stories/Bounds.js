@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Button, Grommet, RangeInput } from 'grommet';
+import { Box, Button, Viewport, RangeInput } from 'focus';
 
 import { Add, Subtract } from 'grommet-icons';
 
@@ -27,7 +27,7 @@ export const Bounds = () => {
 
   const onChange = event => setValue(event.target.value);
   return (
-    <Grommet theme={rangeInputTheme}>
+    <Viewport theme={rangeInputTheme}>
       <Box direction="row" align="center" pad="large" gap="small">
         <Button
           plain={false}
@@ -61,6 +61,6 @@ export const Bounds = () => {
           }}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

@@ -3,7 +3,7 @@ import 'jest-styled-components';
 import renderer from 'react-test-renderer';
 import { cleanup, render, act } from '@testing-library/react';
 
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { Clock } from '..';
 
 const DURATION = 'PT18H23M34S';
@@ -16,22 +16,22 @@ describe('Clock', () => {
 
   test('time', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Clock run={false} type="digital" time={DURATION} />
         <Clock run={false} type="digital" time={TIME} />
         <Clock run={false} type="digital" time={TIME2} />
         <Clock run={false} type="digital" time={DATE} />
-      </Grommet>,
+      </Viewport>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test('hourLimit', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Clock run={false} type="digital" time={DURATION} hourLimit={12} />
         <Clock run={false} type="digital" time={DURATION} hourLimit={24} />
-      </Grommet>,
+      </Viewport>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
@@ -39,12 +39,12 @@ describe('Clock', () => {
   test('run', () => {
     jest.useFakeTimers();
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <Clock type="analog" run="forward" time={DURATION} />
         <Clock type="analog" run="backward" time={DURATION} />
         <Clock type="digital" run="forward" time={DURATION} />
         <Clock type="digital" run="backward" time={DURATION} />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
     act(() => {
@@ -60,7 +60,7 @@ describe('Clock', () => {
       ['xsmall', 'small', 'medium', 'large', 'xlarge'].forEach(size =>
         test(`type ${type} precision ${precision} size ${size}`, () => {
           const component = renderer.create(
-            <Grommet>
+            <Viewport>
               <Clock
                 run={false}
                 type={type}
@@ -68,7 +68,7 @@ describe('Clock', () => {
                 size={size}
                 time={DURATION}
               />
-            </Grommet>,
+            </Viewport>,
           );
           expect(component.toJSON()).toMatchSnapshot();
         }),

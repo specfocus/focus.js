@@ -12,7 +12,7 @@ The labels and behavior of the contained Buttons are described
 ## Usage
 
 ```javascript
-import { Menu } from 'grommet';
+import { Menu } from 'focus';
 <Menu />
 ```
 

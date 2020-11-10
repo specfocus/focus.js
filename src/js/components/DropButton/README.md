@@ -9,7 +9,7 @@ A Button that controls a Drop. When opened, the Drop will contain
 ## Usage
 
 ```javascript
-import { DropButton } from 'grommet';
+import { DropButton } from 'focus';
 <DropButton dropContent={...} />
 ```
 

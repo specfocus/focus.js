@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import { Grommet, Box, Chart, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Chart, Stack, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 import { calcs } from '../calcs';
 
@@ -44,7 +44,7 @@ export const Rich = () => {
     overflow: true,
   };
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <Box
           direction="row"
@@ -94,6 +94,6 @@ export const Rich = () => {
           />
         </Stack>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

@@ -6,16 +6,16 @@ import {
   CheckBox,
   Form,
   FormField,
-  Grommet,
+  Viewport,
   RadioButtonGroup,
   RangeInput,
   Select,
   TextArea,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'focus';
+import { focus } from 'focus/themes';
 
 export const FieldWithComponentProp = () => (
-  <Grommet full theme={grommet}>
+  <Viewport full theme={focus}>
     <Box fill align="center" justify="center">
       <Box width="medium">
         <Form
@@ -83,7 +83,7 @@ export const FieldWithComponentProp = () => (
         </Form>
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 FieldWithComponentProp.story = {

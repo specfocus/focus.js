@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import {
-  Grommet,
+  Viewport,
   Box,
   InfiniteScroll,
   InfiniteScrollProps,
   Text,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'focus';
+import { focus } from 'focus/themes';
 
 const allItems = Array(2000)
   .fill(0)
@@ -32,7 +32,7 @@ const OnMoreInfiniteScroll: React.FC<IProps> = ({ props }) => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box>
         <InfiniteScroll items={items} onMore={onMore} {...props}>
           {item => (
@@ -47,7 +47,7 @@ const OnMoreInfiniteScroll: React.FC<IProps> = ({ props }) => {
           )}
         </InfiniteScroll>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

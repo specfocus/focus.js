@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Grid } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Grid } from 'focus';
+import { focus } from 'focus/themes';
 
 export const NColumnGrid = () => (
-  <Grommet theme={grommet} full>
+  <Viewport theme={focus} full>
     <Grid
       columns={{
         count: 6,
@@ -19,7 +19,7 @@ export const NColumnGrid = () => (
       <Box background="brand">Item 5</Box>
       <Box background="brand">Item 6</Box>
     </Grid>
-  </Grommet>
+  </Viewport>
 );
 
 NColumnGrid.story = { name: 'N-column layout' };

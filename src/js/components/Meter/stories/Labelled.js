@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Grommet, Box, Meter, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Meter, Stack, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Labelled = () => {
   const meterValue = 30;
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <Stack anchor="center">
           <Meter
@@ -25,6 +25,6 @@ export const Labelled = () => {
           </Box>
         </Stack>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Grommet, Box, DataTable } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, DataTable } from 'focus';
+import { focus } from 'focus/themes';
 
 // Source code for the data can be found here
 // https://github.com/grommet/grommet/blob/master/src/js/components/DataTable/stories/data.js
 import { columns, DATA } from './data';
 
 export const Clickable = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       {/* eslint-disable no-alert */}
       <DataTable
@@ -18,5 +18,5 @@ export const Clickable = () => (
         onClickRow={event => alert(JSON.stringify(event.datum, null, 2))}
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );

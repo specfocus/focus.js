@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Image } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Image } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Fit = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="start" gap="medium">
       <Box height="small" width="small" border>
         <Image src="//v2.grommet.io/assets/IMG_4245.jpg" fit="contain" />
@@ -13,5 +13,5 @@ export const Fit = () => (
         <Image src="//v2.grommet.io/assets/IMG_4245.jpg" fit="cover" />
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );

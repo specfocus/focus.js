@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, DateInput, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, DateInput, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Simple = () => {
   const [value, setValue] = React.useState('');
@@ -11,14 +11,14 @@ export const Simple = () => {
     setValue(nextValue);
   };
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box direction="row" align="center" justify="center" pad="large">
         <Text weight="bold">
           {value && new Date(value).toLocaleDateString()}
         </Text>
         <DateInput value={value} onChange={onChange} />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

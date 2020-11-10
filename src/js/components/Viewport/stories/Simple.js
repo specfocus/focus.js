@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { grommet, Grommet, Anchor, Box } from 'grommet';
+import { focus, Viewport, Anchor, Box } from 'focus';
 import { Add } from 'grommet-icons';
 
 const customTheme = {
@@ -12,37 +12,37 @@ const customTheme = {
 };
 
 export const Theme = () => (
-  <Grommet theme={customTheme}>
+  <Viewport theme={customTheme}>
     <Box pad="medium">
       <Anchor icon={<Add />} label="Add" color="custom" />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 export const Plain = () => (
   <>
-    <Grommet plain>
+    <Viewport plain>
       <Box pad="medium">
-        <p>Plain Grommet</p>
+        <p>Plain Focus</p>
       </Box>
-    </Grommet>
-    <Grommet>
+    </Viewport>
+    <Viewport>
       <Box pad="medium">
-        <p>Not plain Grommet</p>
+        <p>Not plain Focus</p>
       </Box>
-    </Grommet>
+    </Viewport>
   </>
 );
 
 export const Vars = () => (
-  <Grommet theme={grommet} cssVars>
+  <Viewport theme={focus} cssVars>
     <Box pad="medium" background="var(--accent-2)" gap="medium">
       <Box>
-        Checkout Grommet variables, you can find them in the StyledGrommet DOM.
+        Checkout Focus variables, you can find them in the StyledGrommet DOM.
       </Box>
       <Box with>
         For example, the background color in this Box is using var(--accent-2)
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );

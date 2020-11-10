@@ -8,8 +8,8 @@ export const doc = Grommet => {
     .availableAt(getAvailableAtBadge('Grommet'))
     .description('The top level Grommet container.')
     .usage(
-      `import { Grommet } from 'grommet';
-<Grommet>...</Grommet>`,
+      `import { Viewport } from 'focus';
+<Viewport>...</Viewport>`,
     )
     .intrinsicElement('div');
 

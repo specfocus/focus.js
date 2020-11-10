@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Box, Drop, Grommet, Text, ThemeContext } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Drop, Viewport, Text, ThemeContext } from 'focus';
+import { focus } from 'focus/themes';
 
 const OneDrop = ({ align, target }) => (
   <Drop align={align} target={target} stretch={false}>
@@ -54,7 +54,7 @@ Set.propTypes = {
 };
 
 const AllDrops = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <ThemeContext.Extend
       value={{
         global: {
@@ -156,7 +156,7 @@ const AllDrops = () => (
         <Set label="(center vertical and horizontal)" aligns={[{}]} />
       </Box>
     </ThemeContext.Extend>
-  </Grommet>
+  </Viewport>
 );
 
 export const AllNotStretched = () => <AllDrops />;

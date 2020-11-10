@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 
-import { grommet, Box, Form, FormField, TextInput, Grommet } from 'grommet';
-import { deepMerge } from 'grommet/utils';
+import { focus, Box, Form, FormField, TextInput, Viewport } from 'focus';
+import { deepMerge } from 'focus/utils';
 
 const customTheme = deepMerge(grommet, {
   formField: {
@@ -67,7 +67,7 @@ export const FieldCustomStates = () => {
   }, []);
 
   return (
-    <Grommet theme={customTheme}>
+    <Viewport theme={customTheme}>
       <Box align="center" pad="large">
         <Form>
           <Box border gap="medium" pad="large" width="medium">
@@ -128,7 +128,7 @@ export const FieldCustomStates = () => {
           </Box>
         </Form>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

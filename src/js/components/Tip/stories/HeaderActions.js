@@ -5,12 +5,12 @@ import {
   Anchor,
   Box,
   DataTable,
-  Grommet,
+  Viewport,
   Heading,
   Paragraph,
   Text,
   Tip,
-} from 'grommet';
+} from 'focus';
 import { Trash, Refresh, Info } from 'grommet-icons';
 
 // Source code for the data can be found here
@@ -35,7 +35,7 @@ export const HeaderActions = () => {
   };
 
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box
         align="center"
         background="dark-1"
@@ -99,7 +99,7 @@ export const HeaderActions = () => {
           />
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

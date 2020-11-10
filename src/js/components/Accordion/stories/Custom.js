@@ -2,7 +2,7 @@ import React from 'react';
 
 import { SubtractCircle, AddCircle } from 'grommet-icons';
 
-import { Accordion, AccordionPanel, Box, Grommet, Text } from 'grommet';
+import { Accordion, AccordionPanel, Box, Viewport, Text } from 'focus';
 
 const customAccordionTheme = {
   global: {
@@ -39,7 +39,7 @@ const customAccordionTheme = {
 };
 
 const CustomAccordion = ({ animate, multiple, ...rest }) => (
-  <Grommet theme={customAccordionTheme}>
+  <Viewport theme={customAccordionTheme}>
     <Box {...rest} pad="large" align="center" justify="center">
       <Accordion animate={animate} multiple>
         <AccordionPanel
@@ -68,7 +68,7 @@ const CustomAccordion = ({ animate, multiple, ...rest }) => (
         </AccordionPanel>
       </Accordion>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 export const Custom = () => <CustomAccordion />;

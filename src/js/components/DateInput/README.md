@@ -5,7 +5,7 @@ A control to input a single date or a date range.
 ## Usage
 
 ```javascript
-import { DateInput } from 'grommet';
+import { DateInput } from 'focus';
 <DateInput id='item' name='item' />
 ```
 

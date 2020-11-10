@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { grommet } from 'grommet/themes';
-import { AnnounceContext, Box, Grommet, Heading, Text } from 'grommet';
+import { focus } from 'focus/themes';
+import { AnnounceContext, Box, Viewport, Heading, Text } from 'focus';
 
 const Announcer = ({ announce, message, mode, role }) => {
   React.useEffect(() => {
@@ -30,14 +30,14 @@ Announcer.defaultProps = {
 };
 
 const AnnounceContextComponent = props => (
-  <Grommet theme={grommet} full>
+  <Viewport theme={focus} full>
     <Box justify="center" align="center" background="brand" fill>
       <Heading>Welcome to announcement section</Heading>
       <AnnounceContext.Consumer>
         {announce => <Announcer announce={announce} {...props} />}
       </AnnounceContext.Consumer>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 export const Polite = () => <AnnounceContextComponent />;

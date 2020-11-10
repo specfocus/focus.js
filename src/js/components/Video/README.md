@@ -5,7 +5,7 @@ A video player.
 ## Usage
 
 ```javascript
-import { Video } from 'grommet';
+import { Video } from 'focus';
 <Video />
 ```
 

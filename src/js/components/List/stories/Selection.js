@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, List } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, List } from 'focus';
+import { focus } from 'focus/themes';
 
 const data = [];
 
@@ -15,7 +15,7 @@ export const Selection = () => {
   const [selected, setSelected] = React.useState();
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large" gap="large">
         <List
           data={data.slice(0, 10)}
@@ -27,6 +27,6 @@ export const Selection = () => {
           }
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

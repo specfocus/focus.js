@@ -13,7 +13,7 @@ export const doc = Calendar => {
       individual dates.`,
     )
     .usage(
-      `import { Calendar } from 'grommet';
+      `import { Calendar } from 'focus';
 <Calendar />`,
     )
     .intrinsicElement('div');

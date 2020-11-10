@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, DataTable, Meter, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, DataTable, Meter, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 import { ColumnConfig } from '../..';
 
@@ -135,7 +135,7 @@ export const DATA: RowType[] = [
 ];
 
 export const ClickableDataTable = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       {/* eslint-disable no-alert */}
       <DataTable
@@ -145,7 +145,7 @@ export const ClickableDataTable = () => (
         onClickRow={event => console.log(event.datum)}
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 ClickableDataTable.story = {

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Button, Form, FormField, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Form, FormField, Viewport, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 const FormFieldLabel = props => {
   const { required, label, ...rest } = props;
@@ -24,7 +24,7 @@ const FormFieldLabel = props => {
 };
 
 export const RequiredLabel = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       <Form>
         <FormFieldLabel name="firstName" label="FirstName" required />
@@ -36,7 +36,7 @@ export const RequiredLabel = () => (
         </Text>
       </Form>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 RequiredLabel.story = {

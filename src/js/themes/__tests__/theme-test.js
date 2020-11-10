@@ -6,7 +6,7 @@ import { hpe } from 'grommet-theme-hpe';
 import { Add } from 'grommet-icons';
 
 import {
-  Grommet,
+  Viewport,
   Anchor,
   Box,
   Button,
@@ -98,13 +98,13 @@ const customTheme = {
 describe('Grommet', () => {
   test('default theme', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         {colors.map(color => (
           <Box key={color} background={color}>
             <Text>{color}</Text>
           </Box>
         ))}
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -112,10 +112,10 @@ describe('Grommet', () => {
 
   test('grommet theme', () => {
     const component = renderer.create(
-      <Grommet theme={grommet}>
+      <Viewport theme={focus}>
         <Button label="test" />
         <Button plain label="test" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -123,7 +123,7 @@ describe('Grommet', () => {
 
   test('ThemeContext theme', () => {
     const component = renderer.create(
-      <Grommet theme={grommet}>
+      <Viewport theme={focus}>
         <ThemeContext.Extend
           value={{
             global: {
@@ -135,7 +135,7 @@ describe('Grommet', () => {
         >
           <Anchor color="test" label="Hello" />
         </ThemeContext.Extend>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -143,13 +143,13 @@ describe('Grommet', () => {
 
   test('dark theme', () => {
     const component = renderer.create(
-      <Grommet theme={dark}>
+      <Viewport theme={dark}>
         {colors.map(color => (
           <Box key={color} background={color}>
             <Text>{color}</Text>
           </Box>
         ))}
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -157,13 +157,13 @@ describe('Grommet', () => {
 
   test('hpe theme', () => {
     const component = renderer.create(
-      <Grommet theme={hpe}>
+      <Viewport theme={hpe}>
         {hpeColors.map(color => (
           <Box key={color} background={color}>
             <Text>{color}</Text>
           </Box>
         ))}
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -171,7 +171,7 @@ describe('Grommet', () => {
 
   test('custom theme', () => {
     const component = renderer.create(
-      <Grommet theme={customTheme}>
+      <Viewport theme={customTheme}>
         <Box>
           <Anchor icon={<Add />} label="Add" />
           <Anchor icon={<Add />} label="Add" color="custom" />
@@ -183,7 +183,7 @@ describe('Grommet', () => {
         <Box>
           <TextInput value="Value" placeholder="Placeholder" />
         </Box>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

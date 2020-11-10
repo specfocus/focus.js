@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Box, Button, Grommet, Layer } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Viewport, Layer } from 'focus';
+import { focus } from 'focus/themes';
 
 export const FullLayer = () => {
   const [showLayer, setShowLayer] = React.useState(false);
 
   return (
-    <Grommet theme={grommet} full>
+    <Viewport theme={focus} full>
       <Box pad="small" fill background="dark-3" align="center" justify="center">
         <Button
           primary
@@ -27,7 +27,7 @@ export const FullLayer = () => {
           </Layer>
         )}
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

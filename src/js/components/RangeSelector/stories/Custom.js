@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import { Grommet, Box, RangeSelector, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Viewport, Box, RangeSelector, Stack, Text } from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 const customThemeRangeSelector = deepMerge(grommet, {
   global: {
@@ -37,7 +37,7 @@ export const Custom = ({ direction = 'horizontal', ...rest }) => {
   };
 
   return (
-    <Grommet theme={customThemeRangeSelector}>
+    <Viewport theme={customThemeRangeSelector}>
       <Box align="center" pad="large">
         <Stack>
           <Box
@@ -69,6 +69,6 @@ export const Custom = ({ direction = 'horizontal', ...rest }) => {
           />
         </Stack>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

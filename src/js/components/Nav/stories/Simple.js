@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Anchor, Grommet, Nav } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Anchor, Viewport, Nav } from 'focus';
+import { focus } from 'focus/themes';
 
 const items = [
   { label: 'Item A', href: '#' },
@@ -11,13 +11,13 @@ const items = [
 ];
 
 const SimpleNav = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Nav pad="large">
       {items.map(item => (
         <Anchor href={item.href} label={item.label} key={item.label} />
       ))}
     </Nav>
-  </Grommet>
+  </Viewport>
 );
 
 export const Simple = () => <SimpleNav />;

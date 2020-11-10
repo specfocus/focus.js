@@ -2,14 +2,14 @@ import React from 'react';
 import {
   Box,
   Button,
-  Grommet,
+  Viewport,
   Keyboard,
   Text,
   Calendar,
   MaskedInput,
   DropButton,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'focus';
+import { focus } from 'focus/themes';
 import { Schedule } from 'grommet-icons';
 
 const DropContent = ({ date: initialDate, time: initialTime, onClose }) => {
@@ -95,7 +95,7 @@ export const DateTimeDropButton = () => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <DropButton
           open={open}
@@ -115,7 +115,7 @@ export const DateTimeDropButton = () => {
           </Box>
         </DropButton>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

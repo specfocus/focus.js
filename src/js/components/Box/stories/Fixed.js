@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Text } from 'grommet';
-import { grommet } from '../../../themes';
+import { Viewport, Box, Text } from 'focus';
+import { focus } from '../../../themes';
 
 export const FixedSizesBox = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box pad="small" gap="small">
       <Box
         width="small"
@@ -43,7 +43,7 @@ export const FixedSizesBox = () => (
         Large
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 FixedSizesBox.story = { name: 'Fixed sizes' };

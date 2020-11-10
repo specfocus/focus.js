@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Box, Grommet, Clock } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Clock } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Countdown = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" justify="start" pad="large">
       <Clock type="digital" time="PT0H0M20S" run="backward" />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 Countdown.story = {

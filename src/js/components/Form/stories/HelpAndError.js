@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Form, FormField, Grommet, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Form, FormField, Viewport, TextInput } from 'focus';
+import { focus } from 'focus/themes';
 
 export const HelpAndError = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       <Form>
         <FormField
@@ -22,7 +22,7 @@ export const HelpAndError = () => (
         </FormField>
       </Form>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 HelpAndError.story = {

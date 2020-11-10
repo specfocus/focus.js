@@ -98,7 +98,7 @@ exports[`leverages default theme 1`] = `
 />
 `;
 
-exports[`uses Grommet theme instead of default 1`] = `
+exports[`uses Focus theme instead of default 1`] = `
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;

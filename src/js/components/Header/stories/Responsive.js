@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Grommet, Header, Anchor, Box, ResponsiveContext, Menu } from 'grommet';
+import { Viewport, Header, Anchor, Box, ResponsiveContext, Menu } from 'focus';
 import { Grommet as GrommetIcon, Menu as MenuIcon } from 'grommet-icons';
-import { grommet } from 'grommet/themes';
+import { focus } from 'focus/themes';
 
 export const Responsive = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Header background="light-4" pad="medium" height="xsmall">
       <Anchor
         href="https://tools.grommet.io/"
@@ -44,5 +44,5 @@ export const Responsive = () => (
         }
       </ResponsiveContext.Consumer>
     </Header>
-  </Grommet>
+  </Viewport>
 );

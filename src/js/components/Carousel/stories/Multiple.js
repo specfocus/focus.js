@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grommet, Box, Carousel, Image } from 'grommet';
+import { Viewport, Box, Carousel, Image } from 'focus';
 
 const data = [
   '//v2.grommet.io/assets/Wilderpeople_Ricky.jpg',
@@ -46,11 +46,11 @@ const View2 = () => {
 };
 
 export const Multi = () => (
-  <Grommet>
+  <Viewport>
     <Carousel>
       <View0 />
       <View1 />
       <View2 />
     </Carousel>
-  </Grommet>
+  </Viewport>
 );

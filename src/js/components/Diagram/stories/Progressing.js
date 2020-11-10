@@ -1,7 +1,7 @@
 import React, { useReducer, useEffect } from 'react';
 
-import { Grommet, Box, Diagram, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Diagram, Stack, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 const Node = ({ id, ...rest }) => (
   <Box
@@ -56,7 +56,7 @@ export const Progressing = () => {
   }
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="start" pad="large">
         <Text> Adding and removing nodes</Text>
         <Stack>
@@ -75,6 +75,6 @@ export const Progressing = () => {
           <Diagram connections={connections} />
         </Stack>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

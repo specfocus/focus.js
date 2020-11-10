@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { Anchor, Box, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Anchor, Box, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 const DefaultAnchor = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <Anchor href="#">Link</Anchor>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

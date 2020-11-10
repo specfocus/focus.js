@@ -2,8 +2,8 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import { Box, DataChart, Grommet, Stack } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, DataChart, Viewport, Stack } from 'focus';
+import { focus } from 'focus/themes';
 
 export const keyFrameExampleOne = keyframes`
 0% {
@@ -42,7 +42,7 @@ for (let i = 0; i < 13; i += 1) {
 }
 
 export const Prediction = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" justify="start" pad="large">
       <Stack anchor="top-right" interactiveChild="first">
         <DataChart
@@ -136,5 +136,5 @@ export const Prediction = () => (
         <AnimatedBox width="small" height="small" />
       </Stack>
     </Box>
-  </Grommet>
+  </Viewport>
 );

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Box, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Select } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Uncontrolled = () => {
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill align="center" justify="start" pad="large">
         <Select
           id="select"
@@ -15,7 +15,7 @@ export const Uncontrolled = () => {
           onChange={({ option }) => console.log(option)}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

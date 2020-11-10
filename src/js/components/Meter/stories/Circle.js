@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-import { Grommet, Box, Meter } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Meter } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Circle = () => {
   const [value, setValue] = useState(20);
@@ -19,7 +19,7 @@ export const Circle = () => {
   }, []);
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <Meter
           type="circle"
@@ -27,6 +27,6 @@ export const Circle = () => {
           values={[{ value, color: value > 50 ? 'accent-2' : 'accent-1' }]}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
 import { CaretDown } from 'grommet-icons';
-import { Box, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Select } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Custom = () => {
   const options = ['one', 'two'];
   const [value, setValue] = useState('');
 
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill align="center" justify="start" pad="large">
         <Select
           id="select"
@@ -37,6 +37,6 @@ export const Custom = () => {
           }
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

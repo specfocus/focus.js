@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Button, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Viewport, Select } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Controlled = () => {
   const options = ['one', 'two'];
@@ -9,7 +9,7 @@ export const Controlled = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill align="center" justify="start" pad="large" gap="small">
         <Button onClick={() => setOpen(!open)} label="Control the select" />
         <Select
@@ -22,6 +22,6 @@ export const Controlled = () => {
           onChange={({ option }) => setValue(option)}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

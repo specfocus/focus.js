@@ -7,7 +7,7 @@ Takes a data set and visualizes it. While Chart renders a
 ## Usage
 
 ```javascript
-import { DataChart } from 'grommet';
+import { DataChart } from 'focus';
 <DataChart data={data} property={} />
 ```
 

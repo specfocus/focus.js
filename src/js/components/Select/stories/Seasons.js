@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import { FormClose } from 'grommet-icons';
-import { Box, Button, Grommet, Select, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Viewport, Select, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 const allSeasons = [
   'S01',
@@ -68,7 +68,7 @@ export const Seasons = () => {
   );
 
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill align="center" justify="center">
         <Select
           closeOnChange={false}
@@ -97,6 +97,6 @@ export const Seasons = () => {
           {renderOption}
         </Select>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

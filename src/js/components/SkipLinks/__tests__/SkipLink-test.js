@@ -2,7 +2,7 @@ import React from 'react';
 import 'jest-styled-components';
 import { act, cleanup, render, fireEvent } from '@testing-library/react';
 
-import { Grommet, SkipLinks, SkipLink, SkipLinkTarget } from '../..';
+import { Viewport, SkipLinks, SkipLink, SkipLinkTarget } from '../..';
 
 describe('SkipLink', () => {
   afterEach(cleanup);
@@ -10,7 +10,7 @@ describe('SkipLink', () => {
   test('basic', () => {
     jest.useFakeTimers();
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <SkipLinks id="skip-links">
           <SkipLink id="main" label="Main Content" />
           <SkipLink id="footer" label="Footer" />
@@ -24,7 +24,7 @@ describe('SkipLink', () => {
           <SkipLinkTarget id="footer" />
           <input type="text" value="footer" onChange={() => {}} />
         </footer>
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
 

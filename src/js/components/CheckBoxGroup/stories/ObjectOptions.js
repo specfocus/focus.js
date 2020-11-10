@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, CheckBoxGroup, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, CheckBoxGroup, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 const objectOptions = [];
 for (let i = 1; i <= 5; i += 1) {
@@ -16,7 +16,7 @@ export const ObjectOptions = () => {
   const [value2, setValue2] = useState([]);
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box pad="medium" gap="large">
         <CheckBoxGroup
           labelKey="lab"
@@ -44,7 +44,7 @@ export const ObjectOptions = () => {
           ]}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

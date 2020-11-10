@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, List } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, List } from 'focus';
+import { focus } from 'focus/themes';
 
 const locations = [
   'Boise',
@@ -21,7 +21,7 @@ for (let i = 0; i < 40; i += 1) {
 }
 
 export const SecondaryKey = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       <List
         data={data.slice(0, 10)}
@@ -29,5 +29,5 @@ export const SecondaryKey = () => (
         secondaryKey="location"
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );

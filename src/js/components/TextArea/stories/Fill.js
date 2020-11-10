@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, TextArea } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, TextArea } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Fill = () => {
   const [value, setValue] = useState('');
@@ -9,7 +9,7 @@ export const Fill = () => {
   const onChange = event => setValue(event.target.value);
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box
         width="large"
         height="medium"
@@ -17,6 +17,6 @@ export const Fill = () => {
       >
         <TextArea value={value} onChange={onChange} fill />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

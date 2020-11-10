@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Calendar, Box, Text, Grommet } from 'grommet';
+import { Calendar, Box, Text, Viewport } from 'focus';
 import { Plan } from 'grommet-icons';
-import { ThemeType } from 'grommet/themes';
+import { ThemeType } from 'focus/themes';
 
 // Remove ': ThemeType' if you are not using Typescript.
 const customTheme: ThemeType = {
@@ -23,7 +23,7 @@ const customTheme: ThemeType = {
 };
 
 export const CustomDateCalendar = () => (
-  <Grommet theme={customTheme} themeMode="dark">
+  <Viewport theme={customTheme} themeMode="dark">
     <Box align="center" background="dark-1" gap="small">
       <Box
         direction="row"
@@ -44,7 +44,7 @@ export const CustomDateCalendar = () => (
         firstDayOfWeek={1}
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 CustomDateCalendar.story = {

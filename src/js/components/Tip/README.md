@@ -7,7 +7,7 @@ Tooltip or a hint when hovering over a UI item.
 ## Usage
 
 ```javascript
-import { Tip } from 'grommet';
+import { Tip } from 'focus';
 <Tip />
 ```
 

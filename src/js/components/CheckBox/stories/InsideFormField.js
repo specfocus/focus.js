@@ -7,12 +7,12 @@ import {
   CheckBoxGroup,
   Form,
   FormField,
-  Grommet,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+  Viewport,
+} from 'focus';
+import { focus } from 'focus/themes';
 
 export const InsideFormField = props => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large">
       <Form
         onSubmit={({ value, touched }) => console.log('Submit', value, touched)}
@@ -54,7 +54,7 @@ export const InsideFormField = props => (
         <Button type="submit" label="Submit" />
       </Form>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 InsideFormField.story = {

@@ -4,7 +4,7 @@ A handler of keyboard key presses.
 ## Usage
 
 ```javascript
-import { Keyboard } from 'grommet';
+import { Keyboard } from 'focus';
 <Keyboard onUp={() => {}} />
 ```
 

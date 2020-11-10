@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { render } from 'react-dom';
 
-import { Grommet, Box, RangeSelector, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, RangeSelector, Stack, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 const RANGE_MIN = 0;
 const RANGE_MAX = 100;
@@ -35,11 +35,11 @@ function Thin({ initialRange = [0, 100], label }) {
 
 function App() {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box pad="small">
         <Thin label="My Range Selector" />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 }
 

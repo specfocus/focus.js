@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Button, DateInput, Form, FormField, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, DateInput, Form, FormField, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 export const DateForm = () => {
   const [value, setValue] = React.useState({ value: '' });
@@ -10,7 +10,7 @@ export const DateForm = () => {
     setValue(nextValue);
   };
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <Form
           value={value}
@@ -26,7 +26,7 @@ export const DateForm = () => {
           <Button type="submit" label="submit" />
         </Form>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

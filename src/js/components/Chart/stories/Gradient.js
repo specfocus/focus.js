@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, Chart } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Chart } from 'focus';
+import { focus } from 'focus/themes';
 
 const gradient = [
   { value: 0, color: 'status-ok' },
@@ -11,7 +11,7 @@ const gradient = [
 ];
 
 export const GradientCharts = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="large" gap="medium">
       <Chart
         id="bar"
@@ -42,7 +42,7 @@ export const GradientCharts = () => (
         round
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 GradientCharts.story = {

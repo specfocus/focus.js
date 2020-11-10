@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Grommet, MaskedInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, MaskedInput } from 'focus';
+import { focus } from 'focus/themes';
 
 export const CustomBoxMaskedInput = () => {
   const [value, setValue] = React.useState('');
@@ -8,7 +8,7 @@ export const CustomBoxMaskedInput = () => {
   const boxRef = React.useCallback(setBox, []);
 
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box
         direction="row"
         align="center"
@@ -44,7 +44,7 @@ export const CustomBoxMaskedInput = () => {
           />
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

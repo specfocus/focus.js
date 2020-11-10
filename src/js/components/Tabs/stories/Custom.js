@@ -2,9 +2,9 @@ import React from 'react';
 import { css } from 'styled-components';
 
 import { CircleInformation, Currency } from 'grommet-icons';
-import { Grommet, FormField, Tab, Tabs, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Viewport, FormField, Tab, Tabs, TextInput } from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 import { RichTabTitle } from './Rich';
 
@@ -67,7 +67,7 @@ const customTheme = deepMerge(grommet, {
 });
 
 const CustomTabs = () => (
-  <Grommet theme={customTheme}>
+  <Viewport theme={customTheme}>
     <Tabs>
       <Tab
         title={
@@ -95,7 +95,7 @@ const CustomTabs = () => (
         tab.active.color)
       </Tab>
     </Tabs>
-  </Grommet>
+  </Viewport>
 );
 
 export const Custom = () => <CustomTabs />;

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Menu } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Menu } from 'focus';
+import { focus } from 'focus/themes';
 
 const ControlBottomMenu = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box height="medium" justify="center" align="center" pad="large">
       <Menu
         dropProps={{ align: { bottom: 'bottom', left: 'left' } }}
@@ -16,7 +16,7 @@ const ControlBottomMenu = () => (
         ]}
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 export const BottomControlButton = () => <ControlBottomMenu />;

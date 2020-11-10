@@ -2,11 +2,11 @@ import React from 'react';
 
 import { FormClose } from 'grommet-icons';
 
-import { Box, Button, Grommet, Layer, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Viewport, Layer, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const ScrollBodyLayer = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Layer full="vertical" position="right">
       <Box fill style={{ minWidth: '378px' }}>
         <Box
@@ -96,7 +96,7 @@ export const ScrollBodyLayer = () => (
         </Box>
       </Box>
     </Layer>
-  </Grommet>
+  </Viewport>
 );
 
 ScrollBodyLayer.story = { name: 'Fixed header, scroll body' };

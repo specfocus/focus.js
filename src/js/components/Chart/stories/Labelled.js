@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, Chart, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Chart, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 const LabelledChart = ({ color, label, value }) => (
   <Box flex={false} basis="xsmall" align="center" gap="small">
@@ -24,13 +24,13 @@ const LabelledChart = ({ color, label, value }) => (
 );
 
 export const LabelledCharts = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box pad="large" direction="row" gap="medium">
       <LabelledChart label="Exported" value={300} />
       <LabelledChart label="Usable" value={200} color="accent-2" />
       <LabelledChart label="Used" value={98.2} color="accent-3" />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 LabelledCharts.story = {

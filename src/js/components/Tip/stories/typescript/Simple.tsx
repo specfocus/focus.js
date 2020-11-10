@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet } from 'grommet';
+import { focus, Box, Button, Viewport } from 'focus';
 import { Tip } from '../../Tip';
 
 export const Simple = () => {
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box align="center" justify="center" fill>
         <Tip content="action info">
           <Button label="action" />
         </Tip>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

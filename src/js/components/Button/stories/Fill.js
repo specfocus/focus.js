@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet } from 'grommet';
+import { focus, Box, Button, Viewport } from 'focus';
 
 export const Fill = props => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box pad="medium" justify="center" direction="row">
       <Box justify="center" align="center" pad="medium" gap="medium">
         <Box
@@ -78,5 +78,5 @@ export const Fill = props => (
         />
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );

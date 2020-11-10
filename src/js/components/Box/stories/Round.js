@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Grid } from 'grommet';
-import { grommet } from '../../../themes';
+import { Viewport, Box, Grid } from 'focus';
+import { focus } from '../../../themes';
 
 export const RoundBox = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box pad="small" gap="small">
       <Box pad="small" background="brand" round alignSelf="start">
         true
@@ -53,7 +53,7 @@ export const RoundBox = () => (
         </Box>
       </Grid>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 RoundBox.story = { name: 'Round' };

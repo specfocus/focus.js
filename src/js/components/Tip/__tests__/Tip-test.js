@@ -9,15 +9,15 @@ import 'regenerator-runtime/runtime';
 
 import { Box } from '../../Box';
 import { Button } from '../../Button';
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { Tip } from '../Tip';
 
 describe('Tip', () => {
   test('should have no accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <Tip content="tooltip content"> Example</Tip>
-      </Grommet>,
+      </Viewport>,
     );
     const results = await axe(container);
     expect(results).toHaveNoViolations();
@@ -26,7 +26,7 @@ describe('Tip', () => {
 
   test(`mouseOver and mouseOut events on the Tip's child`, async () => {
     const { getByText } = render(
-      <Grommet>
+      <Viewport>
         <Tip
           content={
             <Box id="tooltip-id" data-testid="tooltip">
@@ -36,7 +36,7 @@ describe('Tip', () => {
         >
           Test Events
         </Tip>
-      </Grommet>,
+      </Viewport>,
     );
 
     fireEvent.mouseOver(getByText('Test Events'));
@@ -50,11 +50,11 @@ describe('Tip', () => {
 
   test(`focus and blur events on the Tip's child`, async () => {
     const { container, getByText } = render(
-      <Grommet>
+      <Viewport>
         <Tip content="tooltip">
           <Button label="Test Events" />
         </Tip>
-      </Grommet>,
+      </Viewport>,
     );
 
     fireEvent.focus(getByText('Test Events'));
@@ -66,11 +66,11 @@ describe('Tip', () => {
 
   test('plain', async () => {
     const { getByText } = render(
-      <Grommet>
+      <Viewport>
         <Tip plain content="tooltip">
           Example
         </Tip>
-      </Grommet>,
+      </Viewport>,
     );
 
     // Styles of plain are captured in snapshots only when applying mouseOver
@@ -81,7 +81,7 @@ describe('Tip', () => {
 
   test(`dropProps should pass props to Drop`, async () => {
     const { getByText } = render(
-      <Grommet>
+      <Viewport>
         <Tip
           dropProps={{
             plain: false, // should display box-shadow
@@ -90,7 +90,7 @@ describe('Tip', () => {
         >
           Test dropProps
         </Tip>
-      </Grommet>,
+      </Viewport>,
     );
 
     fireEvent.mouseOver(getByText('Test dropProps'));
@@ -102,9 +102,9 @@ describe('Tip', () => {
 
   test(`should work with a child that isn't a React Element`, () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Tip content="Hello">Not React Element</Tip>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -114,12 +114,12 @@ describe('Tip', () => {
     console.error = jest.fn();
     expect(() => {
       renderer.create(
-        <Grommet>
+        <Viewport>
           <Tip>
             <Box>1</Box>
             <Box>2</Box>
           </Tip>
-        </Grommet>,
+        </Viewport>,
       );
     }).toThrow(
       `React.Children.only expected to receive a single React element child.`,
@@ -130,9 +130,9 @@ describe('Tip', () => {
     console.error = jest.fn();
     expect(() => {
       renderer.create(
-        <Grommet>
+        <Viewport>
           <Tip>123 {false}</Tip>
-        </Grommet>,
+        </Viewport>,
       );
     }).toThrow(
       `React.Children.only expected to receive a single React element child.`,

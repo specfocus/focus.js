@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { Box, Grommet, WorldMap } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, WorldMap } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Color = () => {
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <WorldMap color="graph-1" />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

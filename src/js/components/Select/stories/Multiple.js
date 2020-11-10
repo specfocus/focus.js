@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Select } from 'focus';
+import { focus } from 'focus/themes';
 
 const options = ['one', 'two'];
 
@@ -9,7 +9,7 @@ export const Multiple = () => {
   const [value, setValue] = useState(['one']);
 
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box fill align="center" justify="start" pad="large">
         <Select
           placeholder="Select"
@@ -20,7 +20,7 @@ export const Multiple = () => {
           onChange={({ value: nextValue }) => setValue(nextValue)}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

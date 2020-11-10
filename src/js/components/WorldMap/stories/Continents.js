@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Box, Grommet, WorldMap } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, WorldMap } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Continents = () => {
   const [active, setActive] = React.useState();
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <WorldMap
           continents={[
@@ -19,6 +19,6 @@ export const Continents = () => {
         />
         {active && <Box margin="large">Africa</Box>}
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

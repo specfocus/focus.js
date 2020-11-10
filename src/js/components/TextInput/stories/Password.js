@@ -1,15 +1,15 @@
 import React from 'react';
 
 import { Hide, View } from 'grommet-icons';
-import { Box, Button, Grommet, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Viewport, TextInput } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Password = () => {
   const [value, setValue] = React.useState('');
   const [reveal, setReveal] = React.useState(false);
 
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Box
         width="medium"
         direction="row"
@@ -29,6 +29,6 @@ export const Password = () => {
           onClick={() => setReveal(!reveal)}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

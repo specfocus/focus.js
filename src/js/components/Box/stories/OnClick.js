@@ -1,11 +1,11 @@
 import React from 'react';
-import { Attraction } from 'grommet-icons';
+import { Attraction } from 'focus-icons';
 
-import { Grommet, Box, Text } from 'grommet';
-import { grommet } from '../../../themes';
+import { Viewport, Box, Text } from 'focus';
+import { focus } from '../../../themes';
 
 export const OnClickBox = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box justify="center" align="center" pad="large">
       {/* eslint-disable no-alert */}
       <Box
@@ -23,7 +23,7 @@ export const OnClickBox = () => (
         <Text>Party</Text>
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 OnClickBox.story = { name: 'onClick' };

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import { FormDown, FormUp } from 'grommet-icons';
-import { Box, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Box, Viewport, Select } from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 const customRoundedTheme = deepMerge(grommet, {
   global: {
@@ -49,7 +49,7 @@ export const Themed = () => {
   const options = ['one', 'two'];
   const [value, setValue] = useState('');
   return (
-    <Grommet full theme={customRoundedTheme}>
+    <Viewport full theme={customRoundedTheme}>
       <Box fill align="center" justify="start" pad="large">
         <Select
           id="select"
@@ -61,6 +61,6 @@ export const Themed = () => {
           open
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

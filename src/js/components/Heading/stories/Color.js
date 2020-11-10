@@ -1,9 +1,9 @@
 import React from 'react';
-import { Grommet, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Heading } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Color = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Heading color="accent-1">Colored Heading</Heading>
-  </Grommet>
+  </Viewport>
 );

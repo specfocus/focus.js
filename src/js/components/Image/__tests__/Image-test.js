@@ -6,7 +6,7 @@ import 'regenerator-runtime/runtime';
 
 import { act, cleanup, fireEvent, render } from '@testing-library/react';
 import { axe } from 'jest-axe';
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { Image } from '..';
 
 const opacityTypes = ['weak', 'medium', 'strong', '0.3', true, false];
@@ -15,9 +15,9 @@ const SRC =
 
 test('image should have no violations', async () => {
   const { container } = render(
-    <Grommet>
+    <Viewport>
       <Image src={SRC} a11yTitle="Alt Text" />
-    </Grommet>,
+    </Viewport>,
   );
 
   const results = await axe(container);
@@ -28,9 +28,9 @@ test('image should have no violations', async () => {
 
 test('Image renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <Viewport>
       <Image src={SRC} />
-    </Grommet>,
+    </Viewport>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -38,9 +38,9 @@ test('Image renders', () => {
 
 test('Image renders with aria-label', () => {
   const component = renderer.create(
-    <Grommet>
+    <Viewport>
       <Image a11yTitle="aria-label-text" src={SRC} />
-    </Grommet>,
+    </Viewport>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -48,10 +48,10 @@ test('Image renders with aria-label', () => {
 
 test('Image fit renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <Viewport>
       <Image fit="cover" src={SRC} />
       <Image fit="contain" src={SRC} />
-    </Grommet>,
+    </Viewport>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -60,9 +60,9 @@ test('Image fit renders', () => {
 opacityTypes.forEach(opacity => {
   test(`Image opacity of ${opacity} renders`, () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Image opacity={opacity} src={SRC} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -71,12 +71,12 @@ opacityTypes.forEach(opacity => {
 
 test('Image fillProp renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <Viewport>
       <Image fill src={SRC} />
       <Image fill={false} src={SRC} />
       <Image fill="horizontal" src={SRC} />
       <Image fill="vertical" src={SRC} />
-    </Grommet>,
+    </Viewport>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -85,9 +85,9 @@ test('Image fillProp renders', () => {
 test('Image onError', () => {
   const onError = jest.fn();
   const { getByAltText } = render(
-    <Grommet>
+    <Viewport>
       <Image alt="test" onError={onError} />
-    </Grommet>,
+    </Viewport>,
   );
 
   act(() => {

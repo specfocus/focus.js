@@ -8,7 +8,7 @@ import 'regenerator-runtime/runtime';
 import { axe } from 'jest-axe';
 import { cleanup, render } from '@testing-library/react';
 import { Alert, StatusInfo } from 'grommet-icons';
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { Form } from '../../Form';
 import { FormField } from '..';
 import { TextInput } from '../../TextInput';
@@ -22,9 +22,9 @@ describe('FormField', () => {
 
   test(`should have no accessibility violations`, async () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <FormField />
-      </Grommet>,
+      </Viewport>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -33,12 +33,12 @@ describe('FormField', () => {
 
   test('default', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FormField />
         <FormField>
           <TextInput />
         </FormField>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -46,9 +46,9 @@ describe('FormField', () => {
 
   test('label', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FormField label="test label" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -56,9 +56,9 @@ describe('FormField', () => {
 
   test('help', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FormField help="test help" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -66,9 +66,9 @@ describe('FormField', () => {
 
   test('error', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FormField error="test error" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -76,9 +76,9 @@ describe('FormField', () => {
 
   test('info', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FormField info="test info" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -86,9 +86,9 @@ describe('FormField', () => {
 
   test('htmlFor', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FormField htmlFor="test-id" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -96,9 +96,9 @@ describe('FormField', () => {
 
   test('margin', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FormField margin="medium" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -106,9 +106,9 @@ describe('FormField', () => {
 
   test('empty margin', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FormField margin="none" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -116,9 +116,9 @@ describe('FormField', () => {
 
   test('pad', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FormField pad />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -126,7 +126,7 @@ describe('FormField', () => {
 
   test('abut', () => {
     const component = renderer.create(
-      <Grommet
+      <Viewport
         theme={{
           formField: {
             border: {
@@ -146,7 +146,7 @@ describe('FormField', () => {
         }}
       >
         <FormField htmlFor="test-id" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -154,7 +154,7 @@ describe('FormField', () => {
 
   test('abut with margin', () => {
     const component = renderer.create(
-      <Grommet
+      <Viewport
         theme={{
           formField: {
             border: {
@@ -174,7 +174,7 @@ describe('FormField', () => {
         }}
       >
         <FormField margin="medium" htmlFor="test-id" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -182,9 +182,9 @@ describe('FormField', () => {
 
   test('custom formfield', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <CustomFormField htmlFor="test-id" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -192,12 +192,12 @@ describe('FormField', () => {
 
   test('disabled', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FormField disabled /> {/* don't use FormField without Form */}
         <Form>
           <FormField disabled />
         </Form>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -205,12 +205,12 @@ describe('FormField', () => {
 
   test('required', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FormField required /> {/* don't use FormField without Form */}
         <Form>
           <FormField required />
         </Form>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -218,7 +218,7 @@ describe('FormField', () => {
 
   test('custom label', () => {
     const component = renderer.create(
-      <Grommet
+      <Viewport
         theme={{
           formField: {
             label: {
@@ -233,7 +233,7 @@ describe('FormField', () => {
         <Form>
           <FormField label="label" />
         </Form>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -241,7 +241,7 @@ describe('FormField', () => {
 
   test('disabled with custom label', () => {
     const component = renderer.create(
-      <Grommet
+      <Viewport
         theme={{
           formField: {
             label: {
@@ -261,7 +261,7 @@ describe('FormField', () => {
         <Form>
           <FormField disabled label="label" />
         </Form>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -269,7 +269,7 @@ describe('FormField', () => {
 
   test('pad with border undefined', () => {
     const component = renderer.create(
-      <Grommet
+      <Viewport
         theme={{
           formField: {
             border: undefined,
@@ -282,7 +282,7 @@ describe('FormField', () => {
         <Form>
           <FormField label="label" pad />
         </Form>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -290,7 +290,7 @@ describe('FormField', () => {
 
   test('custom input margin', () => {
     const component = renderer.create(
-      <Grommet
+      <Viewport
         theme={{
           formField: {
             content: {
@@ -302,7 +302,7 @@ describe('FormField', () => {
         <Form>
           <FormField label="label" />
         </Form>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -310,7 +310,7 @@ describe('FormField', () => {
 
   test('contentProps', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Form>
           <FormField
             label="label"
@@ -319,7 +319,7 @@ describe('FormField', () => {
             }}
           />
         </Form>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -327,7 +327,7 @@ describe('FormField', () => {
 
   test('custom error and info icon and container', () => {
     const component = renderer.create(
-      <Grommet
+      <Viewport
         theme={{
           formField: {
             error: {
@@ -357,7 +357,7 @@ describe('FormField', () => {
             }}
           />
         </Form>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

@@ -22,7 +22,7 @@ const FullGlobalStyle = createGlobalStyle`
 `;
 
 class Grommet extends Component {
-  static displayName = 'Grommet';
+  static displayName = 'Viewport';
 
   static getDerivedStateFromProps(nextProps, prevState) {
     const {
@@ -167,4 +167,4 @@ if (process.env.NODE_ENV !== 'production') {
 }
 const GrommetWrapper = GrommetDoc || Grommet;
 
-export { GrommetWrapper as Grommet };
+export { GrommetWrapper as Viewport };

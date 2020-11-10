@@ -6,7 +6,7 @@ import {
   Avatar,
   Box,
   Anchor,
-  Grommet,
+  Viewport,
   Header,
   Nav,
   Paragraph,
@@ -14,7 +14,7 @@ import {
   SkipLink,
   SkipLinks,
   Heading,
-} from 'grommet';
+} from 'focus';
 
 const avatarSrc =
   '//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80';
@@ -52,7 +52,7 @@ sighted mouse users take for granted.
 `;
 
 const howDoesItWorkContent = `
-To get the most of Grommet's SkipLinks example, use a narrow window width and
+To get the most of Focus's SkipLinks example, use a narrow window width and
 open this page in a full screen (you can either use the 
 storybook "full-screen" icon or click on any of the Header's anchors 
 on the top right of the page (Home, Profile or Setting links) to achieve it) 
@@ -76,7 +76,7 @@ const Info = ({ label }) => (
 );
 
 export const Simple = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <SkipLinks>
       <SkipLink id="main" label="Main Content" />
       <SkipLink id="footer" label="Footer" />
@@ -120,5 +120,5 @@ export const Simple = () => (
         </Box>
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );

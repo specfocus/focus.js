@@ -1,10 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { base } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { base } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
-import { Box, extendDefaultTheme } from 'grommet';
+import { Box, extendDefaultTheme } from 'focus';
 
 extendDefaultTheme(
   deepMerge(base, {

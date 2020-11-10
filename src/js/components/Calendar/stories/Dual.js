@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Button, Calendar, Grommet, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Calendar, Viewport, Heading } from 'focus';
+import { focus } from 'focus/themes';
 
 import { Blank, Previous, Next } from 'grommet-icons';
 
@@ -21,7 +21,7 @@ export const Dual = () => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box justify="center" pad="large" direction="row" gap="small">
         <Calendar
           animate={false}
@@ -95,6 +95,6 @@ export const Dual = () => {
           )}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

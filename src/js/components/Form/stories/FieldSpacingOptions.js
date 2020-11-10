@@ -5,14 +5,14 @@ import {
   Form,
   FormField,
   Grid,
-  Grommet,
+  Viewport,
   Heading,
   RadioButtonGroup,
   TextInput,
   ThemeContext,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+} from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 const customTheme = deepMerge(grommet, {
   formField: {
@@ -53,7 +53,7 @@ const adjustedLabelMargins = {
 
 export const FieldSpacingOptions = () => {
   return (
-    <Grommet theme={customTheme}>
+    <Viewport theme={customTheme}>
       <Grid columns={{ count: 'fit', size: 'medium' }} gap="medium">
         <Box pad={{ horizontal: 'medium' }}>
           <Form>
@@ -255,7 +255,7 @@ export const FieldSpacingOptions = () => {
           </Form>
         </Box>
       </Grid>
-    </Grommet>
+    </Viewport>
   );
 };
 

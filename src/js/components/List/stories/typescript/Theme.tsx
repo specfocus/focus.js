@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Grommet, Box, List } from 'grommet';
-import { grommet, ThemeType } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Viewport,, Box, List } from 'focus';
+import { focus, ThemeType } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 export const locations = [
   'Boise',
@@ -25,9 +25,9 @@ const theme: ThemeType = deepMerge(grommet, {
 });
 
 export const Themed = () => (
-  <Grommet theme={theme}>
+  <Viewport theme={theme}>
     <Box align="center" pad="large">
       <List data={locations} />
     </Box>
-  </Grommet>
+  </Viewport>
 );

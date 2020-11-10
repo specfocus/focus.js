@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import { FormDown, FormUp } from 'grommet-icons';
-import { Box, Grommet, Select } from 'grommet';
-import { ThemeType } from 'grommet/themes';
+import { Box, Viewport, Select } from 'focus';
+import { ThemeType } from 'focus/themes';
 
 // the prefix name of the Create option entry
 const prefix = 'Create';
@@ -59,7 +59,7 @@ export const CreateOption = () => {
   const [searchValue, setSearchValue] = useState('');
 
   return (
-    <Grommet full theme={theme}>
+    <Viewport full theme={theme}>
       <Box fill align="center" justify="start" pad="large">
         <Select
           open
@@ -85,7 +85,7 @@ export const CreateOption = () => {
           }}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

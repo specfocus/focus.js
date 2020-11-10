@@ -7,14 +7,14 @@ import { axe } from 'jest-axe';
 import 'jest-axe/extend-expect';
 import 'regenerator-runtime/runtime';
 
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { Text } from '..';
 
 test('should have no accessibility violations', async () => {
   const { container } = render(
-    <Grommet>
+    <Viewport>
       <Text a11yTitle="test"> Example</Text>
-    </Grommet>,
+    </Viewport>,
   );
   const results = await axe(container);
   expect(results).toHaveNoViolations();
@@ -23,9 +23,9 @@ test('should have no accessibility violations', async () => {
 
 test('renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <Viewport>
       <Text>text</Text>
-    </Grommet>,
+    </Viewport>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -34,9 +34,9 @@ test('renders', () => {
 test('accepts ref', () => {
   const ref = React.createRef();
   const component = renderer.create(
-    <Grommet>
+    <Viewport>
       <Text ref={ref}>text</Text>
-    </Grommet>,
+    </Viewport>,
     { createNodeMock: el => el },
   );
   expect(ref.current).not.toBeNull();
@@ -46,14 +46,14 @@ test('accepts ref', () => {
 
 test('renders size', () => {
   const component = renderer.create(
-    <Grommet>
+    <Viewport>
       <Text size="xsmall" />
       <Text size="small" />
       <Text size="medium" />
       <Text size="large" />
       <Text size="xlarge" />
       <Text size="xxlarge" />
-    </Grommet>,
+    </Viewport>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -61,11 +61,11 @@ test('renders size', () => {
 
 test('renders textAlign', () => {
   const component = renderer.create(
-    <Grommet>
+    <Viewport>
       <Text textAlign="start" />
       <Text textAlign="center" />
       <Text textAlign="end" />
-    </Grommet>,
+    </Viewport>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -73,7 +73,7 @@ test('renders textAlign', () => {
 
 test('renders margin', () => {
   const component = renderer.create(
-    <Grommet>
+    <Viewport>
       <Text margin="small" />
       <Text margin="medium" />
       <Text margin="large" />
@@ -84,7 +84,7 @@ test('renders margin', () => {
       <Text margin={{ top: 'small' }} />
       <Text margin={{ left: 'small' }} />
       <Text margin={{ right: 'small' }} />
-    </Grommet>,
+    </Viewport>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -94,10 +94,10 @@ const LONG = 'a b c d e f g h i j k l m n o p q r s t u v w x y z';
 
 test('renders truncate', () => {
   const component = renderer.create(
-    <Grommet>
+    <Viewport>
       <Text truncate={false}>{LONG}</Text>
       <Text truncate>{LONG}</Text>
-    </Grommet>,
+    </Viewport>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -105,9 +105,9 @@ test('renders truncate', () => {
 
 test('renders color', () => {
   const component = renderer.create(
-    <Grommet>
+    <Viewport>
       <Text color="status-critical" />
-    </Grommet>,
+    </Viewport>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -115,9 +115,9 @@ test('renders color', () => {
 
 test('renders tag', () => {
   const component = renderer.create(
-    <Grommet>
+    <Viewport>
       <Text as="div" />
-    </Grommet>,
+    </Viewport>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -125,24 +125,24 @@ test('renders tag', () => {
 
 test('proxies tag', () => {
   const tagComponent = renderer.create(
-    <Grommet>
+    <Viewport>
       <Text tag="div" />
-    </Grommet>,
+    </Viewport>,
   );
   const asComponent = renderer.create(
-    <Grommet>
+    <Viewport>
       <Text as="div" />
-    </Grommet>,
+    </Viewport>,
   );
   expect(tagComponent.toJSON()).toEqual(asComponent.toJSON());
 });
 
 test('renders weight', () => {
   const component = renderer.create(
-    <Grommet>
+    <Viewport>
       <Text weight="normal" />
       <Text weight="bold" />
-    </Grommet>,
+    </Viewport>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();

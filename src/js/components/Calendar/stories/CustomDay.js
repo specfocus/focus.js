@@ -4,13 +4,13 @@ import {
   Box,
   Calendar,
   DropButton,
-  Grommet,
+  Viewport,
   Heading,
   Stack,
   Text,
-} from 'grommet';
+} from 'focus';
 import { Notification } from 'grommet-icons';
-import { grommet } from 'grommet/themes';
+import { focus } from 'focus/themes';
 
 export const CustomDayCalendar = () => {
   const calendarContent = [7, 8, 9];
@@ -20,7 +20,7 @@ export const CustomDayCalendar = () => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <Heading level={4}>Example without onSelect set</Heading>
         <Calendar date={selectedDay} fill>
@@ -69,7 +69,7 @@ export const CustomDayCalendar = () => {
           }}
         </Calendar>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

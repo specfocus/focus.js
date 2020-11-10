@@ -26,7 +26,7 @@ export const doc = Chart => {
   const DocumentedChart = describe(Chart)
     .availableAt(getAvailableAtBadge('Chart'))
     .description('A graphical chart.')
-    .usage("import { Chart } from 'grommet';\n<Chart />");
+    .usage("import { Chart } from 'focus';\n<Chart />");
   // We don't include svg due to a collision on the values property
   // .intrinsicElement('svg');
 
@@ -214,7 +214,7 @@ export const docCalcs = calcs => {
     `,
     )
     .usage(
-      `import { calcs } from 'grommet';
+      `import { calcs } from 'focus';
 const data = calcs(<values>, { coarseness: 5, steps: [1, 1] });`,
     );
 

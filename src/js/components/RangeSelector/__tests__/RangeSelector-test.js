@@ -6,7 +6,7 @@ import { axe } from 'jest-axe';
 import 'jest-axe/extend-expect';
 import 'regenerator-runtime/runtime';
 
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { RangeSelector } from '..';
 
 describe('RangeSelector', () => {
@@ -14,9 +14,9 @@ describe('RangeSelector', () => {
 
   test('should not have accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <RangeSelector values={[20, 30]} />
-      </Grommet>,
+      </Viewport>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -25,9 +25,9 @@ describe('RangeSelector', () => {
 
   test('basic', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <RangeSelector values={[20, 30]} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -35,9 +35,9 @@ describe('RangeSelector', () => {
 
   test('color', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <RangeSelector color="accent-1" values={[20, 30]} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -45,10 +45,10 @@ describe('RangeSelector', () => {
 
   test('direction', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <RangeSelector direction="horizontal" values={[20, 30]} />
         <RangeSelector direction="vertical" values={[20, 30]} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -56,10 +56,10 @@ describe('RangeSelector', () => {
 
   test('invert', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <RangeSelector invert values={[20, 30]} />
         <RangeSelector invert={false} values={[20, 30]} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -67,9 +67,9 @@ describe('RangeSelector', () => {
 
   test('max', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <RangeSelector max={50} values={[20, 30]} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -77,9 +77,9 @@ describe('RangeSelector', () => {
 
   test('min', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <RangeSelector min={10} values={[20, 30]} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -87,11 +87,11 @@ describe('RangeSelector', () => {
 
   test('opacity', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         {['weak', 'medium', 'strong'].map(opacity => (
           <RangeSelector key={opacity} opacity={opacity} values={[20, 30]} />
         ))}
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -99,11 +99,11 @@ describe('RangeSelector', () => {
 
   test('round', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         {['xsmall', 'small', 'medium', 'large', 'full'].map(round => (
           <RangeSelector key={round} round={round} values={[20, 30]} />
         ))}
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -111,7 +111,7 @@ describe('RangeSelector', () => {
 
   test('size', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         {[
           'xxsmall',
           'xsmall',
@@ -123,7 +123,7 @@ describe('RangeSelector', () => {
         ].map(size => (
           <RangeSelector key={size} size={size} values={[20, 30]} />
         ))}
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -136,9 +136,9 @@ describe('RangeSelector', () => {
     };
     const onChange = jest.fn(nextValues => setValues(nextValues));
     const { container, getByLabelText } = render(
-      <Grommet>
+      <Viewport>
         <RangeSelector values={[0, 100]} step={3} onChange={onChange} />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -161,9 +161,9 @@ describe('RangeSelector', () => {
   test('handle keyboard', () => {
     const onChange = jest.fn();
     const { container, getByLabelText } = render(
-      <Grommet>
+      <Viewport>
         <RangeSelector values={[20, 30]} onChange={onChange} />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -185,9 +185,9 @@ describe('RangeSelector', () => {
   test('handle mouse', () => {
     const onChange = jest.fn();
     const { container, getByLabelText } = render(
-      <Grommet>
+      <Viewport>
         <RangeSelector values={[20, 30]} onChange={onChange} />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
 

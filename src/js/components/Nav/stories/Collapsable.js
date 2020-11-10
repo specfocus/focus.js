@@ -3,16 +3,16 @@ import React from 'react';
 import {
   Anchor,
   Box,
-  Grommet,
+  Viewport,
   Header,
   Nav,
   Menu,
   ResponsiveContext,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'focus';
+import { focus } from 'focus/themes';
 
 const CollapsableNav = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Header background="dark-1" pad="medium">
       <Box direction="row" align="center" gap="small">
         Resize the page to collapse the Nav into a Menu
@@ -38,7 +38,7 @@ const CollapsableNav = () => (
         }
       </ResponsiveContext.Consumer>
     </Header>
-  </Grommet>
+  </Viewport>
 );
 
 export const Collapsable = () => <CollapsableNav />;

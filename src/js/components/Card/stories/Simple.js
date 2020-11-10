@@ -7,12 +7,12 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
-  Grommet,
+  Viewport,
   Text,
-} from 'grommet';
+} from 'focus';
 
 export const Simple = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box pad="large" gap="medium" height="large" width="medium">
       <Card pad="small" background="dark-1" gap="medium">
         <CardHeader>header</CardHeader>
@@ -36,5 +36,5 @@ export const Simple = () => (
         <Box>box - random component</Box>
       </Card>
     </Box>
-  </Grommet>
+  </Viewport>
 );

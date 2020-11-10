@@ -6,7 +6,7 @@ import 'regenerator-runtime/runtime';
 
 import { axe } from 'jest-axe';
 import { cleanup, render, fireEvent } from '@testing-library/react';
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { RangeInput } from '..';
 
 describe('RangeInput', () => {
@@ -14,9 +14,9 @@ describe('RangeInput', () => {
 
   test('should have no accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <RangeInput value="50" a11yTitle="test" />
-      </Grommet>,
+      </Viewport>,
     );
 
     const results = await axe(container);
@@ -26,9 +26,9 @@ describe('RangeInput', () => {
 
   test('renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <RangeInput value="50" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -36,9 +36,9 @@ describe('RangeInput', () => {
 
   test('track themed', () => {
     const component = renderer.create(
-      <Grommet theme={{ rangeInput: { track: { color: 'brand' } } }}>
+      <Viewport theme={{ rangeInput: { track: { color: 'brand' } } }}>
         <RangeInput value="10" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -46,11 +46,11 @@ describe('RangeInput', () => {
 
   test('track themed with color and opacity', () => {
     const component = renderer.create(
-      <Grommet
+      <Viewport
         theme={{ rangeInput: { track: { color: 'brand', opacity: 0.3 } } }}
       >
         <RangeInput value="10" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -58,9 +58,9 @@ describe('RangeInput', () => {
 
   test('with min and max offset', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <RangeInput min={10} max={20} step={1} value={15} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -69,9 +69,9 @@ describe('RangeInput', () => {
   test('onFocus', () => {
     const onFocus = jest.fn();
     const { container, getByDisplayValue } = render(
-      <Grommet>
+      <Viewport>
         <RangeInput min={0} max={10} step={1} value={5} onFocus={onFocus} />
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.focus(getByDisplayValue('5'));
     expect(container.firstChild).toMatchSnapshot();
@@ -81,9 +81,9 @@ describe('RangeInput', () => {
   test('onBlur', () => {
     const onBlur = jest.fn();
     const { container, getByDisplayValue } = render(
-      <Grommet>
+      <Viewport>
         <RangeInput min={0} max={10} step={1} value={5} onBlur={onBlur} />
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.blur(getByDisplayValue('5'));
     expect(container.firstChild).toMatchSnapshot();
@@ -93,9 +93,9 @@ describe('RangeInput', () => {
   test('onChange', () => {
     const onChange = jest.fn();
     const { container, getByDisplayValue } = render(
-      <Grommet>
+      <Viewport>
         <RangeInput min={0} max={10} step={1} value={5} onChange={onChange} />
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.change(getByDisplayValue('5'), {
       target: {

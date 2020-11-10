@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Grommet, DataTable } from 'grommet';
+import { Box, Viewport, DataTable } from 'focus';
 import { Blank } from 'grommet-icons';
 
 // Source code for the data can be found here
@@ -52,7 +52,7 @@ export const Custom = () => {
     direction: 'desc',
   });
   return (
-    <Grommet theme={customTheme}>
+    <Viewport theme={customTheme}>
       <Box align="center" pad="large">
         <DataTable
           columns={columns}
@@ -62,6 +62,6 @@ export const Custom = () => {
           onSort={setSort}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

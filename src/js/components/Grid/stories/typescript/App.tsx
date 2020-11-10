@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-import { Grommet, Box, Button, Grid, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Button, Grid, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const AppGrid = () => {
   const [sidebar, setSidebar] = useState(true);
 
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Grid
         fill
         rows={['auto', 'flex']}
@@ -54,7 +54,7 @@ export const AppGrid = () => {
           <Text>main</Text>
         </Box>
       </Grid>
-    </Grommet>
+    </Viewport>
   );
 };
 

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Grommet, Box, Grid } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Grid } from 'focus';
+import { focus } from 'focus/themes';
 
 export const GridAreasAlternative = () => {
   return (
-    <Grommet full theme={grommet}>
+    <Viewport full theme={focus}>
       <Grid
         rows={['xxsmall', 'medium', 'xsmall']}
         columns={['1/4', '3/4']}
@@ -32,7 +32,7 @@ export const GridAreasAlternative = () => {
           Footer
         </Box>
       </Grid>
-    </Grommet>
+    </Viewport>
   );
 };
 

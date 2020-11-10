@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Grommet, Layer } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, Layer } from 'focus';
+import { focus } from 'focus/themes';
 
 export const RTLLayer = () => (
-  <Grommet theme={grommet} dir="rtl">
+  <Viewport theme={focus} dir="rtl">
     <Layer
       position="start"
       margin={{ vertical: 'small', start: 'xlarge', end: 'medium' }}
@@ -18,7 +18,7 @@ export const RTLLayer = () => (
         <Box pad="xlarge">text</Box>
       </Box>
     </Layer>
-  </Grommet>
+  </Viewport>
 );
 
 RTLLayer.story = { name: 'RTL' };

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Grommet, Box, Grid, Heading, ResponsiveContext } from 'grommet';
+import { Viewport, Box, Grid, Heading, ResponsiveContext } from 'focus';
 
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 // Two responsive grids
 //    - First one with a known number of elements
@@ -146,7 +146,7 @@ const Responsive = ({
 );
 
 export const ResponsiveGrid = () => (
-  <Grommet theme={customBreakpoints}>
+  <Viewport theme={customBreakpoints}>
     <Box>
       <Heading level={2}>Resize me.</Heading>
       <Responsive
@@ -185,7 +185,7 @@ export const ResponsiveGrid = () => (
         {listAnimalsBoxes}
       </Responsive>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 ResponsiveGrid.story = { name: 'Responsive grid' };

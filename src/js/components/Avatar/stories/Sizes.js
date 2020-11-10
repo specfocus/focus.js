@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Avatar, Box, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Avatar, Box, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Sizes = () => {
   const src = '//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80';
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box direction="row" pad="large" gap="small">
         <Avatar size="small" src={src} />
         <Avatar size="medium" src={src} />
@@ -27,6 +27,6 @@ export const Sizes = () => {
           SY
         </Avatar>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

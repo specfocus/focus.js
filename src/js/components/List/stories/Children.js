@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Gremlin } from 'grommet-icons';
 
-import { Box, Grommet, grommet, List, Text, Tip } from 'grommet';
+import { Box, Viewport, grommet, List, Text, Tip } from 'focus';
 
 export const data = [
   { city: 'Boise', state: 'Idaho' },
@@ -12,7 +12,7 @@ export const data = [
 ];
 
 export const Children = () => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box pad="large" height="100%" align="center">
       <List data={data} pad="medium">
         {datum => (
@@ -25,5 +25,5 @@ export const Children = () => (
         )}
       </List>
     </Box>
-  </Grommet>
+  </Viewport>
 );

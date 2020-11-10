@@ -10,7 +10,7 @@ export const doc = Table => {
     .description('A table of data organized in cells.')
     .usage(
       // eslint-disable-next-line max-len
-      `import { Table, TableHeader, TableFooter, TableBody, TableRow } from 'grommet';
+      `import { Table, TableHeader, TableFooter, TableBody, TableRow } from 'focus';
 <Table />`,
     )
     .intrinsicElement('table');

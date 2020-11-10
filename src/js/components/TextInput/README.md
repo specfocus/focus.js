@@ -5,7 +5,7 @@ A control to input a single line of text, with optional suggestions.
 ## Usage
 
 ```javascript
-import { TextInput } from 'grommet';
+import { TextInput } from 'focus';
 <TextInput id='item' name='item' />
 ```
 

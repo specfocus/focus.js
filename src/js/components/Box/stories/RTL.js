@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box } from 'grommet';
-import { grommet } from '../../../themes';
+import { Viewport, Box } from 'focus';
+import { focus } from '../../../themes';
 
 export const RTLBox = () => (
-  <Grommet theme={grommet} dir="rtl">
+  <Viewport theme={focus} dir="rtl">
     <Box direction="row" align="center" pad="small" gap="small" border>
       <Box direction="row" align="center" pad="small" border="start">
         border start
@@ -26,7 +26,7 @@ export const RTLBox = () => (
         margin start
       </Box>
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 RTLBox.story = { name: 'RTL' };

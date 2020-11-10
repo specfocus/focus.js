@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Accordion, AccordionPanel, Box, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Accordion, AccordionPanel, Box, Viewport } from 'focus';
+import { focus } from 'focus/themes';
 
 const SimpleAccordion = props => {
   const { animate, multiple, ...rest } = props;
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box {...rest}>
         <Accordion animate={animate} multiple={multiple}>
           <AccordionPanel label="Panel 1">
@@ -28,7 +28,7 @@ const SimpleAccordion = props => {
           </AccordionPanel>
         </Accordion>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

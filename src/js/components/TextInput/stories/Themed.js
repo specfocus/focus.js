@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Box, Grommet, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Box, Viewport, TextInput } from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 const suggestions = Array(100)
   .fill()
@@ -66,7 +66,7 @@ export const Themed = () => {
   const onSelect = event => setValue(event.suggestion);
 
   return (
-    <Grommet full theme={customTheme}>
+    <Viewport full theme={customTheme}>
       <Box fill align="center" justify="start" pad="large">
         <Box width="medium">
           <TextInput
@@ -80,6 +80,6 @@ export const Themed = () => {
           />
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

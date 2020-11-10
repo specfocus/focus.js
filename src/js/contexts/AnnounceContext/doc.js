@@ -7,7 +7,7 @@ export const doc = AnnounceContext => {
     .availableAt(getAvailableAtBadge('AnnounceContext'))
     .description('A means of announcing events for screen readers.')
     .usage(
-      "import { AnnounceContext } from 'grommet';\n" +
+      "import { AnnounceContext } from 'focus';\n" +
         '<AnnounceContext.Consumer />\n{announce => ()}',
     );
 

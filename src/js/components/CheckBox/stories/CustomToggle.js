@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { css } from 'styled-components';
 
-import { Box, Grommet, CheckBox } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Box, Viewport, CheckBox } from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 const checkboxCheckStyle = css`
   background-color: #2196f3;
@@ -62,7 +62,7 @@ export const CustomToggle = props => {
   const [checked, setChecked] = useState(false);
 
   return (
-    <Grommet theme={deepMerge(grommet, customToggleTheme)}>
+    <Viewport theme={deepMerge(grommet, customToggleTheme)}>
       <Box align="center" pad="large">
         <CheckBox
           {...props}
@@ -72,7 +72,7 @@ export const CustomToggle = props => {
           toggle
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

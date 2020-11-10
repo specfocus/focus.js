@@ -5,7 +5,7 @@ import 'jest-styled-components';
 
 import { findAllByType } from '../../../utils';
 
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { RoutedAnchor } from '..';
 
 class FakeRouter extends Component {
@@ -43,11 +43,11 @@ describe('RoutedAnchor', () => {
   test('renders', () => {
     const warnSpy = jest.spyOn(console, 'warn').mockImplementation();
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FakeRouter push={push} replace={replace}>
           <RoutedAnchor label="Test" path="/" />
         </FakeRouter>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -60,11 +60,11 @@ describe('RoutedAnchor', () => {
     const preventDefault = jest.fn();
     const onClick = jest.fn();
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FakeRouter push={push} replace={replace}>
           <RoutedAnchor label="Test" onClick={onClick} path="/" />
         </FakeRouter>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
 
@@ -81,11 +81,11 @@ describe('RoutedAnchor', () => {
     const warnSpy = jest.spyOn(console, 'warn').mockImplementation();
     const onClick = jest.fn();
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FakeRouter push={push} replace={replace}>
           <RoutedAnchor label="Test" onClick={onClick} path="/" />
         </FakeRouter>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
 
@@ -105,11 +105,11 @@ describe('RoutedAnchor', () => {
     const warnSpy = jest.spyOn(console, 'warn').mockImplementation();
     const preventDefault = jest.fn();
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FakeRouter push={push} replace={replace}>
           <RoutedAnchor label="Test" path="/" />
         </FakeRouter>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
 
@@ -127,11 +127,11 @@ describe('RoutedAnchor', () => {
     const warnSpy = jest.spyOn(console, 'warn').mockImplementation();
     const preventDefault = jest.fn();
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <FakeRouter replace={replace} push={push}>
           <RoutedAnchor label="Test" path="/" method="replace" />
         </FakeRouter>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
 

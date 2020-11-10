@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Grommet, Heading, ResponsiveContext } from 'grommet';
+import { Box, Viewport, Heading, ResponsiveContext } from 'focus';
 
 const customBreakpoints = {
   global: {
@@ -49,7 +49,7 @@ const customBreakpoints = {
 };
 
 export const CustomBreakpoints = () => (
-  <Grommet theme={customBreakpoints} full>
+  <Viewport theme={customBreakpoints} full>
     <ResponsiveContext.Consumer>
       {size => (
         <Box fill background="brand">
@@ -57,7 +57,7 @@ export const CustomBreakpoints = () => (
         </Box>
       )}
     </ResponsiveContext.Consumer>
-  </Grommet>
+  </Viewport>
 );
 
 CustomBreakpoints.story = {

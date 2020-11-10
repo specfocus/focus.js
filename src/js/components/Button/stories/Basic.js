@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet } from 'grommet';
+import { focus, Box, Button, Viewport } from 'focus';
 
 export const Basic = props => (
-  <Grommet theme={grommet}>
+  <Viewport theme={focus}>
     <Box align="center" pad="medium">
       <Button label="Default" onClick={() => {}} {...props} />
     </Box>
@@ -25,5 +25,5 @@ export const Basic = props => (
         {...props}
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );

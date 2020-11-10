@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { deepMerge } from 'grommet/utils';
+import { deepMerge } from 'focus/utils';
 
-import { Box, Calendar, Grommet, grommet } from 'grommet';
+import { Box, Calendar, Viewport, grommet } from 'focus';
 
 const customHeading = deepMerge(grommet, {
   calendar: {
@@ -19,7 +19,7 @@ export const CustomSizeCalendar = () => {
   };
 
   return (
-    <Grommet theme={customHeading}>
+    <Viewport theme={customHeading}>
       <Box align="center" pad="large">
         <Calendar
           date={date}
@@ -27,7 +27,7 @@ export const CustomSizeCalendar = () => {
           bounds={['2018-09-08', '2020-12-13']}
         />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

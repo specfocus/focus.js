@@ -1,12 +1,12 @@
-## Grommet
-The top level Grommet container.
+## Viewport
+The top level Viewport container.
 
-[![](https://cdn-images-1.medium.com/fit/c/120/120/1*TD1P0HtIH9zF0UEH28zYtw.png)](https://storybook.grommet.io/?selectedKind=Grommet&full=0&addons=0&stories=1&panelRight=0) [![](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/grommet/grommet-sandbox?initialpath=/grommet&module=%2Fsrc%2FGrommet.js)
+[![](https://cdn-images-1.medium.com/fit/c/120/120/1*TD1P0HtIH9zF0UEH28zYtw.png)](https://storybook.speckfocus.com/?selectedKind=Viewport&full=0&addons=0&stories=1&panelRight=0) [![](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/specfocus/focus-sandbox?initialpath=/focus&module=%2Fsrc%2FViewport.js)
 ## Usage
 
 ```javascript
-import { Grommet } from 'grommet';
-<Grommet>...</Grommet>
+import { Viewport } from 'focus';
+<Viewport>...</Viewport>
 ```
 
 ## Properties
@@ -68,7 +68,7 @@ boolean
 
 **plain**
 
-Whether or not Grommet should apply a global font-family, font-size,
+Whether or not View should apply a global font-family, font-size,
         and line-height.
 
 ```
@@ -85,7 +85,7 @@ boolean
 
 **theme**
 
-Custom styles for Grommet app component.
+Custom styles for Viewport app component.
 
 ```
 object
@@ -128,9 +128,9 @@ div
 ```
 ## Theme
   
-**grommet.extend**
+**Viewport.extend**
 
-Any additional style for Grommet. Expects `string | (props) => {}`.
+Any additional style for Viewport. Expects `string | (props) => {}`.
 
 Defaults to
 

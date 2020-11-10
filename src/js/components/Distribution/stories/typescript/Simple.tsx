@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Distribution, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Viewport, Box, Distribution, Text } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Simple = () => (
-  <Grommet theme={grommet} full>
+  <Viewport theme={focus} full>
     <Distribution
       fill
       values={[
@@ -21,5 +21,5 @@ export const Simple = () => (
         </Box>
       )}
     </Distribution>
-  </Grommet>
+  </Viewport>
 );

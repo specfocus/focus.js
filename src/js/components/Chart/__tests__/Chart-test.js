@@ -6,7 +6,7 @@ import { axe } from 'jest-axe';
 import 'jest-axe/extend-expect';
 import 'regenerator-runtime/runtime';
 
-import { Grommet } from '../../Grommet';
+import { Viewport } from '../../Viewport';
 import { Box } from '../../Box';
 import { Chart, calcs } from '..';
 
@@ -43,9 +43,9 @@ describe('Chart', () => {
 
   test('should not have accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <Chart values={VALUES} />
-      </Grommet>,
+      </Viewport>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -54,9 +54,9 @@ describe('Chart', () => {
 
   test('default', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Chart values={VALUES} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -64,12 +64,12 @@ describe('Chart', () => {
 
   test('type', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Chart type="bar" values={VALUES} />
         <Chart type="line" values={VALUES} />
         <Chart type="area" values={VALUES} />
         <Chart type="point" values={VALUES} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -77,7 +77,7 @@ describe('Chart', () => {
 
   test('size', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Chart size="xsmall" values={VALUES} />
         <Chart size="small" values={VALUES} />
         <Chart size="medium" values={VALUES} />
@@ -88,7 +88,7 @@ describe('Chart', () => {
           <Chart size={{ width: 'fill' }} values={VALUES} />
           <Chart size={{ width: 'auto' }} values={VALUES} />
         </Box>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -96,13 +96,13 @@ describe('Chart', () => {
 
   test('thickness', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Chart thickness="xsmall" values={VALUES} />
         <Chart thickness="small" values={VALUES} />
         <Chart thickness="medium" values={VALUES} />
         <Chart thickness="large" values={VALUES} />
         <Chart thickness="xlarge" values={VALUES} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -110,12 +110,12 @@ describe('Chart', () => {
 
   test('cap', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Chart round values={VALUES} />
         <Chart type="line" round values={VALUES} />
         <Chart type="area" round values={VALUES} />
         <Chart type="point" round values={VALUES} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -123,13 +123,13 @@ describe('Chart', () => {
 
   test('gap', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Box width="large">
           <Chart size={{ width: 'auto' }} gap="small" values={VALUES} />
           <Chart size={{ width: 'auto' }} gap="medium" values={VALUES} />
           <Chart size={{ width: 'auto' }} gap="large" values={VALUES} />
         </Box>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -137,9 +137,9 @@ describe('Chart', () => {
 
   test('dash', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Chart dash values={VALUES} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -147,7 +147,7 @@ describe('Chart', () => {
 
   test('color', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Chart color="brand" values={VALUES} />
         <Chart color={{ color: 'brand', opacity: 'strong' }} values={VALUES} />
         <Chart
@@ -157,7 +157,7 @@ describe('Chart', () => {
           ]}
           values={VALUES}
         />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -165,14 +165,14 @@ describe('Chart', () => {
 
   test('point', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Chart type="point" point="circle" values={VALUES} />
         <Chart type="point" point="diamond" values={VALUES} />
         <Chart type="point" point="square" values={VALUES} />
         <Chart type="point" point="star" values={VALUES} />
         <Chart type="point" point="triangle" values={VALUES} />
         <Chart type="point" point="triangleDown" values={VALUES} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -180,10 +180,10 @@ describe('Chart', () => {
 
   test('value style', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Chart type="point" point="circle" values={STYLED_VALUES} />
         <Chart type="bar" values={STYLED_VALUES} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -191,13 +191,13 @@ describe('Chart', () => {
 
   test('pad', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Chart pad="xsmall" values={VALUES} />
         <Chart
           pad={{ horizontal: 'medium', vertical: 'small' }}
           values={VALUES}
         />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -205,12 +205,12 @@ describe('Chart', () => {
 
   test('animate', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Chart type="bar" values={VALUES} animate />
         <Chart type="line" values={VALUES} animate />
         <Chart type="area" values={VALUES} animate />
         <Chart type="point" values={VALUES} animate />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -218,12 +218,12 @@ describe('Chart', () => {
 
   test('undefined values', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Chart type="bar" values={UNDEFINED_VALUES} />
         <Chart type="line" values={UNDEFINED_VALUES} />
         <Chart type="area" values={UNDEFINED_VALUES} />
         <Chart type="point" values={UNDEFINED_VALUES} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

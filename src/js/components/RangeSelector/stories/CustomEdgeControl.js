@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Gremlin, Grommet as GrommetIcon } from 'grommet-icons';
-import { Grommet, Box, RangeSelector, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Gremlin, Viewport as GrommetIcon } from 'grommet-icons';
+import { Viewport, Box, RangeSelector, Stack, Text } from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 const customEdge = deepMerge(grommet, {
   rangeSelector: {
@@ -21,7 +21,7 @@ export const CustomEdgeControl = ({ direction = 'horizontal', ...rest }) => {
   };
 
   return (
-    <Grommet theme={customEdge}>
+    <Viewport theme={customEdge}>
       <Box align="center" pad="xlarge" gap="large">
         <Text style={{ fontFamily: 'Comic Sans MS' }} color="brand">
           Feed the gremlins with grommets...{' '}
@@ -54,7 +54,7 @@ export const CustomEdgeControl = ({ direction = 'horizontal', ...rest }) => {
           />
         </Stack>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

@@ -11,7 +11,7 @@ export const doc = Tip => {
     Tip child node or string.`,
     )
     .usage(
-      `import { Tip } from 'grommet';
+      `import { Tip } from 'focus';
 <Tip />`,
     );
 

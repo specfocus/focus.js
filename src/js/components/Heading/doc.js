@@ -9,7 +9,7 @@ export const doc = Heading => {
     .availableAt(getAvailableAtBadge('Heading'))
     .description('Heading text structured in levels.')
     .usage(
-      `import { Heading } from 'grommet';
+      `import { Heading } from 'focus';
 <Heading />`,
     )
     .intrinsicElement(['h1', 'h2', 'h3', 'h4']);

@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, CheckBox } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, CheckBox } from 'focus';
+import { focus } from 'focus/themes';
 
 const SimpleCheckBox = ({ checked: checkedProp, ...rest }) => {
   const [checked, setChecked] = useState(!!checkedProp);
   const onChange = event => setChecked(event.target.checked);
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <CheckBox {...rest} checked={checked} onChange={onChange} />
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, CheckBox } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Viewport, CheckBox } from 'focus';
+import { focus } from 'focus/themes';
 
 export const Indeterminate = () => {
   const [checked, setChecked] = useState([]);
@@ -24,7 +24,7 @@ export const Indeterminate = () => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <Viewport theme={focus}>
       <Box align="center" pad="large">
         <Box direction="row" gap="medium">
           <CheckBox
@@ -43,6 +43,6 @@ export const Indeterminate = () => {
           ))}
         </Box>
       </Box>
-    </Grommet>
+    </Viewport>
   );
 };

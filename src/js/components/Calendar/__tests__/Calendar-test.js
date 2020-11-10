@@ -8,7 +8,7 @@ import 'regenerator-runtime/runtime';
 import { axe } from 'jest-axe';
 import { cleanup, fireEvent, render, act } from '@testing-library/react';
 import { FormNextLink, FormPreviousLink } from 'grommet-icons';
-import { Box, Button, Calendar, Grommet, Text } from '../..';
+import { Box, Button, Calendar, Viewport, Text } from '../..';
 
 const DATE = '2020-01-15T00:00:00-08:00';
 const DATES = [
@@ -21,9 +21,9 @@ describe('Calendar', () => {
 
   test('Calendar should have no accessbility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <Calendar date={DATE} animate={false} />
-      </Grommet>,
+      </Viewport>,
     );
 
     const results = await axe(container);
@@ -33,9 +33,9 @@ describe('Calendar', () => {
   test('date', () => {
     // need to set the date to avoid snapshot drift over time
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Calendar date={DATE} animate={false} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -47,9 +47,9 @@ describe('Calendar', () => {
     const disabledDate = new Date(DATE);
     disabledDate.setDate(disabledDate.getDate() + 1);
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Calendar date={DATE} disabled={[disabledDate.toDateString()]} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -57,9 +57,9 @@ describe('Calendar', () => {
 
   test('dates', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Calendar dates={DATES} animate={false} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -67,9 +67,9 @@ describe('Calendar', () => {
 
   test('daysOfWeek', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Calendar daysOfWeek dates={DATES} animate={false} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -77,11 +77,11 @@ describe('Calendar', () => {
 
   test('size', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Calendar size="small" date={DATE} animate={false} />
         <Calendar size="medium" date={DATE} animate={false} />
         <Calendar size="large" date={DATE} animate={false} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -89,9 +89,9 @@ describe('Calendar', () => {
 
   test('fill', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Calendar fill date={DATE} animate={false} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -99,10 +99,10 @@ describe('Calendar', () => {
 
   test('firstDayOfWeek', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Calendar firstDayOfWeek={0} date={DATE} animate={false} />
         <Calendar firstDayOfWeek={1} date={DATE} animate={false} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -110,9 +110,9 @@ describe('Calendar', () => {
 
   test('reference', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Calendar reference={DATE} animate={false} />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -120,11 +120,11 @@ describe('Calendar', () => {
 
   test('showAdjacentDays', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Calendar date={DATE} animate={false} />
         <Calendar date={DATE} animate={false} showAdjacentDays={false} />
         <Calendar date={DATE} animate={false} showAdjacentDays="trim" />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -132,7 +132,7 @@ describe('Calendar', () => {
 
   test('header', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Calendar
           date={DATE}
           onSelect={() => {}}
@@ -169,7 +169,7 @@ describe('Calendar', () => {
           )}
           animate={false}
         />
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -177,11 +177,11 @@ describe('Calendar', () => {
 
   test('children', () => {
     const component = renderer.create(
-      <Grommet>
+      <Viewport>
         <Calendar date={DATE} fill animate={false}>
           {({ day }) => <Box>{day}</Box>}
         </Calendar>
-      </Grommet>,
+      </Viewport>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -190,9 +190,9 @@ describe('Calendar', () => {
   test('select date', () => {
     const onSelect = jest.fn();
     const { getByText, container } = render(
-      <Grommet>
+      <Viewport>
         <Calendar date={DATE} onSelect={onSelect} animate={false} />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByText('17'));
@@ -203,9 +203,9 @@ describe('Calendar', () => {
   test('select dates', () => {
     const onSelect = jest.fn();
     const { getByText, container } = render(
-      <Grommet>
+      <Viewport>
         <Calendar dates={DATES} onSelect={onSelect} animate={false} />
-      </Grommet>,
+      </Viewport>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByText('17'));
@@ -218,13 +218,13 @@ describe('Calendar', () => {
     // and the request of firstDayOfWeek
     // is Monday, we are verifing we are not missing a week, issue 3253.
     const { container } = render(
-      <Grommet>
+      <Viewport>
         <Calendar
           firstDayOfWeek={1}
           date="2020-03-01T00:00:00-08:00"
           animate={false}
         />
-      </Grommet>,
+      </Viewport>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -233,9 +233,9 @@ describe('Calendar', () => {
   test('change months', () => {
     jest.useFakeTimers();
     const { container, getByLabelText } = render(
-      <Grommet>
+      <Viewport>
         <Calendar date={DATE} />
-      </Grommet>,
+      </Viewport>,
     );
     // Change the Calendar from January to December
     fireEvent.click(getByLabelText('December 2019'));
@@ -254,9 +254,9 @@ describe('Calendar', () => {
   test('select date with range', () => {
     const onSelect = jest.fn();
     const { getByText } = render(
-      <Grommet>
+      <Viewport>
         <Calendar date={DATE} onSelect={onSelect} range animate={false} />
-      </Grommet>,
+      </Viewport>,
     );
     // expect to be selecting end date of range, because date serves
     // as start. since selected date is < date we should set it as start
@@ -274,14 +274,14 @@ describe('Calendar', () => {
   test('select date with range no date set', () => {
     const onSelect = jest.fn();
     const { getByText } = render(
-      <Grommet>
+      <Viewport>
         <Calendar
           reference="2020-07-01T00:00:00-08:00"
           onSelect={onSelect}
           range
           animate={false}
         />
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.click(getByText('17'));
     fireEvent.click(getByText('20'));
@@ -296,14 +296,14 @@ describe('Calendar', () => {
   test('select date greater and less than', () => {
     const onSelect = jest.fn();
     const { getByLabelText } = render(
-      <Grommet>
+      <Viewport>
         <Calendar
           dates={[['2020-01-01T00:00:00-08:00', '2020-01-05T00:00:00-08:00']]}
           onSelect={onSelect}
           range
           animate={false}
         />
-      </Grommet>,
+      </Viewport>,
     );
     // select date greater than January 1st
     fireEvent.click(getByLabelText('Fri Jan 03 2020'));
@@ -323,14 +323,14 @@ describe('Calendar', () => {
   test('select date with same start date', () => {
     const onSelect = jest.fn();
     const { getByLabelText } = render(
-      <Grommet>
+      <Viewport>
         <Calendar
           dates={[['2020-01-01T00:00:00-08:00', '2020-01-03T00:00:00-08:00']]}
           onSelect={onSelect}
           range
           animate={false}
         />
-      </Grommet>,
+      </Viewport>,
     );
     // selecting same starting day
     fireEvent.click(getByLabelText('Wed Jan 01 2020'));
@@ -340,14 +340,14 @@ describe('Calendar', () => {
   test('select date with same date twice', () => {
     const onSelect = jest.fn();
     const { getByLabelText } = render(
-      <Grommet>
+      <Viewport>
         <Calendar
           reference="2020-01-01T00:00:00-08:00"
           onSelect={onSelect}
           range
           animate={false}
         />
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.click(getByLabelText('Fri Jan 03 2020'));
     expect(onSelect).toBeCalledWith(expect.stringMatching(/^2020-01-03T/));
@@ -358,14 +358,14 @@ describe('Calendar', () => {
   test('select date with same end date', () => {
     const onSelect = jest.fn();
     const { getByLabelText } = render(
-      <Grommet>
+      <Viewport>
         <Calendar
           dates={[['2020-01-01T00:00:00-08:00', '2020-01-03T00:00:00-08:00']]}
           onSelect={onSelect}
           range
           animate={false}
         />
-      </Grommet>,
+      </Viewport>,
     );
     // selecting same ending day
     fireEvent.click(getByLabelText('Fri Jan 03 2020'));
@@ -375,14 +375,14 @@ describe('Calendar', () => {
   test('range as array', () => {
     const onSelect = jest.fn();
     const { getByLabelText } = render(
-      <Grommet>
+      <Viewport>
         <Calendar
           dates={[['2020-01-01T00:00:00-08:00', '2020-01-05T00:00:00-08:00']]}
           onSelect={onSelect}
           range="array"
           animate={false}
         />
-      </Grommet>,
+      </Viewport>,
     );
     // select date greater than January 1st
     // activeDate by default is start
@@ -420,7 +420,7 @@ describe('Calendar', () => {
   test('activeDate start', () => {
     const onSelect = jest.fn();
     const { getByLabelText } = render(
-      <Grommet>
+      <Viewport>
         <Calendar
           activeDate="start"
           dates={[['2020-01-01T00:00:00-08:00', '2020-01-05T00:00:00-08:00']]}
@@ -428,7 +428,7 @@ describe('Calendar', () => {
           range="array"
           animate={false}
         />
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.click(getByLabelText('Fri Jan 03 2020'));
     expect(onSelect).toBeCalledWith([
@@ -442,7 +442,7 @@ describe('Calendar', () => {
   test('activeDate end', () => {
     const onSelect = jest.fn();
     const { getByLabelText } = render(
-      <Grommet>
+      <Viewport>
         <Calendar
           activeDate="end"
           dates={[['2020-01-01T00:00:00-08:00', '2020-01-05T00:00:00-08:00']]}
@@ -450,7 +450,7 @@ describe('Calendar', () => {
           range="array"
           animate={false}
         />
-      </Grommet>,
+      </Viewport>,
     );
     fireEvent.click(getByLabelText('Fri Jan 03 2020'));
     expect(onSelect).toBeCalledWith([
@@ -470,14 +470,14 @@ describe('Calendar Keyboard events', () => {
     onSelect = jest.fn();
     App = () => {
       return (
-        <Grommet>
+        <Viewport>
           <Calendar
             bounds={['2020-01-01', '2020-01-31']}
             date={DATE}
             onSelect={onSelect}
             animate={false}
           />
-        </Grommet>
+        </Viewport>
       );
     };
   });

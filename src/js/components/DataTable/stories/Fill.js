@@ -1,7 +1,7 @@
 import React from 'react';
-import { Grommet, Box, DataTable } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Viewport,, Box, DataTable } from 'focus';
+import { focus } from 'focus/themes';
+import { deepMerge } from 'focus/utils';
 
 // Source code for the data can be found here
 // https://github.com/grommet/grommet/blob/master/src/js/components/DataTable/stories/data.js
@@ -40,7 +40,7 @@ const myTheme = deepMerge(grommet, {
 });
 
 export const Fill = () => (
-  <Grommet theme={myTheme} full>
+  <Viewport theme={myTheme} full>
     <Box fill="vertical">
       <DataTable
         columns={pinnedColumns}
@@ -53,7 +53,7 @@ export const Fill = () => (
         }}
       />
     </Box>
-  </Grommet>
+  </Viewport>
 );
 
 Fill.story = {
