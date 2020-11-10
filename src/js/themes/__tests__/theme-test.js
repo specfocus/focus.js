@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import { hpe } from 'grommet-theme-hpe';
+import { hpe } from 'focus/themes/hpe';
 import { Add } from 'grommet-icons';
 
 import {
@@ -14,7 +14,7 @@ import {
   TextInput,
 } from '../../components';
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { dark, grommet } from '..';
+import { dark, focus } from '..';
 
 // hpe theme has deprecated the accent and neutral colors
 const hpeColors = [
@@ -110,7 +110,7 @@ describe('Grommet', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('grommet theme', () => {
+  test('focus theme', () => {
     const component = renderer.create(
       <Viewport theme={focus}>
         <Button label="test" />

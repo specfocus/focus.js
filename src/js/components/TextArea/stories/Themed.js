@@ -4,7 +4,7 @@ import { Box, Viewport, TextArea } from 'focus';
 import { focus } from 'focus/themes';
 import { deepMerge } from 'focus/utils';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(focus, {
   textArea: {
     extend: () => `
       font-size: 40px;

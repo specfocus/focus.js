@@ -4,7 +4,7 @@ import { Box, Drop, Viewport } from 'focus';
 import { focus } from 'focus/themes';
 import { deepMerge } from 'focus/utils';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(focus, {
   global: {
     drop: {
       background: { dark: 'neutral-2', light: 'neutral-2' },

@@ -4,7 +4,7 @@ import { Viewport, Box, Button, RadioButton } from 'focus';
 import { focus } from 'focus/themes';
 import { deepMerge } from 'focus/utils';
 
-const theme = deepMerge(grommet, {
+const theme = deepMerge(focus, {
   radioButton: {
     gap: 'xsmall',
     size: '18px',

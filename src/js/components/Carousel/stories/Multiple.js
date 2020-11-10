@@ -3,15 +3,15 @@ import React from 'react';
 import { Viewport, Box, Carousel, Image } from 'focus';
 
 const data = [
-  '//v2.grommet.io/assets/Wilderpeople_Ricky.jpg',
-  '//v2.grommet.io/assets/IMG_4245.jpg',
-  '//v2.grommet.io/assets/IMG_4210.jpg',
+  '//v2.specfocus.com/assets/Wilderpeople_Ricky.jpg',
+  '//v2.specfocus.com/assets/IMG_4245.jpg',
+  '//v2.specfocus.com/assets/IMG_4210.jpg',
   'https://avatars1.githubusercontent.com/u/14203820?s=280&v=4',
   'https://developer.hpe.com/img/hpe-dev-grommet-gremlin-rockin-static.svg',
-  '//v2.grommet.io/assets/Wilderpeople_Ricky.jpg',
-  '//v2.grommet.io/assets/IMG_4245.jpg',
-  '//v2.grommet.io/assets/IMG_4210.jpg',
-  '//v2.grommet.io/assets/Wilderpeople_Ricky.jpg',
+  '//v2.specfocus.com/assets/Wilderpeople_Ricky.jpg',
+  '//v2.specfocus.com/assets/IMG_4245.jpg',
+  '//v2.specfocus.com/assets/IMG_4210.jpg',
+  '//v2.specfocus.com/assets/Wilderpeople_Ricky.jpg',
 ];
 
 const View0 = () => {

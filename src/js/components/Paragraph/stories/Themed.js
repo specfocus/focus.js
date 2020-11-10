@@ -4,7 +4,7 @@ import { Viewport, Paragraph } from 'focus';
 import { deepMerge } from 'focus/utils';
 import { focus } from 'focus/themes';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(focus, {
   paragraph: {
     font: {
       family: 'Comic Sans MS',

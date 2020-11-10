@@ -111,7 +111,7 @@ describe('InfiniteScroll', () => {
           mixedItems.push(
             <Image
               a11yTitle="Gremlin"
-              src="https://v2.grommet.io/img/stak-hurrah.svg"
+              src="https://v2.specfocus.com/img/stak-hurrah.svg"
             />,
           );
           break;

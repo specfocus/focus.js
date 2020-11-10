@@ -4,13 +4,13 @@ import { focus } from 'focus/themes';
 import { deepMerge } from 'focus/utils';
 
 // Source code for the data can be found here
-// https://github.com/grommet/grommet/blob/master/src/js/components/DataTable/stories/data.js
+// https://github.com/specfocus/grommet/blob/master/src/js/components/DataTable/stories/data.js
 import { columns, data } from './data';
 
 const pinnedColumns = columns.map(c => ({ ...c }));
 pinnedColumns[0].pin = true;
 
-const myTheme = deepMerge(grommet, {
+const myTheme = deepMerge(focus, {
   table: {
     header: {
       background: {

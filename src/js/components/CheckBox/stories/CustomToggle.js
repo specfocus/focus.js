@@ -62,7 +62,7 @@ export const CustomToggle = props => {
   const [checked, setChecked] = useState(false);
 
   return (
-    <Viewport theme={deepMerge(grommet, customToggleTheme)}>
+    <Viewport theme={deepMerge(focus, customToggleTheme)}>
       <Box align="center" pad="large">
         <CheckBox
           {...props}

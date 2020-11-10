@@ -1,5 +1,5 @@
 import React from 'react';
-import { Attraction } from 'focus-icons';
+import { Attraction } from 'grommet-icons';
 
 import { Viewport, Box, Text } from 'focus';
 import { focus } from '../../../themes';

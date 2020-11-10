@@ -29,7 +29,7 @@ const borderPositions = [
   },
   {
     name: 'Border Inner',
-    theme: deepMerge(grommet, {
+    theme: deepMerge(focus, {
       formField: {
         border: { position: 'inner', side: 'all' },
       },
@@ -37,7 +37,7 @@ const borderPositions = [
   },
   {
     name: 'Border Outer',
-    theme: deepMerge(grommet, {
+    theme: deepMerge(focus, {
       formField: {
         border: { position: 'outer', side: 'all' },
       },
@@ -45,7 +45,7 @@ const borderPositions = [
   },
   {
     name: 'Border None',
-    theme: deepMerge(grommet, {
+    theme: deepMerge(focus, {
       formField: {
         border: { position: 'none' },
       },
@@ -53,7 +53,7 @@ const borderPositions = [
   },
   {
     name: 'Border Undefined',
-    theme: deepMerge(grommet, {
+    theme: deepMerge(focus, {
       formField: {
         border: undefined,
         content: { pad: 'large' },

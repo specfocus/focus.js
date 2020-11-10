@@ -5,7 +5,7 @@ import { Box, Viewport, Select } from 'focus';
 import { focus } from 'focus/themes';
 import { deepMerge } from 'focus/utils';
 
-const customRoundedTheme = deepMerge(grommet, {
+const customRoundedTheme = deepMerge(focus, {
   global: {
     colors: {
       selected: 'neutral-3',

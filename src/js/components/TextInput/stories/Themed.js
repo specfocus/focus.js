@@ -8,7 +8,7 @@ const suggestions = Array(100)
   .fill()
   .map((_, i) => `suggestion ${i + 1}`);
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(focus, {
   global: {
     input: {
       padding: {

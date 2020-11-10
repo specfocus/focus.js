@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { Attraction, Car, TreeOption } from 'grommet-icons';
-import { Box, Viewport, grommet, Tab, Tabs } from 'focus';
+import { Box, Viewport, focus, Tab, Tabs } from 'focus';
 import { deepMerge } from 'focus/utils';
 
-const myTheme = deepMerge(grommet, {
+const myTheme = deepMerge(focus, {
   tabs: {
     header: {
       border: {

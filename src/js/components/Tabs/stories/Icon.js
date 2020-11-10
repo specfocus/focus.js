@@ -6,7 +6,7 @@ import { Box, Viewport, Tab, Tabs } from 'focus';
 import { focus } from 'focus/themes';
 import { deepMerge } from 'focus/utils';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(focus, {
   tab: {
     color: 'text',
     active: {

@@ -23,7 +23,7 @@ exports[`Focus announce 1`] = `
 exports[`Focus announce 2`] = `
 <div
   aria-live="assertive"
-  id="grommet-announcer"
+  id="focus-announcer"
   style="left: -100%; right: 100%; position: fixed; z-index: -1;"
 >
   hello
@@ -33,7 +33,7 @@ exports[`Focus announce 2`] = `
 exports[`Focus announce 3`] = `
 <div
   aria-live="assertive"
-  id="grommet-announcer"
+  id="focus-announcer"
   style="left: -100%; right: 100%; position: fixed; z-index: -1;"
 />
 `;
@@ -158,7 +158,7 @@ exports[`Focus full 1`] = `
 </div>
 `;
 
-exports[`Focus grommet theme 1`] = `
+exports[`Focus focus theme 1`] = `
 .c0 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial,sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 18px;

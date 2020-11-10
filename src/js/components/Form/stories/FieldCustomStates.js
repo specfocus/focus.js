@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import { focus, Box, Form, FormField, TextInput, Viewport } from 'focus';
 import { deepMerge } from 'focus/utils';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(focus, {
   formField: {
     border: {
       error: {

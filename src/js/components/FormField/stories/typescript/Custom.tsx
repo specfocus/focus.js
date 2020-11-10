@@ -28,7 +28,7 @@ const customTheme: ThemeType = {
 };
 
 export const Custom = () => (
-  <Viewport theme={deepMerge(grommet, customTheme)}>
+  <Viewport theme={deepMerge(focus, customTheme)}>
     <Box align="center" pad="large">
       <FormField label="Label" htmlFor="text-area">
         <TextArea id="text-area" placeholder="placeholder" />

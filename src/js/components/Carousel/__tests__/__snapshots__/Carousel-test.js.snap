@@ -343,7 +343,7 @@ exports[`Carousel basic 1`] = `
         >
           <img
             className=""
-            src="//v2.grommet.io/assets/IMG_4245.jpg"
+            src="//v2.specfocus.com/assets/IMG_4245.jpg"
           />
         </div>
       </div>
@@ -359,7 +359,7 @@ exports[`Carousel basic 1`] = `
         >
           <img
             className=""
-            src="//v2.grommet.io/assets/IMG_4210.jpg"
+            src="//v2.specfocus.com/assets/IMG_4210.jpg"
           />
         </div>
       </div>
@@ -821,7 +821,7 @@ exports[`Carousel basic with \`initialChild: 1\` 1`] = `
         >
           <img
             className=""
-            src="//v2.grommet.io/assets/IMG_4245.jpg"
+            src="//v2.specfocus.com/assets/IMG_4245.jpg"
           />
         </div>
       </div>
@@ -837,7 +837,7 @@ exports[`Carousel basic with \`initialChild: 1\` 1`] = `
         >
           <img
             className=""
-            src="//v2.grommet.io/assets/IMG_4210.jpg"
+            src="//v2.specfocus.com/assets/IMG_4210.jpg"
           />
         </div>
       </div>
@@ -1299,7 +1299,7 @@ exports[`Carousel navigate 1`] = `
         >
           <img
             class=""
-            src="//v2.grommet.io/assets/IMG_4245.jpg"
+            src="//v2.specfocus.com/assets/IMG_4245.jpg"
           />
         </div>
       </div>
@@ -1315,7 +1315,7 @@ exports[`Carousel navigate 1`] = `
         >
           <img
             class=""
-            src="//v2.grommet.io/assets/IMG_4210.jpg"
+            src="//v2.specfocus.com/assets/IMG_4210.jpg"
           />
         </div>
       </div>
@@ -1430,7 +1430,7 @@ exports[`Carousel navigate 2`] = `
         >
           <img
             class="StyledImage-ey4zx9-0 paVDt"
-            src="//v2.grommet.io/assets/IMG_4245.jpg"
+            src="//v2.specfocus.com/assets/IMG_4245.jpg"
           />
         </div>
       </div>
@@ -1446,7 +1446,7 @@ exports[`Carousel navigate 2`] = `
         >
           <img
             class="StyledImage-ey4zx9-0 paVDt"
-            src="//v2.grommet.io/assets/IMG_4210.jpg"
+            src="//v2.specfocus.com/assets/IMG_4210.jpg"
           />
         </div>
       </div>
@@ -1561,7 +1561,7 @@ exports[`Carousel navigate 3`] = `
         >
           <img
             class="StyledImage-ey4zx9-0 paVDt"
-            src="//v2.grommet.io/assets/IMG_4245.jpg"
+            src="//v2.specfocus.com/assets/IMG_4245.jpg"
           />
         </div>
       </div>
@@ -1577,7 +1577,7 @@ exports[`Carousel navigate 3`] = `
         >
           <img
             class="StyledImage-ey4zx9-0 paVDt"
-            src="//v2.grommet.io/assets/IMG_4210.jpg"
+            src="//v2.specfocus.com/assets/IMG_4210.jpg"
           />
         </div>
       </div>
@@ -2015,7 +2015,7 @@ exports[`Carousel play 1`] = `
         >
           <img
             class=""
-            src="//v2.grommet.io/assets/IMG_4245.jpg"
+            src="//v2.specfocus.com/assets/IMG_4245.jpg"
           />
         </div>
       </div>
@@ -2031,7 +2031,7 @@ exports[`Carousel play 1`] = `
         >
           <img
             class=""
-            src="//v2.grommet.io/assets/IMG_4210.jpg"
+            src="//v2.specfocus.com/assets/IMG_4210.jpg"
           />
         </div>
       </div>
@@ -2145,7 +2145,7 @@ exports[`Carousel play 2`] = `
         >
           <img
             class="StyledImage-ey4zx9-0 paVDt"
-            src="//v2.grommet.io/assets/IMG_4245.jpg"
+            src="//v2.specfocus.com/assets/IMG_4245.jpg"
           />
         </div>
       </div>
@@ -2161,7 +2161,7 @@ exports[`Carousel play 2`] = `
         >
           <img
             class="StyledImage-ey4zx9-0 paVDt"
-            src="//v2.grommet.io/assets/IMG_4210.jpg"
+            src="//v2.specfocus.com/assets/IMG_4210.jpg"
           />
         </div>
       </div>
@@ -2559,7 +2559,7 @@ exports[`Carousel should trigger events of focus, blur and click 1`] = `
         >
           <img
             class=""
-            src="//v2.grommet.io/assets/IMG_4245.jpg"
+            src="//v2.specfocus.com/assets/IMG_4245.jpg"
           />
         </div>
       </div>
@@ -2575,7 +2575,7 @@ exports[`Carousel should trigger events of focus, blur and click 1`] = `
         >
           <img
             class=""
-            src="//v2.grommet.io/assets/IMG_4210.jpg"
+            src="//v2.specfocus.com/assets/IMG_4210.jpg"
           />
         </div>
       </div>

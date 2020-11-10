@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { Avatar, Button, Box, grommet, Viewport, Nav, Sidebar } from 'focus';
+import { Avatar, Button, Box, focus, Viewport, Nav, Sidebar } from 'focus';
 
 import {
   Analytics,

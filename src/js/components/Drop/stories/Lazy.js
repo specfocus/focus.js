@@ -4,7 +4,7 @@ import { Box, Drop, Viewport } from 'focus';
 import { focus } from 'focus/themes';
 import { deepMerge } from 'focus/utils';
 
-const lazyTheme = deepMerge(grommet, {
+const lazyTheme = deepMerge(focus, {
   global: {
     drop: {
       background: 'rgba(255, 255, 255, 0.7)',

@@ -4,7 +4,7 @@ import { Viewport, Box, RangeSelector, Stack, Text } from 'focus';
 import { focus } from 'focus/themes';
 import { deepMerge } from 'focus/utils';
 
-const customThemeRangeSelector = deepMerge(grommet, {
+const customThemeRangeSelector = deepMerge(focus, {
   global: {
     borderSize: {
       small: '6px',

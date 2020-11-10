@@ -55,7 +55,7 @@ export const RichFooter = () => {
           <CardBody height="small">
             <Image
               fit="cover"
-              src="//v2.grommet.io/assets/IMG_4245.jpg"
+              src="//v2.specfocus.com/assets/IMG_4245.jpg"
               a11yTitle="bridge"
             />
           </CardBody>

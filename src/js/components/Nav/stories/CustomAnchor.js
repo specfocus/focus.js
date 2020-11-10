@@ -11,7 +11,7 @@ const navItems = [
   { label: 'REACT', href: '#' },
 ];
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(focus, {
   anchor: {
     textDecoration: 'none',
     fontWeight: 500,

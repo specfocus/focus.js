@@ -14,7 +14,7 @@ import {
 import { focus } from 'focus/themes';
 import { deepMerge } from '../../../utils';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(focus, {
   formField: {
     border: {
       side: 'all',

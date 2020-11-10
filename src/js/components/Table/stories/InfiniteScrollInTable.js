@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import {
   Box,
   Heading,
-  grommet,
+  focus,
   Viewport,
   InfiniteScroll,
   Table,

@@ -20,7 +20,7 @@ export default create({
   inputTextColor: '#333333',
   inputBorderRadius: 4,
 
-  brandTitle: 'Grommet',
-  brandImage: 'grommet-logo.svg',
-  brandUrl: 'https://v2.grommet.io/',
+  brandTitle: 'Focus',
+  brandImage: 'focus-logo.svg',
+  brandUrl: 'https://v2.specfocus.com/',
 });

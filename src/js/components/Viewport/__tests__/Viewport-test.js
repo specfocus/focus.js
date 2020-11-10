@@ -3,12 +3,12 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import { cleanup, render } from '@testing-library/react';
 
-import { hpe as hpeTheme } from 'grommet-theme-hpe';
+import { hpe as hpeTheme } from 'focus-theme-hpe';
 
 import { Viewport } from '..';
 import { Heading } from '../../Heading';
 import { AnnounceContext, ResponsiveContext } from '../../../contexts';
-import { focus } from '../../../themes/grommet';
+import { focus } from '../../../themes/focus';
 
 const TestAnnouncer = ({ announce }) => {
   React.useEffect(() => announce('hello', 'assertive'));
@@ -54,7 +54,7 @@ describe('Focus', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  test('grommet theme', () => {
+  test('focus theme', () => {
     const component = renderer.create(<Viewport theme={focus} />);
     expect(component.toJSON()).toMatchSnapshot();
   });
@@ -104,13 +104,13 @@ describe('Focus', () => {
 
     // no style, no need for expectPortal
     expect(
-      document.body.querySelector('#grommet-announcer[aria-live]'),
+      document.body.querySelector('#focus-announcer[aria-live]'),
     ).toMatchSnapshot();
 
     setTimeout(() => {
       // should clear the aria-live container
       expect(
-        document.body.querySelector('#grommet-announcer[aria-live]'),
+        document.body.querySelector('#focus-announcer[aria-live]'),
       ).toMatchSnapshot();
       done();
     }, 600); // wait the aria-live container to clear

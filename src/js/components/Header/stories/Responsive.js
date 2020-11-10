@@ -8,7 +8,7 @@ export const Responsive = () => (
   <Viewport theme={focus}>
     <Header background="light-4" pad="medium" height="xsmall">
       <Anchor
-        href="https://tools.grommet.io/"
+        href="https://tools.specfocus.com/"
         icon={<GrommetIcon color="brand" />}
         label="Grommet Tools"
       />
@@ -23,20 +23,20 @@ export const Responsive = () => (
                 items={[
                   {
                     label: <Box pad="small">Grommet.io</Box>,
-                    href: 'https://v2.grommet.io/',
+                    href: 'https://v2.specfocus.com/',
                   },
                   {
                     label: <Box pad="small">Feedback</Box>,
-                    href: 'https://github.com/grommet/grommet/issues',
+                    href: 'https://github.com/specfocus/grommet/issues',
                   },
                 ]}
               />
             </Box>
           ) : (
             <Box justify="end" direction="row" gap="medium">
-              <Anchor href="https://v2.grommet.io/" label="Grommet.io" />
+              <Anchor href="https://v2.specfocus.com/" label="Grommet.io" />
               <Anchor
-                href="https://github.com/grommet/grommet/issues"
+                href="https://github.com/specfocus/grommet/issues"
                 label="Feedback"
               />
             </Box>

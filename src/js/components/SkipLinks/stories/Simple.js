@@ -2,7 +2,7 @@
 import React from 'react';
 
 import {
-  grommet,
+  focus,
   Avatar,
   Box,
   Anchor,

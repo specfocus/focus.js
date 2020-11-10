@@ -8,7 +8,7 @@ import { deepMerge } from 'focus/utils';
 
 import { RichTabTitle } from './Rich';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(focus, {
   global: {
     edgeSize: {
       small: '10px',

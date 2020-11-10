@@ -43,7 +43,7 @@ export const Sitemap = () => {
           <Box align="center" gap="small">
             <GrommetIcon color="brand" size="large" />
             <Text alignSelf="center" color="brand" weight="bold">
-              grommet.io
+              specfocus.com
             </Text>
           </Box>
         </Box>

@@ -47,13 +47,13 @@ export const findAllByType = (component, type) => {
 
 export const getAvailableAtBadge = availableAt => [
   {
-    url: `https://storybook.grommet.io/?selectedKind=${availableAt}&full=0&addons=0&stories=1&panelRight=0`,
+    url: `https://storybook.specfocus.com/?selectedKind=${availableAt}&full=0&addons=0&stories=1&panelRight=0`,
     badge:
       'https://cdn-images-1.medium.com/fit/c/120/120/1*TD1P0HtIH9zF0UEH28zYtw.png',
     label: 'Storybook',
   },
   {
-    url: `https://codesandbox.io/s/github/grommet/grommet-sandbox?initialpath=/${availableAt.toLowerCase()}&module=%2Fsrc%2F${availableAt}.js`,
+    url: `https://codesandbox.io/s/github/specfocus/focus-sandbox?initialpath=/${availableAt.toLowerCase()}&module=%2Fsrc%2F${availableAt}.js`,
     badge: 'https://codesandbox.io/static/img/play-codesandbox.svg',
     label: 'CodeSandbox',
   },

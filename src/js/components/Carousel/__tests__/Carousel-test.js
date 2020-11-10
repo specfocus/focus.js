@@ -14,8 +14,8 @@ describe('Carousel', () => {
     const component = renderer.create(
       <Viewport>
         <Carousel>
-          <Image src="//v2.grommet.io/assets/IMG_4245.jpg" />
-          <Image src="//v2.grommet.io/assets/IMG_4210.jpg" />
+          <Image src="//v2.specfocus.com/assets/IMG_4245.jpg" />
+          <Image src="//v2.specfocus.com/assets/IMG_4210.jpg" />
         </Carousel>
       </Viewport>,
     );
@@ -27,8 +27,8 @@ describe('Carousel', () => {
     const component = renderer.create(
       <Viewport>
         <Carousel initialChild={1}>
-          <Image src="//v2.grommet.io/assets/IMG_4245.jpg" />
-          <Image src="//v2.grommet.io/assets/IMG_4210.jpg" />
+          <Image src="//v2.specfocus.com/assets/IMG_4245.jpg" />
+          <Image src="//v2.specfocus.com/assets/IMG_4210.jpg" />
         </Carousel>
       </Viewport>,
     );
@@ -40,8 +40,8 @@ describe('Carousel', () => {
     const { getByTestId, container } = render(
       <Viewport>
         <Carousel data-testid="test-carousel">
-          <Image src="//v2.grommet.io/assets/IMG_4245.jpg" />
-          <Image src="//v2.grommet.io/assets/IMG_4210.jpg" />
+          <Image src="//v2.specfocus.com/assets/IMG_4245.jpg" />
+          <Image src="//v2.specfocus.com/assets/IMG_4210.jpg" />
         </Carousel>
       </Viewport>,
     );
@@ -73,8 +73,8 @@ describe('Carousel', () => {
           onBlur={onBlur}
           controls="selectors"
         >
-          <Image src="//v2.grommet.io/assets/IMG_4245.jpg" />
-          <Image src="//v2.grommet.io/assets/IMG_4210.jpg" />
+          <Image src="//v2.specfocus.com/assets/IMG_4245.jpg" />
+          <Image src="//v2.specfocus.com/assets/IMG_4210.jpg" />
         </Carousel>
       </Viewport>,
     );
@@ -98,8 +98,8 @@ describe('Carousel', () => {
     const { container } = render(
       <Viewport>
         <Carousel play={1000}>
-          <Image src="//v2.grommet.io/assets/IMG_4245.jpg" />
-          <Image src="//v2.grommet.io/assets/IMG_4210.jpg" />
+          <Image src="//v2.specfocus.com/assets/IMG_4245.jpg" />
+          <Image src="//v2.specfocus.com/assets/IMG_4210.jpg" />
         </Carousel>
       </Viewport>,
     );

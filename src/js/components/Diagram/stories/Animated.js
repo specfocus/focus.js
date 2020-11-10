@@ -6,7 +6,7 @@ import { deepMerge } from 'focus/utils';
 
 import { data } from './data';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(focus, {
   diagram: {
     extend: `@keyframes
   example {

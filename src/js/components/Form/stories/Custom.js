@@ -57,7 +57,7 @@ const customTheme = {
 };
 
 export const Custom = () => (
-  <Viewport full theme={deepMerge(grommet, customTheme)}>
+  <Viewport full theme={deepMerge(focus, customTheme)}>
     <Box fill align="center" justify="center">
       <Box width="medium">
         <Form

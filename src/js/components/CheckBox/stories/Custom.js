@@ -48,7 +48,7 @@ export const Custom = props => {
   const [checked, setChecked] = useState(false);
 
   return (
-    <Viewport theme={deepMerge(grommet, customCheckBoxTheme)}>
+    <Viewport theme={deepMerge(focus, customCheckBoxTheme)}>
       <Box align="center" pad="large">
         <CheckBox
           {...props}

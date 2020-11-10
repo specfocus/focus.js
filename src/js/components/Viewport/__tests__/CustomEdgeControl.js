@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Gremlin, Grommet as GrommetIcon } from 'grommet-icons';
+import { Gremlin, Grommet as GrommetIcon } from 'focus-icons';
 import { Viewport, Box, RangeSelector, Stack, Text } from 'focus';
 import { focus } from 'focus/themes';
 import { deepMerge } from 'focus/utils';

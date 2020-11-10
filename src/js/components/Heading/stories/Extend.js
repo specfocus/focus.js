@@ -24,7 +24,7 @@ const letterSpace = {
 const letterSpacing = ({ level, size }) =>
   level && size ? `letter-spacing: ${letterSpace[level][size]}` : '';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(focus, {
   heading: { extend: props => `${letterSpacing(props)}` },
 });
 

@@ -10,7 +10,7 @@ import { deepMerge } from 'focus/utils';
 //    - Second one with an unknown number of elements
 
 // set custom breakpoints so we can see the changes
-const customBreakpoints = deepMerge(grommet, {
+const customBreakpoints = deepMerge(focus, {
   global: {
     breakpoints: {
       small: {

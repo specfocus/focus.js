@@ -3,7 +3,7 @@ import { Viewport, Heading } from 'focus';
 import { focus } from 'focus/themes';
 import { deepMerge } from 'focus/utils';
 
-const customlevel = deepMerge(grommet, {
+const customlevel = deepMerge(focus, {
   heading: {
     level: {
       5: {

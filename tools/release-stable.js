@@ -5,7 +5,7 @@ import path from 'path';
 
 const repoURL = `https://${
   process.env.GH_TOKEN
-}@github.com/grommet/grommet.git`;
+}@github.com/specfocus/grommet.git`;
 const localFolder = path.resolve('.tmp/grommet');
 const localDist = path.resolve('dist');
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import {
-  grommet,
+  focus,
   Anchor,
   Box,
   DataTable,
@@ -14,7 +14,7 @@ import {
 import { Trash, Refresh, Info } from 'grommet-icons';
 
 // Source code for the data can be found here
-// https://github.com/grommet/grommet/blob/master/src/js/components/DataTable/stories/data.js
+// https://github.com/specfocus/focus/blob/master/src/js/components/DataTable/stories/data.js
 import { storageColumns, storageData } from '../../DataTable/stories/data';
 
 const TipContent = ({ message, icon }) => (

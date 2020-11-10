@@ -3,7 +3,7 @@ import { deepMerge } from 'focus/utils';
 
 import { Box, Calendar, Viewport, grommet } from 'focus';
 
-const customHeading = deepMerge(grommet, {
+const customHeading = deepMerge(focus, {
   calendar: {
     heading: {
       level: '3',

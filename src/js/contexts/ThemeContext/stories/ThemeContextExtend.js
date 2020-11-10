@@ -4,7 +4,7 @@ import { focus } from 'focus/themes';
 import { deepMerge } from 'focus/utils';
 import { Box, Text, ThemeContext, Viewport, Select } from 'focus';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(focus, {
   global: {
     focus: {
       border: {

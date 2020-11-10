@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  grommet,
+  focus,
   Box,
   Meter,
   Viewport,
@@ -15,7 +15,7 @@ import { deepMerge } from 'focus/utils';
 
 const tooltipColor = 'white';
 
-const theme = deepMerge(grommet, {
+const theme = deepMerge(focus, {
   list: {
     item: {
       pad: { horizontal: 'small', vertical: 'xsmall' },

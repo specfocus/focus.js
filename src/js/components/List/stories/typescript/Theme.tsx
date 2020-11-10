@@ -14,7 +14,7 @@ export const locations = [
 
 // Type annotations can only be used in TypeScript files.
 // Remove ': ThemeType' if you are not using Typescript.
-const theme: ThemeType = deepMerge(grommet, {
+const theme: ThemeType = deepMerge(focus, {
   list: {
     item: {
       pad: { horizontal: 'large', vertical: 'xsmall' },

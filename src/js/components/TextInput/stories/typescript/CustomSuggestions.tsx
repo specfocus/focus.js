@@ -7,7 +7,7 @@ import { deepMerge } from 'focus/utils';
 
 // Type annotations can only be used in TypeScript files.
 // Remove ': ThemeType' if you are not using Typescript.
-const myCustomTheme: ThemeType = deepMerge(grommet, {
+const myCustomTheme: ThemeType = deepMerge(focus, {
   global: {
     drop: {
       background: '#444444',

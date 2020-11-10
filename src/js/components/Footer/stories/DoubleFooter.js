@@ -46,7 +46,7 @@ export const DoubleFooter = () => {
       >
         <Box direction="row" gap="small">
           <GrommetIcon color="brand" />
-          <Text alignSelf="center">grommet.io</Text>
+          <Text alignSelf="center">specfocus.com</Text>
         </Box>
         <Text textAlign="center" size="small">
           © 2019 Copyright

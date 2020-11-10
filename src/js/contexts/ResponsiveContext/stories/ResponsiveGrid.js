@@ -5,7 +5,7 @@ import { focus } from 'focus/themes';
 
 import { Box, Grid, Paragraph, Viewport, ResponsiveContext } from 'focus';
 
-const customBreakpoints = deepMerge(grommet, {
+const customBreakpoints = deepMerge(focus, {
   global: {
     breakpoints: {
       xsmall: {

@@ -202,7 +202,7 @@ exports[`Markdown renders 1`] = `
       <img
         alt="alt text"
         className=""
-        src="//v2.grommet.io/assets/IMG_4245.jpg"
+        src="//v2.specfocus.com/assets/IMG_4245.jpg"
         title="Markdown Image"
       />
     </p>
