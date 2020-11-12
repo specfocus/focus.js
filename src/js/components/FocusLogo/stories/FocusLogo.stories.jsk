@@ -1,0 +1,5 @@
+// export { Plus } from './Static';
+
+export default {
+  title: 'Logo/FocusLoco',
+};

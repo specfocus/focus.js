@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-
-import { Box, Viewport, TextArea } from 'focus';
+import { Box, TextArea, Viewport } from 'focus';
 import { focus } from 'focus/themes';
+import React, { useState } from 'react';
 
 const Resize = props => {
   const [value, setValue] = useState('');
