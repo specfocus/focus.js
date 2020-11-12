@@ -17,10 +17,23 @@ const Resize = props => {
   );
 };
 
-export const Simple = () => <Resize resize />;
+const Auto = () => <Resize resize="auto" />;
 
-export const NonResizable = () => <Resize resize={false} />;
+Auto.story = {
+  name: 'Auto',
+};
+
+const Simple = () => <Resize resize />;
+
+Simple.story = {
+  name: 'Simple',
+};
+
+
+const NonResizable = () => <Resize resize={false} />;
 
 NonResizable.story = {
   name: 'Non resizable',
 };
+
+export { Auto, Simple, NonResizable };

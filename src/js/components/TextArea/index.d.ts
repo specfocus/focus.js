@@ -9,7 +9,7 @@ export interface TextAreaProps {
   name?: string;
   placeholder?: string;
   plain?: boolean;
-  resize?: 'vertical' | 'horizontal' | boolean;
+  resize?: 'auto' | 'vertical' | 'horizontal' | boolean;
   size?: 'small' | 'medium' | 'large' | 'xlarge' | string;
   value?: string;
 }

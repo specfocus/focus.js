@@ -1,7 +1,6 @@
 export { Fill } from './Fill';
 export { InsideFormField } from './InsideFormField';
-export { NonResizable } from './Simple';
-export { Simple } from './Simple';
+export { Auto, NonResizable, Simple } from './Resize';
 export { Themed } from './Themed';
 
 export default {

@@ -1,9 +1,7 @@
 import React, { forwardRef, useContext, useState } from 'react';
-
 import { FormContext } from '../Form/FormContext';
 import { Keyboard } from '../Keyboard';
-
-import { StyledTextArea } from './StyledTextArea';
+import { GrowWrap, StyledTextArea } from './StyledTextArea';
 
 const TextArea = forwardRef(
   (
@@ -15,6 +13,7 @@ const TextArea = forwardRef(
       onChange,
       onFocus,
       onKeyDown,
+      resize,
       value: valueProp,
       ...rest
     },
@@ -34,27 +33,55 @@ const TextArea = forwardRef(
         }}
         onKeyDown={onKeyDown}
       >
-        <StyledTextArea
-          aria-label={a11yTitle}
-          ref={ref}
-          name={name}
-          fillArg={fill}
-          focus={focus}
-          value={value}
-          {...rest}
-          onFocus={event => {
-            setFocus(true);
-            if (onFocus) onFocus(event);
-          }}
-          onBlur={event => {
-            setFocus(false);
-            if (onBlur) onBlur(event);
-          }}
-          onChange={event => {
-            setValue(event.target.value);
-            if (onChange) onChange(event);
-          }}
-        />
+        {resize !== 'auto' ? (
+          <StyledTextArea
+            aria-label={a11yTitle}
+            ref={ref}
+            name={name}
+            fillArg={fill}
+            focus={focus}
+            resize={resize}
+            value={value}
+            {...rest}
+            onFocus={event => {
+              setFocus(true);
+              if (onFocus) onFocus(event);
+            }}
+            onBlur={event => {
+              setFocus(false);
+              if (onBlur) onBlur(event);
+            }}
+            onChange={event => {
+              setValue(event.target.value);
+              if (onChange) onChange(event);
+            }}
+          />
+        ) : (
+            <GrowWrap data-replicated-value={value}>
+              <StyledTextArea
+                aria-label={a11yTitle}
+                ref={ref}
+                name={name}
+                fillArg={fill}
+                focus={focus}
+                resize={resize}
+                value={value}
+                {...rest}
+                onFocus={event => {
+                  setFocus(true);
+                  if (onFocus) onFocus(event);
+                }}
+                onBlur={event => {
+                  setFocus(false);
+                  if (onBlur) onBlur(event);
+                }}
+                onChange={event => {
+                  setValue(event.target.value);
+                  if (onChange) onChange(event);
+                }}
+              />
+            </GrowWrap>
+          )}
       </Keyboard>
     );
   },
