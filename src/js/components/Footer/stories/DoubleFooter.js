@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Grommet as GrommetIcon } from 'grommet-icons';
-import { Anchor, Box, Footer, grommet, Viewport, Main, Text } from 'focus';
+import { Anchor, Box, Footer, focus, Viewport, Main, Text } from 'focus';
 import { fiveColumns as data } from './data';
 
 const StyledAnchor = styled(Anchor)`

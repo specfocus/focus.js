@@ -65,7 +65,7 @@ export const WindowChart = ({ data, max }) => {
     <Viewport theme={focus}>
       <Box pad="large">
         {/* className="chromatic-ignore" is used for the story testing.
-            grommet doesn't reccomend the usage of className */}
+            focus.js doesn't reccomend the usage of className */}
         <Box direction="row" justify="between" className="chromatic-ignore">
           {innerAxis[0].reverse().map(t => (
             <Text key={t}>{new Date(t).toLocaleDateString()}</Text>

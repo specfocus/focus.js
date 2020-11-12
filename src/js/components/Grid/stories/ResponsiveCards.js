@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import {
-  grommet,
+  focus,
   Box,
   Card,
   Grid,

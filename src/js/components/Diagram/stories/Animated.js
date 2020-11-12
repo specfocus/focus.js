@@ -1,6 +1,6 @@
 import React, { useReducer, useEffect } from 'react';
 
-import { Box, Diagram, Viewport, grommet, Stack, Text } from 'focus';
+import { Box, Diagram, Viewport, focus, Stack, Text } from 'focus';
 import { Diamond } from 'grommet-icons';
 import { deepMerge } from 'focus/utils';
 

@@ -9,7 +9,7 @@ const fullStyle = css`
   overflow: auto;
 `;
 
-const StyledGrommet = styled.div`
+const StyledViewport = styled.div`
   ${props => !props.plain && baseStyle}
   ${props => props.full && fullStyle}
   ${props => props.theme.global.font.face}
@@ -22,7 +22,7 @@ const StyledGrommet = styled.div`
       .join('\n')}
 `;
 
-StyledGrommet.defaultProps = {};
-Object.setPrototypeOf(StyledGrommet.defaultProps, defaultProps);
+StyledViewport.defaultProps = {};
+Object.setPrototypeOf(StyledViewport.defaultProps, defaultProps);
 
-export { StyledGrommet };
+export { StyledViewport };

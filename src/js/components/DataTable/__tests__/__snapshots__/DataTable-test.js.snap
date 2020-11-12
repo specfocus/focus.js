@@ -2635,7 +2635,7 @@ exports[`DataTable click 1`] = `
 
 exports[`DataTable click 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <table
     class="StyledTable-sc-1m3u5g-6 kzMUEM StyledDataTable-xrlyjm-0 maGPF"
@@ -3323,7 +3323,7 @@ exports[`DataTable custom theme 1`] = `
 
 exports[`DataTable custom theme 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <table
     class="StyledTable-sc-1m3u5g-6 kzMUEM StyledDataTable-xrlyjm-0 maGPF"
@@ -4750,7 +4750,7 @@ exports[`DataTable groupBy 1`] = `
 
 exports[`DataTable groupBy 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <table
     class="StyledTable-sc-1m3u5g-6 kzMUEM StyledDataTable-xrlyjm-0 maGPF"
@@ -5837,7 +5837,7 @@ exports[`DataTable groupBy property 1`] = `
 
 exports[`DataTable groupBy property 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <table
     class="StyledTable-sc-1m3u5g-6 kzMUEM StyledDataTable-xrlyjm-0 maGPF"
@@ -6334,7 +6334,7 @@ exports[`DataTable onSort 1`] = `
 
 exports[`DataTable onSort 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <table
     class="StyledTable-sc-1m3u5g-6 kzMUEM StyledDataTable-xrlyjm-0 maGPF"
@@ -10211,7 +10211,7 @@ exports[`DataTable search 1`] = `
 
 exports[`DataTable search 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <table
     class="StyledTable-sc-1m3u5g-6 kzMUEM StyledDataTable-xrlyjm-0 maGPF"
@@ -10782,7 +10782,7 @@ exports[`DataTable select 1`] = `
 
 exports[`DataTable select 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <table
     class="StyledTable-sc-1m3u5g-6 kzMUEM StyledDataTable-xrlyjm-0 maGPF"
@@ -12840,7 +12840,7 @@ exports[`DataTable sortable 1`] = `
 
 exports[`DataTable sortable 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <table
     class="StyledTable-sc-1m3u5g-6 kzMUEM StyledDataTable-xrlyjm-0 maGPF"

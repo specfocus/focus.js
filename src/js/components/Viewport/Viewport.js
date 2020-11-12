@@ -149,9 +149,9 @@ class Viewport extends Component {
       <ThemeContext.Provider value={theme}>
         <ResponsiveContext.Provider value={responsive}>
           <ContainerTargetContext.Provider value={containerTarget}>
-            <StyledGrommet full={full} {...rest}>
+            <StyledViewport full={full} {...rest}>
               {children}
-            </StyledGrommet>
+            </StyledViewport>
             {full && <FullGlobalStyle />}
           </ContainerTargetContext.Provider>
         </ResponsiveContext.Provider>

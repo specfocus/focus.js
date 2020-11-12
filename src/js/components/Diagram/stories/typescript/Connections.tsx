@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Gremlin, IceCream } from 'grommet-icons';
-import { Stack, grommet, Viewport, Box, Diagram } from 'focus';
+import { Stack, focus, Viewport, Box, Diagram } from 'focus';
 
 import { DiagramConnectionAnchor, DiagramConnectionType } from '../../index';
 

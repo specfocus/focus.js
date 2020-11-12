@@ -18,7 +18,7 @@ import { Markdown } from 'focus';
 
 Custom components and props to override html elements such as 'img'
       or 'pre'. By default 'a', 'p', 'img', and table elements are overridden
-      with grommet components.
+      with focus.js components.
       Available options:
       a: { component: Anchor },
       img: { component: Image },

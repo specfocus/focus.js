@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-import { Viewport, grommet, Box, Button, Drop, Nav, Text } from 'focus';
+import { Viewport, focus, Box, Button, Drop, Nav, Text } from 'focus';
 import { Calculator, Bug, Achievement } from 'grommet-icons';
 
 const TooltipButton = ({ icon, name }) => {

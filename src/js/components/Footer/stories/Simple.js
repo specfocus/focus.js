@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Footer, grommet, Viewport, Main, Text } from 'focus';
+import { Box, Footer, focus, Viewport, Main, Text } from 'focus';
 
 export const Simple = () => (
   <Viewport theme={focus}>

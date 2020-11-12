@@ -471,7 +471,7 @@ exports[`Button kind disabled with hoverIndicator should not hover 1`] = `
 
 exports[`Button kind disabled with hoverIndicator should not hover 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <button
     class="StyledButtonKind-sc-1vhfpnt-0 hMrilV"
@@ -1132,7 +1132,7 @@ exports[`Button kind mouseOver and mouseOut events 1`] = `
 
 exports[`Button kind mouseOver and mouseOut events 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <button
     class="StyledButtonKind-sc-1vhfpnt-0 jcRPDY"

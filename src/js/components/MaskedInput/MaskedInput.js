@@ -234,7 +234,7 @@ const MaskedInput = forwardRef(
         // overrides setter `event.target.value =` and loses original event
         // target fidelity.
         // https://stackoverflow.com/a/46012210 &&
-        // https://github.com/specfocus/grommet/pull/3171#discussion_r296415239
+        // https://github.com/specfocus/focus.js/pull/3171#discussion_r296415239
         const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
           window.HTMLInputElement.prototype,
           'value',

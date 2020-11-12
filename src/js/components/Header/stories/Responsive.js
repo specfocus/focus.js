@@ -27,7 +27,7 @@ export const Responsive = () => (
                   },
                   {
                     label: <Box pad="small">Feedback</Box>,
-                    href: 'https://github.com/specfocus/grommet/issues',
+                    href: 'https://github.com/specfocus/focus.js/issues',
                   },
                 ]}
               />
@@ -36,7 +36,7 @@ export const Responsive = () => (
             <Box justify="end" direction="row" gap="medium">
               <Anchor href="https://v2.specfocus.com/" label="Grommet.io" />
               <Anchor
-                href="https://github.com/specfocus/grommet/issues"
+                href="https://github.com/specfocus/focus.js/issues"
                 label="Feedback"
               />
             </Box>

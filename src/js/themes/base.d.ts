@@ -728,9 +728,6 @@ export interface ThemeType {
     margin?: MarginType;
     round?: RoundType;
   };
-  grommet?: {
-    extend?: ExtendType;
-  };
   heading?: {
     extend?: ExtendType;
     font?: {};
@@ -1213,6 +1210,9 @@ export interface ThemeType {
     scrubber?: {
       color?: ColorType;
     };
+  };
+  viewport?: {
+    extend?: ExtendType;
   };
   worldMap?: {
     color?: ColorType;

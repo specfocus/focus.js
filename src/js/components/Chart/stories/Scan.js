@@ -88,7 +88,7 @@ export const ScanChart = props => {
                         >
                           <Text size="large">{data[active].value}</Text>
                           {/* className="chromatic-ignore" is used for this
-                            component testing. grommet doesn't reccomend the
+                            component testing. focus.js doesn't reccomend the
                             usage of className */}
                           <Text className="chromatic-ignore" size="small">
                             {new Date(data[active].time).toLocaleDateString()}

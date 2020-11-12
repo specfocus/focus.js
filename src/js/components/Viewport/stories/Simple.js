@@ -38,7 +38,7 @@ export const Vars = () => (
   <Viewport theme={focus} cssVars>
     <Box pad="medium" background="var(--accent-2)" gap="medium">
       <Box>
-        Checkout Focus variables, you can find them in the StyledGrommet DOM.
+        Checkout Focus variables, you can find them in the StyledViewport DOM.
       </Box>
       <Box with>
         For example, the background color in this Box is using var(--accent-2)

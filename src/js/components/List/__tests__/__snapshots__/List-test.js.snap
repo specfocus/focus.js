@@ -1646,7 +1646,7 @@ exports[`List events Enter key 1`] = `
 
 exports[`List events Enter key 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <ul
     class="List__StyledList-sc-130gdqg-0 cZBHzF"
@@ -1825,7 +1825,7 @@ exports[`List events focus and blur 1`] = `
 
 exports[`List events focus and blur 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <ul
     class="List__StyledList-sc-130gdqg-0 cZBHzF"
@@ -2003,7 +2003,7 @@ exports[`List events mouse events 1`] = `
 
 exports[`List events mouse events 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <ul
     class="List__StyledList-sc-130gdqg-0 cZBHzF"
@@ -2542,7 +2542,7 @@ exports[`List onClickItem 1`] = `
 
 exports[`List onClickItem 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <ul
     class="List__StyledList-sc-130gdqg-0 cZBHzF"

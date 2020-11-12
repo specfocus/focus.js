@@ -1583,7 +1583,7 @@ exports[`Focus default theme 1`] = `
 </div>
 `;
 
-exports[`Focus grommet theme 1`] = `
+exports[`Focus focus.js theme 1`] = `
 .c1 {
   display: inline-block;
   box-sizing: border-box;

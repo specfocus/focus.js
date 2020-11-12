@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  grommet,
+  focus,
   Box,
   Card,
   CardBody,

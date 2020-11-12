@@ -7902,7 +7902,7 @@ exports[`DateInput select format 1`] = `
 
 exports[`DateInput select format 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <div
     class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 dOerlP"
@@ -10260,7 +10260,7 @@ exports[`DateInput select format inline 1`] = `
 
 exports[`DateInput select format inline 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <div
     class="StyledBox-sc-13pk1d4-0 dYebPD"
@@ -12270,7 +12270,7 @@ exports[`DateInput select format inline range 1`] = `
 
 exports[`DateInput select format inline range 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <div
     class="StyledBox-sc-13pk1d4-0 dYebPD"
@@ -15351,7 +15351,7 @@ exports[`DateInput type format inline 1`] = `
 
 exports[`DateInput type format inline 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <div
     class="StyledBox-sc-13pk1d4-0 dYebPD"

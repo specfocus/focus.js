@@ -25,7 +25,7 @@ const allOptions = Array(3)
 const borderPositions = [
   {
     name: 'Default Grommet Theme',
-    theme: grommet,
+    theme: focus,
   },
   {
     name: 'Border Inner',

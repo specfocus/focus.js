@@ -24,7 +24,7 @@ export const doc = Layer => {
       .description(
         `Whether to animate the Layer content when it opens. This
         property is deprecated and will be removed in the next major version
-        of grommet. Instead, use 'animation'.`,
+        of focus.js. Instead, use 'animation'.`,
       )
       .defaultValue(true),
     animation: PropTypes.oneOfType([

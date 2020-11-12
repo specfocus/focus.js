@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { deepMerge } from 'focus/utils';
 
-import { Box, Calendar, Viewport, grommet } from 'focus';
+import { Box, Calendar, Viewport, focus } from 'focus';
 
 const customHeading = deepMerge(focus, {
   calendar: {

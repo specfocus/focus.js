@@ -2,7 +2,7 @@
 
 exports[`CheckBoxGroup disabled renders 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  className="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <div
     className="StyledBox-sc-13pk1d4-0 dYebPD"
@@ -144,7 +144,7 @@ exports[`CheckBoxGroup disabled renders 1`] = `
 
 exports[`CheckBoxGroup initial value renders 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  className="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <div
     className="StyledBox-sc-13pk1d4-0 dYebPD"
@@ -263,7 +263,7 @@ exports[`CheckBoxGroup initial value renders 1`] = `
 
 exports[`CheckBoxGroup labelKey 1`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <div
     class="StyledBox-sc-13pk1d4-0 dYebPD"
@@ -313,7 +313,7 @@ exports[`CheckBoxGroup labelKey 1`] = `
 
 exports[`CheckBoxGroup onChange 1`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <div
     class="StyledBox-sc-13pk1d4-0 dYebPD"
@@ -374,7 +374,7 @@ exports[`CheckBoxGroup onChange 1`] = `
 
 exports[`CheckBoxGroup onClick for check and uncheck a CheckBox 1`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <div
     class="StyledBox-sc-13pk1d4-0 eBvFNX"
@@ -436,7 +436,7 @@ exports[`CheckBoxGroup onClick for check and uncheck a CheckBox 1`] = `
 
 exports[`CheckBoxGroup onClick for check and uncheck a CheckBox 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <div
     class="StyledBox-sc-13pk1d4-0 eBvFNX"
@@ -487,7 +487,7 @@ exports[`CheckBoxGroup onClick for check and uncheck a CheckBox 2`] = `
 
 exports[`CheckBoxGroup options renders 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  className="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <div
     className="StyledBox-sc-13pk1d4-0 dYebPD"
@@ -553,7 +553,7 @@ exports[`CheckBoxGroup options renders 1`] = `
 
 exports[`CheckBoxGroup value renders 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  className="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <div
     className="StyledBox-sc-13pk1d4-0 dYebPD"
@@ -631,7 +631,7 @@ exports[`CheckBoxGroup value renders 1`] = `
 
 exports[`CheckBoxGroup valueKey 1`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <div
     class="StyledBox-sc-13pk1d4-0 dYebPD"

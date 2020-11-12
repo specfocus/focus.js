@@ -210,7 +210,7 @@ boolean
 
 **validate**
 
-Validation rule when used within a grommet Form. Provide an object
+Validation rule when used within a focus.js Form. Provide an object
       with a regular expression, a function, or an array of these. If a
       function is provided, it will be called with two arguments, the value
       for this field and the entire value object. This permits validation to

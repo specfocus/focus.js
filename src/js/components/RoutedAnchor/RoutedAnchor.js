@@ -17,7 +17,7 @@ class RoutedAnchor extends Component {
     if (process.env.NODE_ENV !== 'production') {
       console.warn(
         `This component will be deprecated in the upcoming releases. 
-        Please refer to https://github.com/specfocus/grommet/issues/2855 
+        Please refer to https://github.com/specfocus/focus.js/issues/2855 
         for more information.`,
       );
     }

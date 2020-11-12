@@ -40,7 +40,7 @@ describe('RoutedButton', () => {
   const push = jest.fn();
   const replace = jest.fn();
   const warning = `This component will be deprecated in the upcoming releases.
-         Please refer to https://github.com/specfocus/grommet/issues/2855 
+         Please refer to https://github.com/specfocus/focus.js/issues/2855 
          for more information.`;
   test('renders', () => {
     console.warn = jest.fn();

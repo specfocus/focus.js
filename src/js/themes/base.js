@@ -812,9 +812,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       margin: { bottom: 'small' },
       // round: undefined,
     },
-    grommet: {
-      // extend: undefined
-    },
     heading: {
       font: {
         // family: undefined
@@ -1211,6 +1208,9 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       scrubber: {
         color: 'light-4',
       },
+    },
+    viewport: {
+      // extend: undefined
     },
     worldMap: {
       color: 'light-3',

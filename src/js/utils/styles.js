@@ -359,7 +359,7 @@ export const unfocusStyle = ({
 `;
 
 // For backwards compatibility we need to add back the control border width.
-// Based on how grommet was functioning prior to https://github.com/specfocus/focus/pull/3939,
+// Based on how focus.js was functioning prior to https://github.com/specfocus/focus/pull/3939,
 // the padding was subtracting the border width from the theme value, but the
 // placeholder was not. Because we're now placing the subtraction into the
 // theme itself, we have to add back in the border width here.
@@ -491,7 +491,8 @@ export const overflowStyle = overflowProp => {
 
   return css`
     ${overflowProp.horizontal &&
-      `overflow-x: ${overflowProp.horizontal};`} ${overflowProp.vertical &&
+      `overflow-x: ${overflowProp.horizontal};`}
+    ${overflowProp.vertical &&
       `overflow-y: ${overflowProp.vertical};`};
   `;
 };

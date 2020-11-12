@@ -23,6 +23,6 @@ const StyledViewport = styled.div`
 `;
 
 StyledViewport.defaultProps = {};
-Object.setPrototypeOf(StyledGrommet.defaultProps, defaultProps);
+Object.setPrototypeOf(StyledViewport.defaultProps, defaultProps);
 
 export { StyledViewport };

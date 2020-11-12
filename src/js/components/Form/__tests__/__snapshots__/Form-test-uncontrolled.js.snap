@@ -1518,7 +1518,7 @@ exports[`Form uncontrolled uncontrolled 1`] = `
 
 exports[`Form uncontrolled uncontrolled 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <form>
     <div
@@ -1552,7 +1552,7 @@ exports[`Form uncontrolled uncontrolled 2`] = `
 
 exports[`Form uncontrolled uncontrolled 3`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <form>
     <div
@@ -1773,7 +1773,7 @@ exports[`Form uncontrolled uncontrolled onValidate 1`] = `
 
 exports[`Form uncontrolled uncontrolled onValidate 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <form>
     <div
@@ -2021,7 +2021,7 @@ exports[`Form uncontrolled uncontrolled onValidate custom error 1`] = `
 
 exports[`Form uncontrolled uncontrolled onValidate custom error 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <form>
     <div
@@ -2269,7 +2269,7 @@ exports[`Form uncontrolled uncontrolled onValidate custom info 1`] = `
 
 exports[`Form uncontrolled uncontrolled onValidate custom info 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledViewport-sc-19lkkz7-0 djOnwZ"
 >
   <form>
     <div
