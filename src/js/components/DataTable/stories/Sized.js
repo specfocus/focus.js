@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Viewport,, Box, DataTable } from 'focus';
+import { Viewport, Box, DataTable } from 'focus';
 import { focus } from 'focus/themes';
 
 // Source code for the data can be found here

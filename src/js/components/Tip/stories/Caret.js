@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { focus, Box, Button, Viewport,, Heading, Text, Tip } from 'focus';
+import { focus, Box, Button, Viewport, Heading, Text, Tip } from 'focus';
 import { Trash } from 'grommet-icons';
 
 const TipContent = ({ message }) => (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Viewport,,, Box, DataTable, Heading, Meter, Text } from 'focus';
+import { Viewport, Box, DataTable, Heading, Meter, Text } from 'focus';
 import { focus } from 'focus/themes';
 
 const amountFormatter = new Intl.NumberFormat('en-US', {

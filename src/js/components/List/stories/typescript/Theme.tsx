@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Viewport,, Box, List } from 'focus';
+import { Viewport, Box, List } from 'focus';
 import { focus, ThemeType } from 'focus/themes';
 import { deepMerge } from 'focus/utils';
 

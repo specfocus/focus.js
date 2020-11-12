@@ -1,5 +1,5 @@
 import React from 'react';
-import { Viewport,, Box, DataTable } from 'focus';
+import { Viewport, Box, DataTable } from 'focus';
 import { focus } from 'focus/themes';
 import { deepMerge } from 'focus/utils';
 

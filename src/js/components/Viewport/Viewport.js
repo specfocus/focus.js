@@ -15,13 +15,13 @@ import {
   normalizeColor,
 } from '../../utils';
 import { base as baseTheme } from '../../themes';
-import { StyledGrommet } from './StyledGrommet';
+import { StyledViewport } from './StyledViewport';
 
 const FullGlobalStyle = createGlobalStyle`
   body { margin: 0; }
 `;
 
-class Grommet extends Component {
+class Viewport extends Component {
   static displayName = 'Viewport';
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -163,8 +163,8 @@ class Grommet extends Component {
 let GrommetDoc;
 if (process.env.NODE_ENV !== 'production') {
   // eslint-disable-next-line global-require
-  GrommetDoc = require('./doc').doc(Grommet);
+  GrommetDoc = require('./doc').doc(Viewport);
 }
-const GrommetWrapper = GrommetDoc || Grommet;
+const GrommetWrapper = GrommetDoc || Viewport;
 
 export { GrommetWrapper as Viewport };

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Box, Button, Form, FormField, Viewport,, Text, TextArea } from 'focus';
+import { Box, Button, Form, FormField, Viewport, Text, TextArea } from 'focus';
 import { focus } from 'focus/themes';
 
 export const InsideFormField = () => {

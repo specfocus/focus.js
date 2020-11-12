@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import { Search } from 'grommet-icons';
-import { Box, Viewport,, Image, Text, TextInput } from 'focus';
+import { Box, Viewport, Image, Text, TextInput } from 'focus';
 import { focus, ThemeType } from 'focus/themes';
 import { deepMerge } from 'focus/utils';
 

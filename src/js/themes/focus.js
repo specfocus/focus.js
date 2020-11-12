@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 import { deepFreeze } from '../utils/object';
 
-export const grommet = deepFreeze({
+export const focus = deepFreeze({
   global: {
     colors: {
       background: {

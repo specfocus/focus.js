@@ -1,8 +1,3 @@
 export { base, generate, ThemeType } from './base';
-export { dark } from './d./focus
+export { dark } from './dark';
 export { focus } from './focus';
-;
-;
-;
-;
-

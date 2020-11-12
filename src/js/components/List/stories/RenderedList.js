@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Viewport,, Box, List, Text } from 'focus';
+import { Viewport, Box, List, Text } from 'focus';
 import { focus } from 'focus/themes';
 
 const locations = [
