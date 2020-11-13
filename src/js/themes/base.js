@@ -80,6 +80,7 @@ const colors = {
   'graph-2': 'neutral-2',
   'graph-3': 'neutral-3',
   'graph-4': 'neutral-4',
+  icon: '#666666',
   placeholder: '#AAAAAA',
   selected: 'brand',
   text: {
@@ -880,6 +881,14 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       responsiveBreakpoint: 'small', // when we scale the font size down
       weight: 600,
+    },
+    icon: {
+      size: {
+        small: '12px',
+        medium: '24px',
+        large: '48px',
+        xlarge: '96px',
+      },
     },
     layer: {
       background: {

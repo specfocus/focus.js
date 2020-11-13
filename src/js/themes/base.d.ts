@@ -119,6 +119,7 @@ type Colors = typeof colors & {
   'graph-3'?: ColorType;
   'graph-4'?: ColorType;
   'graph-5'?: ColorType;
+  icon?: ColorType;
   [x: string]: ColorType;
 };
 
