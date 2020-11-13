@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledIcon } from '../StyledIcon';
+import { StyledIcon } from '../components/Icon/StyledIcon';
 
 export const Ebay = props => (
   <StyledIcon viewBox='0 0 60 24' a11yTitle='Ebay' {...props}>

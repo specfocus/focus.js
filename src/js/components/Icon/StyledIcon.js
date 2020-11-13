@@ -1,9 +1,7 @@
+import { colorStyle } from 'grommet-styles';
 import React from 'react';
 import styled, { css } from 'styled-components';
-
-import { colorStyle } from 'grommet-styles';
-
-import { defaultProps } from './default-props';
+import { defaultProps } from '../../default-props';
 
 const colorCss = css`
   ${props => colorStyle(

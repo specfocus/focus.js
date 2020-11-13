@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledIcon } from '../StyledIcon';
+import { StyledIcon } from '../components/Icon/StyledIcon';
 
 export const StatusInfoSmall = props => (
   <StyledIcon viewBox='0 0 12 12' a11yTitle='StatusInfoSmall' {...props}>

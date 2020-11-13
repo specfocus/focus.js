@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledIcon } from '../StyledIcon';
+import { StyledIcon } from '../components/Icon/StyledIcon';
 
 export const ContactInfo = props => (
   <StyledIcon viewBox='0 0 24 24' a11yTitle='ContactInfo' {...props}>

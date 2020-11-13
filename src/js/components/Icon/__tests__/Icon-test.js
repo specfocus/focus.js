@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 
 import * as Icons from '../icons';
 
-import { StyledIcon } from '../StyledIcon';
+import { StyledIcon } from '../components/Icon/StyledIcon';
 
 test('Icon renders', () => {
   const component = renderer.create((

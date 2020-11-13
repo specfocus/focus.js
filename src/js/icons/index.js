@@ -263,7 +263,7 @@ export * from './Google';
 export * from './GraphQl';
 export * from './Gremlin';
 export * from './Grid';
-export * from './Viewport';
+export * from './Grommet';
 export * from './Group';
 export * from './Grow';
 export * from './Hadoop';

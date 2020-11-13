@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { text } from '@storybook/addon-knobs';
 
 import { ThemeProvider } from 'styled-components';
-import * as Icons from './icons';
+import * as Icons from 'focus/icons';
 
 const customTheme = {
   global: {

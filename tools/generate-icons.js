@@ -47,7 +47,7 @@ function buildIcon(fileName, svgChildren, viewBox) {
   });
   return `import React from 'react';
 
-import { StyledIcon } from '../StyledIcon';
+import { StyledIcon } from '../components/Icon/StyledIcon';
 
 export const ${pascalCase(fileName)} = props => (
   <StyledIcon viewBox='${viewBox}' a11yTitle='${pascalCase(fileName)}' {...props}>
