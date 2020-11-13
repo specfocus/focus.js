@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
 
 export const FocusLogo = ({
-  color = 'rgb(216, 216, 216)',
-  height = 200,
+  color,
+  height,
   rotation,
   translation,
-  width = 200
+  width
 }) => {
   const style = useMemo(() => ({
     fill: color,
@@ -45,6 +45,9 @@ export const FocusLogo = ({
 };
 
 FocusLogo.defaultProps = {
+  color: '#0079EF',
+  height: 200,
+  width: 200,
   rotation: 0,
   translation: 0
 };

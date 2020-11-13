@@ -19,8 +19,8 @@ import { base as iconBase } from 'grommet-icons/themes/base';
 import { deepFreeze, deepMerge } from '../utils/object';
 import { parseMetricToNum } from '../utils/mixins';
 
-const brandColor = '#7D4CDB';
-const accentColors = ['#6FFFB0', '#FD6FFF', '#81FCED', '#FFCA58'];
+const brandColor = '#0079EF';
+const accentColors = ['#0073E7', '#7425AD', '#81FCED', '#FFCA58'];
 const neutralColors = ['#00873D', '#3D138D', '#00739D', '#A2423D'];
 const statusColors = {
   critical: '#FF4040',

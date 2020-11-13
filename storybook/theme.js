@@ -5,14 +5,14 @@ import { create } from '@storybook/theming/create';
 export default create({
   base: 'light',
 
-  colorSecondary: '#7D4CDB',
+  colorSecondary: '#0079EF',
 
   appBg: '#F8F8F8',
   appBorderColor: '#EDEDED',
   appBorderRadius: 6,
 
   barTextColor: '#999999',
-  barSelectedColor: '#7D4CDB',
+  barSelectedColor: '#0079EF',
   barBg: '#F2F2F2',
 
   inputBg: 'white',

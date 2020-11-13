@@ -1,10 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { FocusLogo } from './FocusLogo';
 import { useProgress } from '../../effects/useProgress';
+import { EasingFunctions } from 'focus/utils/EasingFunctions';
 
 const SPINS = 3;
-const DURATION = 2 * 1000;
-const LOOPS = 1 + SPINS + 1 + 1;
+const DURATION = 1000;
+const LOOPS = 1 + 2 * SPINS + 1 + 1;
 const COMPLETION = LOOPS * DURATION;
 const LOOP = 1 / LOOPS;
 
@@ -33,16 +34,16 @@ export const FocusAnimation = ({ active, ...props }) => {
       setTransform([0, 0]);
     } else if (loop === 0) {
       // collapsing
-      setTransform([delta, delta]);
+      setTransform([delta / 2, EasingFunctions.easeInOutCubic(delta)]);
     } else if (loop === LOOPS - 2) {
       // expanding
-      setTransform([delta, 1 - delta]);
+      setTransform([delta / 2, EasingFunctions.easeInOutCubic(1 - delta)]);
     } else if (loop === LOOPS - 1) {
       // stay expanded
       setTransform([0, 0]);
     } else {
       // spin
-      setTransform([delta, 1]);
+      setTransform([delta / 2, 1]);
     }
   }, [active, progress]);
   return (
